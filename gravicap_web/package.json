@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d gravicap_web"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
