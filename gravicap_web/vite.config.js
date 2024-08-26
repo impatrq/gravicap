@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: "/gravicap/",
+  base: "/gravicap/gravicap_web/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
