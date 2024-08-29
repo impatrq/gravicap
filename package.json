@@ -1,5 +1,5 @@
 {
-  "name": "gravicap_web",
+  "name": "gravicap",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d gravicap_web"
+    "deploy": "gh-pages -d gravicap"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
