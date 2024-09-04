@@ -10,7 +10,6 @@ task prioridad 3
 
 
 
-
 relé 1: cargar batería
 relé 2: descargar batería
 
@@ -26,3 +25,17 @@ Si la carga es suficiente para más de 1 min
 descarga
 si no es suficiente
 devuelve 1 y cambia algún valor para pedir de la red o similar
+
+Returns:
+
+
+1. los datos de las colas no tienen que ser globales, pueden ser locales
+3. el medicion no existe para el recibe
+4. creo una variable local que reciba el recibe
+5. usar un semáforo para que el codigo haga algo con cada pulso que 
+recibe del encoder
+
+// test_up = 0 ==> puede seguir subiendo/cargando
+// test_up = 1 ==> no puede seguir subiendo/cargando
+// test_down = 0 ==> puede seguir bajando
+// test_down = 1 ==> no puede seguir bajando

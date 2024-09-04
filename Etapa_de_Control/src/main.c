@@ -19,52 +19,47 @@ int main(void) {
   sleep_ms(1000);
 
   xTaskCreate(
-    task_init,                 // Puntero a funcion para llamar
-    "Task Init",               // Nombre para debuggear
-    4 * configMINIMAL_STACK_SIZE,   // Espacio en stack reservado mínimo
-    NULL,                       // Parametros
-    tskIDLE_PRIORITY + 1UL,     // Prioridad mayor que la Idle
-    NULL                        // Sin handle
+    task_init, "Task Init",
+    7 * configMINIMAL_STACK_SIZE,
+    NULL, 
+    tskIDLE_PRIORITY + 1UL,
+    NULL
   );
 
-  // Le pido que lea el ina219 0x40, para obtener la corriente del consumidor
   xTaskCreate(
-    task_lectura_sensor_ina219,                 // Puntero a funcion para llamar
-    "Lectura INA219 0x40 CONSUMIDOR",               // Nombre para debuggear
-    4 * configMINIMAL_STACK_SIZE,   // Espacio en stack reservado 
+    task_lectura_sensor_ina219, "Lectura INA219 0x40 CONSUMIDOR",
+    4 * configMINIMAL_STACK_SIZE,
     // Le mando como parámetro la ubicación (&) de una estructura de ina219 para que labure con ese
-    (void*) &m_ina0x40,                     // Parametros
-    tskIDLE_PRIORITY + 2UL,     // Prioridad mayor que la Idle
-    NULL                        // Sin handle
+    (void*) &m_ina0x40,
+    tskIDLE_PRIORITY + 2UL, 
+    NULL
   );
 
   xTaskCreate(
-    task_lectura_sensor_ina219,                 // Puntero a funcion para llamar
-    "Lectura INA219 0x41 SALIDA DEL PANEL",               // Nombre para debuggear
-    4 * configMINIMAL_STACK_SIZE,   // Espacio en stack reservado 
+    task_lectura_sensor_ina219, "Lectura INA219 0x41 SALIDA DEL PANEL",
+    4 * configMINIMAL_STACK_SIZE, 
     // Le mando como parámetro la ubicación (&) de una estructura de ina219 para que labure con ese
-    (void*) &m_ina0x41,                     // Parametros
-    tskIDLE_PRIORITY + 2UL,     // Prioridad mayor que la Idle
-    NULL                        // Sin handle
+    (void*) &m_ina0x41,
+    tskIDLE_PRIORITY + 2UL, 
+    NULL
   );
 
-  xTaskCreate(
-    task_rele_on,
-    "Relé 1",
-    configMINIMAL_STACK_SIZE,
-    (void*) &rele_1,
-    tskIDLE_PRIORITY + 3UL,     // Prioridad mayor que la Idle
-    NULL 
-  );
+xTaskCreate(
+  task_consulta_all, "Consulta",
+  configMINIMAL_STACK_SIZE,
+  NULL,
+  tskIDLE_PRIORITY + 3UL,
+  NULL 
+);
 
-    xTaskCreate(
-    task_rele_on,
-    "Relé 2",
-    configMINIMAL_STACK_SIZE,
-    (void*) &rele_2,
-    tskIDLE_PRIORITY + 3UL,     // Prioridad mayor que la Idle
-    NULL 
-  );
-  // Arranco el scheduler
+xTaskCreate(
+  task_encoder, "Encoder Task",
+  1024,
+  NULL,
+  1,
+  NULL
+);
+
+// Arranco el scheduler
   vTaskStartScheduler();
 }
