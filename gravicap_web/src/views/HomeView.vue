@@ -76,7 +76,6 @@ h3 {
     padding-top: 5vh;
     font-size: 1.75vw;
     color: #66139A;
-    background-image: url("../public/background.jpg");
     max-width: 100%;
     width: 50vw;
     height: 50vh;
