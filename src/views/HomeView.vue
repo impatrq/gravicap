@@ -79,8 +79,8 @@ h3 {
 .explicacion-izquierda {
     padding-top: 5vh;
     font-size: 1.75vw;
-    color: #fcedf2;
-    background-image: url(background.jpg);
+    color: #661616;
+    background-image: url("../public/images/background.jpg");
     max-width: 100%;
     width: 50vw;
     height: 50vh;
