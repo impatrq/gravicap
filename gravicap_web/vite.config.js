@@ -8,7 +8,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: 'https://gravicap.vercel.app/home' 
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
