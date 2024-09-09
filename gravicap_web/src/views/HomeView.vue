@@ -128,8 +128,10 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 2vw;
+        font-size: 3.5vw;
     }
+    h2 {
+        font-size: 4vw
 }
 @media screen and (max-width: 400px) {
     h3 {
@@ -145,8 +147,10 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 2vw;
+        font-size: 3.5vw;
     }
+    h2 {
+        font-size: 4vw;
 }
 @media screen and (max-width: 500px) {
     h3 {
