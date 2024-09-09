@@ -205,7 +205,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
     h2 {
         font-size: 3vh;
@@ -305,7 +305,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
     h2 {
         font-size: 3vh;
