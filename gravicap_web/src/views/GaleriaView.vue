@@ -145,6 +145,8 @@ p {
     border-radius: 1.5rem;
     max-width: 100%;
     margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 @media only screen and (max-width: 550px) {
     .container {
