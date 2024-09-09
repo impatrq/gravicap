@@ -357,4 +357,24 @@ h2 {
         text-align: center;
     }
 }
+@media screen and (min-width: 301px), (max-width: 399px) {
+    h1 {
+        font-size: 5vw;
+    }
+    .texto-quienes-somos {
+        font-size: 2vh;
+    }
+    h2 {
+        font-size: 3vh;
+    }
+    .integrante {
+        font-size: 2vh;
+        text-align: center;
+    }
+    .presentacion-integrantes {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
 </style>
