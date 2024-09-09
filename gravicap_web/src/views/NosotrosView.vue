@@ -70,6 +70,9 @@ h2 {
     object-fit: contain;
     height: 15vh;
     width: 15vw;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
 }
 .integrante {
     font-family: carlito;
