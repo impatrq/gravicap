@@ -42,7 +42,7 @@
 }
 h1 {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     padding-top: 2vh;
 }
 h2 {
@@ -79,7 +79,7 @@ h2 {
 }
 @media screen and (max-width: 375px) {
     h1 {
-        font-size: 5vw;
+        font-size: 7vw;
     }
     .texto-quienes-somos {
         font-size: 1.6vh;
@@ -99,7 +99,7 @@ h2 {
 }
 @media screen and (max-width: 320px) {
     h1 {
-        font-size: 5vw;
+        font-size: 7vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -119,7 +119,7 @@ h2 {
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 1.6vh;
@@ -139,7 +139,7 @@ h2 {
 }
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 1.6vh;
@@ -159,7 +159,7 @@ h2 {
 }
 @media screen and (max-width: 1024px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -179,7 +179,7 @@ h2 {
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -199,7 +199,7 @@ h2 {
 }
 @media screen and (max-width: 800px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2.5vh;
@@ -219,7 +219,7 @@ h2 {
 }
 @media screen and (max-width: 900px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -239,7 +239,7 @@ h2 {
 }
 @media screen and (max-width: 1000px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -259,7 +259,7 @@ h2 {
 }
 @media screen and (max-width: 500px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -279,7 +279,7 @@ h2 {
 }
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
@@ -299,7 +299,7 @@ h2 {
 }
 @media screen and (max-width: 700px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2.5vh;
@@ -319,7 +319,7 @@ h2 {
 }
 @media screen and (max-width: 400px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2.5vh;
@@ -339,7 +339,7 @@ h2 {
 }
 @media screen and (max-width: 300px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .texto-quienes-somos {
         font-size: 2vh;
