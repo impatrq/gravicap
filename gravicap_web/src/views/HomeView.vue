@@ -132,6 +132,7 @@ h3 {
     }
     h2 {
         font-size: 4vw
+    }
 }
 @media screen and (max-width: 400px) {
     h3 {
@@ -151,6 +152,7 @@ h3 {
     }
     h2 {
         font-size: 4vw;
+    }
 }
 @media screen and (max-width: 500px) {
     h3 {
