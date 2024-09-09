@@ -74,7 +74,7 @@ h3 {
 }
 .explicacion-izquierda {
     padding-top: 5vh;
-    font-size: 1.75vw;
+    font-size: 2vh;
     color: #66139A;
     max-width: 100%;
     width: 50vw;
