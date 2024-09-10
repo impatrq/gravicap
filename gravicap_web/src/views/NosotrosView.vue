@@ -34,7 +34,7 @@
     background-color:  #C287E8;
     border-radius: 5.5%;
     font-size: 1vh;
-    max-height: 80vh;
+    max-height: 70vh;
 }
 .grid-derecha {
     background-color:  #C287E8;
