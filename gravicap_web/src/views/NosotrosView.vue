@@ -105,7 +105,7 @@ h2 {
         font-size: 7vw;
     }
     .texto-quienes-somos {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
@@ -125,7 +125,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 1.6vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
@@ -265,7 +265,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
@@ -285,7 +285,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
@@ -325,7 +325,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2.5vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 2vh;
@@ -345,7 +345,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
@@ -365,7 +365,7 @@ h2 {
         font-size: 5vw;
     }
     .texto-quienes-somos {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     h2 {
         font-size: 3vh;
