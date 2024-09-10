@@ -33,7 +33,6 @@
 .grid-izquierda {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    font-size: 1vh;
     max-height: 70vh;
 }
 .grid-derecha {
@@ -54,7 +53,7 @@ h2 {
 .texto-quienes-somos {
     text-align: center;
     font-family: carlito;
-    font-size: 1.6vw;
+    font-size: 3vw;
 }
 .presentacion-integrantes {
     display: grid;
