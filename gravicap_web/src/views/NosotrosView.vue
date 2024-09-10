@@ -1,7 +1,7 @@
 <template>
 <div class="container">
             <div class="grid-izquierda">
-                <h1>¿Quienes Somos?</h1>
+                <div class="quienes-somos">¿Quienes Somos?</div>
                 <p class="texto-quienes-somos">Gravicap es un proyecto creado por estudiantes de 7°1 Aviónica de la escuela secundaria técnica n°7 o Impa. Nuestro objetivo es mostrarle al mundo una nueva forma menos dañina y mas eficiente de almacenar energía usando nuestro proyecto como ejemplo.</p>
             </div>
             <div class="grid-derecha">
@@ -40,7 +40,7 @@
     border-radius: 5.5%;
     height: 70vh;
 }
-h1 {
+.quienes-somos {
     text-align: center;
     font-size: 3.5vw;
     padding-top: 2vh;
@@ -81,7 +81,7 @@ h2 {
     margin: 0;
 }
 @media screen and (max-width: 375px) {
-    h1 {
+    .quienes-somos {
         font-size: 7vw;
     }
     .texto-quienes-somos {
@@ -101,7 +101,7 @@ h2 {
     }
 }
 @media screen and (max-width: 320px) {
-    h1 {
+    .quienes-somos {
         font-size: 7vw;
     }
     .texto-quienes-somos {
@@ -121,7 +121,7 @@ h2 {
     }
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
-    h1 {
+    .quienes-somos {
         font-size: 5vw;
     }
     .texto-quienes-somos {
@@ -141,7 +141,7 @@ h2 {
     }
 }
 @media screen and (max-width: 768px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -161,7 +161,7 @@ h2 {
     }
 }
 @media screen and (max-width: 1024px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -181,7 +181,7 @@ h2 {
     }
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -201,7 +201,7 @@ h2 {
     }
 }
 @media screen and (max-width: 800px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -221,7 +221,7 @@ h2 {
     }
 }
 @media screen and (max-width: 900px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -241,7 +241,7 @@ h2 {
     }
 }
 @media screen and (max-width: 1000px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -261,7 +261,7 @@ h2 {
     }
 }
 @media screen and (max-width: 500px) {
-    h1 {
+    .quienes-somos {
         font-size: 5vw;
     }
     .texto-quienes-somos {
@@ -281,7 +281,7 @@ h2 {
     }
 }
 @media screen and (max-width: 600px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -301,7 +301,7 @@ h2 {
     }
 }
 @media screen and (max-width: 700px) {
-    h1 {
+    .quienes-somos {
         font-size: 3vw;
     }
     .texto-quienes-somos {
@@ -321,7 +321,7 @@ h2 {
     }
 }
 @media screen and (max-width: 400px) {
-    h1 {
+    .quienes-somos {
         font-size: 5vw;
     }
     .texto-quienes-somos {
@@ -341,7 +341,7 @@ h2 {
     }
 }
 @media screen and (max-width: 300px) {
-    h1 {
+    .quienes-somos {
         font-size: 5vw;
     }
     .texto-quienes-somos {
@@ -361,7 +361,7 @@ h2 {
     }
 }
 @media screen and (min-width: 301px), (max-width: 399px) {
-    h1 {
+    .quienes-somos {
         font-size: 5vw;
     }
     .texto-quienes-somos {
