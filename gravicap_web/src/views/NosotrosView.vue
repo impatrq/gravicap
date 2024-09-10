@@ -166,7 +166,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 2.5vw;
+        font-size: 5.5vw;
     }
     h2 {
         font-size: 3.5vh;
