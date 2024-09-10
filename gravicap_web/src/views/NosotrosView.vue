@@ -23,7 +23,7 @@
     display: grid;
     height: 80vh;
     grid-template-columns: 0.7fr 1.5fr;
-    grid-template-rows: 5fr 3fr;
+    grid-template-rows: 5fr;
     gap: 5vw;
     padding-left: 3vw;
     padding-right: 3vw;
