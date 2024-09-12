@@ -165,7 +165,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 15vw;
+        font-size: 5vw;
     }
     h2 {
         font-size: 3vh;
@@ -185,7 +185,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 15vw;
+        font-size: 5vw;
     }
     h2 {
         font-size: 3vh;
@@ -205,7 +205,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 15vw;
+        font-size: 5vw;
     }
     h2 {
         font-size: 3vh;
@@ -225,7 +225,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 15vw;
+        font-size: 5vw;
     }
     h2 {
         font-size: 3vh;
