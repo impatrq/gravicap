@@ -160,26 +160,6 @@ h2 {
         text-align: center;
     }
 }
-@media screen and (max-width: 1024px) {
-    .quienes-somos {
-        font-size: 3vw;
-    }
-    .texto-quienes-somos {
-        font-size: 15vw;
-    }
-    h2 {
-        font-size: 3.5vh;
-    }
-    .integrante {
-        font-size: 2vh;
-        text-align: center;
-    }
-    .presentacion-integrantes {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-}
 @media screen and (min-width:1440px) and (max-width: 1441px) {
     .quienes-somos {
         font-size: 3vw;
