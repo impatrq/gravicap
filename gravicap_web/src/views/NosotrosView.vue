@@ -365,7 +365,7 @@ h2 {
         font-size: 3vw;
     }
     .texto-quienes-somos {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     h2 {
         font-size: 3.5vh;
