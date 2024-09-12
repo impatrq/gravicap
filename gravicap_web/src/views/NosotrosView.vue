@@ -44,6 +44,7 @@
     text-align: center;
     font-size: 3.5vw;
     padding-top: 2vh;
+    color: #66139A;
 }
 h2 {
     text-align: center;
