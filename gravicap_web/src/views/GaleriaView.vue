@@ -157,7 +157,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 1.5rem;
         max-width: 100%;
     }
     p {
@@ -174,7 +173,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 1.5rem;
         max-width: 100%;
     }
     p {
@@ -192,7 +190,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 1.5rem;
         max-width: 100%;
         text-align: center;
         justify-content: center;
@@ -211,7 +208,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 1.5rem;
         max-width: 100%;
         text-align: center;
     }
@@ -229,7 +225,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 1.5rem;
         max-width: 100%;
         text-align: center;
     }
@@ -247,7 +242,6 @@ p {
         width: 40vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 15%;
         max-width: 100%;
         text-align: center;
     }
@@ -265,7 +259,6 @@ p {
         width: 40vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 15%;
         max-width: 100%;
         text-align: center;
     }
@@ -284,7 +277,6 @@ p {
         width: 40vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 15%;
         margin-left: 0;
         margin-right: 0;
         max-width: 100%;
@@ -308,7 +300,6 @@ p {
         width: 40vw; 
         object-fit: contain;
         padding: 0;
-        border-radius: 15%;
         margin-left: 0;
         margin-right: 0;
         max-width: 100%;
