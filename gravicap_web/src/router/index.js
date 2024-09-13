@@ -10,26 +10,30 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
+      redirect: '/home',
       component: HomeView
     },
     {
-      path: '/',
+      path: '/'
       redirect: '/home',
       component: HomeView
     },
     {
       path: '/sobre_nosotros',
       name: 'sobre_nosotros',
+      redirect: '/sobre_nosotros',
       component: () => import('../views/NosotrosView.vue')
     },
     {
       path: '/galeria',
       name: 'galeria',
+      redirect: '/galeria',
       component: () => import('../views/GaleriaView.vue')
     },
     {
       path: '/contactanos',
       name: 'contactanos',
+      redirect: '/contactanos'
       component: () => import('../views/ContactanosView.vue')
     }
   ]
