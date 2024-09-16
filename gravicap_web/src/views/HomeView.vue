@@ -277,3 +277,8 @@ h3 {
     }
 }
 </style>
+<script>
+export default {
+  name: 'HomeView'
+}
+</script>
