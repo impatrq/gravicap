@@ -31,12 +31,7 @@ const router = createRouter({
       path: '/contactanos',
       name: 'contactanos',
       component: () => import('../views/ContactanosView.vue')
-    },
-    {
-      path: '/home',
-      redirect: '/home',
-      component: HomeView
-    },
+    }
   ]
 })
 
