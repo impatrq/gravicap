@@ -105,10 +105,9 @@ h2 {
     height: 80vh;
     grid-template-columns: 80vw;
     grid-template-rows: 5fr;
-    gap: 5vw;
-    margin: auto;   
-    padding: 5vh 3vw;            
-    justify-content: space-between;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
     font-family: carlito;
     }           
 }
