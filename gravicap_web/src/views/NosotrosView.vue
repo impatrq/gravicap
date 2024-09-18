@@ -103,11 +103,12 @@ h2 {
     .container {
     display: grid;
     height: 80vh;
-    grid-template-columns: auto auto;
+    grid-template-columns: 80vw;
     grid-template-rows: 5fr;
-    gap: 5vw;            
+    gap: 5vw;
+    margin: 0 auto;   
+    padding: 5vh 3vw;            
     justify-content: space-between;
-    padding-top: 5vh;
     font-family: carlito;
     }           
 }
