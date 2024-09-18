@@ -81,7 +81,6 @@ h3 {
     height: 50vh;
     border-radius: 5%;
     margin-top: 5%;
-    object-fit: contain;
     max-height: 50vh;
 }
 .batería {
@@ -128,7 +127,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 10vh;
+        font-size: 3.5vh;
     }
     h2 {
         font-size: 4vh
