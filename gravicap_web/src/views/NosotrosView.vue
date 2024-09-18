@@ -109,7 +109,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }           
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }        
 }
 @media screen and (max-width: 320px) {
     .quienes-somos {
@@ -139,7 +144,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }                   
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
     .quienes-somos {
@@ -190,6 +200,11 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
     .quienes-somos {
@@ -299,7 +314,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }              
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (max-width: 600px) {
     .quienes-somos {
@@ -369,7 +389,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }              
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (max-width: 300px) {
     .quienes-somos {
@@ -399,7 +424,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }              
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (min-width: 301px), (max-width: 399px) {
     .quienes-somos {
@@ -429,7 +459,12 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }              
+    }
+    .grid-derecha {
+    background-color:  #C287E8;
+    border-radius: 5.5%;
+    height: 50vh;
+    }                
 }
 @media screen and (min-width: 1024px) {
     .quienes-somos {
