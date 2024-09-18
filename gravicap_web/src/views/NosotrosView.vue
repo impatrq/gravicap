@@ -103,7 +103,7 @@ h2 {
     .container {
     display: grid;
     height: 80vh;
-    grid-template-columns: 0.7fr 1.5fr;
+    grid-template-columns: auto auto;
     grid-template-rows: 5fr;
     gap: 5vw;            
     justify-content: space-between;
