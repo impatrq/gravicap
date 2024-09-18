@@ -160,6 +160,16 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 5fr;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
+    font-family: carlito;
+    }              
 }
 @media screen and (max-width: 768px) {
     .quienes-somos {
@@ -280,6 +290,16 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 5fr;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
+    font-family: carlito;
+    }              
 }
 @media screen and (max-width: 600px) {
     .quienes-somos {
@@ -340,6 +360,16 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 5fr;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
+    font-family: carlito;
+    }              
 }
 @media screen and (max-width: 300px) {
     .quienes-somos {
@@ -360,6 +390,16 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 5fr;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
+    font-family: carlito;
+    }              
 }
 @media screen and (min-width: 301px), (max-width: 399px) {
     .quienes-somos {
@@ -380,6 +420,16 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 5fr;
+    margin: 0;   
+    padding-top: 5vh;
+    padding-left: 10vw;        
+    font-family: carlito;
+    }              
 }
 @media screen and (min-width: 1024px) {
     .quienes-somos {
