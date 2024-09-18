@@ -431,41 +431,6 @@ h2 {
     height: 60vh;
     }                
 }
-@media screen and (min-width: 301px), (max-width: 399px) {
-    .quienes-somos {
-        font-size: 3vw;
-    }
-    .texto-quienes-somos {
-        font-size: 1.5vh;
-    }
-    h2 {
-        font-size: 3vh;
-    }
-    .integrante {
-        font-size: 2vh;
-        text-align: center;
-    }
-    .presentacion-integrantes {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .container {
-    display: grid;
-    height: 80vh;
-    grid-template-columns: 80vw;
-    grid-template-rows: 5fr;
-    margin: 0;   
-    padding-top: 5vh;
-    padding-left: 10vw;        
-    font-family: carlito;
-    }
-    .grid-derecha {
-    background-color:  #C287E8;
-    border-radius: 5.5%;
-    height: 60vh;
-    }                
-}
 @media screen and (min-width: 1024px) {
     .quienes-somos {
         font-size: 3vw;
