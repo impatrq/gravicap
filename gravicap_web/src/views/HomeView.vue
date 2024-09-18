@@ -128,7 +128,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 5vh;
+        font-size: 10vh;
     }
     h2 {
         font-size: 4vh
