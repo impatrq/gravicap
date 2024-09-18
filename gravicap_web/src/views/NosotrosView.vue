@@ -151,7 +151,7 @@ h2 {
     height: 60vh;
     }                
 }
-@media screen and (max-width: 426px) and (min-width: 425px) {
+@media screen and (max-width: 425px) {
     .quienes-somos {
         font-size: 3vw;
     }
