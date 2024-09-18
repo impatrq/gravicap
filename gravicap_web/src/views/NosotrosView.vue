@@ -106,7 +106,7 @@ h2 {
     grid-template-columns: 80vw;
     grid-template-rows: 5fr;
     gap: 5vw;
-    margin: 0 auto;   
+    margin: auto;   
     padding: 5vh 3vw;            
     justify-content: space-between;
     font-family: carlito;
