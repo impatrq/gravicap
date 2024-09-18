@@ -100,6 +100,17 @@ h2 {
         align-items: center;
         text-align: center;
     }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 0.7fr 1.5fr;
+    grid-template-rows: 5fr;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 5vh;
+    font-family: carlito;
+    }        
 }
 @media screen and (max-width: 320px) {
     .quienes-somos {
@@ -119,6 +130,17 @@ h2 {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    .container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 0.7fr 1.5fr;
+    grid-template-rows: 5fr;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 5vh;
+    font-family: carlito;
     }
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
