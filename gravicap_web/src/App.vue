@@ -70,6 +70,9 @@ nav {
 nav a.router-link-exact-active {
   color: var(--color-text);
 }
+a {
+  text-decoration: none;
+}
 nav a.router-link-exact-active:hover {
   background-color: transparent;
 }
