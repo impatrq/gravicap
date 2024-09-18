@@ -133,7 +133,7 @@ h3 {
         font-size: 4vh
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
     h3 {
         font-size: 3vh;
     }
