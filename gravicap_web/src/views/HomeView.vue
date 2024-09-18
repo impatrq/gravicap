@@ -113,26 +113,6 @@ h3 {
 .beneficios {
     font-size: 3vw;
 }
-@media screen and (max-width: 320px) {
-    h3 {
-        font-size: 3vh;
-    }
-    h4, h5, h6 {
-        font-size: 2vh;
-    }
-    .explicacion {
-        font-size: 1.5vh;
-    }
-    .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 4.5vw;
-    }
-    h2 {
-        font-size: 4vh
-    }
-}
 @media screen and (max-width: 375px) {
     h3 {
         font-size: 3vh;
@@ -333,6 +313,26 @@ h3 {
     }
     .explicacion-izquierda {
         font-size: 2vw;
+    }
+}
+@media screen and (max-width: 320px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 4.5vw;
+    }
+    h2 {
+        font-size: 4vh
     }
 }
 </style>
