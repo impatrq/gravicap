@@ -153,6 +153,66 @@ h3 {
         font-size: 4vh;
     }
 }
+@media screen and (max-width: 300px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 2.5vw;
+    }
+    h2 {
+        font-size: 4vh
+    }
+}
+@media screen and (max-width: 400px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 2.5vw;
+    }
+    h2 {
+        font-size: 4vh
+    }
+}
+@media screen and (max-width: 475px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 2.5vw;
+    }
+    h2 {
+        font-size: 4vh
+    }
+}
 @media screen and (max-width: 500px) {
     h3 {
         font-size: 3vh;
