@@ -141,11 +141,15 @@ h2 {
     grid-template-columns: 0.7fr 1.5fr;
     grid-template-rows: 5fr;
     justify-content: space-between;
-    padding-left: 3vw;
-    padding-right: 3vw;
     padding-top: 5vh;
     font-family: carlito;
     }
+    .grid-izquierda {
+    width: 35vw;
+    }
+    .grid-derecha {
+    width: 65vw;            
+    }        
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
     .quienes-somos {
