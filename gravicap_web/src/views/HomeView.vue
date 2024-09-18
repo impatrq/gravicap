@@ -127,7 +127,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 2.5vw;
+        font-size: 2.5rem;
     }
     h2 {
         font-size: 4vh
@@ -147,7 +147,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 2.5vw;
+        font-size: 2.5rem;
     }
     h2 {
         font-size: 4vh
@@ -167,7 +167,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 3.5vh;
+        font-size: 3.5rem;
     }
     h2 {
         font-size: 4vh;
@@ -289,7 +289,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 4.5vw;
+        font-size: 4.5rem;
     }
     h2 {
         font-size: 4vh
@@ -309,7 +309,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 5vw;
+        font-size: 5rem;
     }
     h2 {
         font-size: 4vh;
@@ -329,7 +329,7 @@ h3 {
         padding: 0;
     }
     .explicacion-izquierda {
-        font-size: 2.5vw;
+        font-size: 2.5rem;
     }
     h2 {
         font-size: 4vh
