@@ -114,7 +114,7 @@ h3 {
 .beneficios {
     font-size: 3vw;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     h3 {
         font-size: 3vh;
     }
