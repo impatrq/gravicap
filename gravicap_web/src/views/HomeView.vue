@@ -113,26 +113,6 @@ h3 {
 .beneficios {
     font-size: 3vw;
 }
-@media screen and (max-width: 375px) {
-    h3 {
-        font-size: 3vh;
-    }
-    h4, h5, h6 {
-        font-size: 2vh;
-    }
-    .explicacion {
-        font-size: 1.5vh;
-    }
-    .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 5vw;
-    }
-    h2 {
-        font-size: 4vh;
-    }
-}
 @media screen and (max-width: 300px) {
     h3 {
         font-size: 3vh;
@@ -154,26 +134,6 @@ h3 {
     }
 }
 @media screen and (max-width: 400px) {
-    h3 {
-        font-size: 3vh;
-    }
-    h4, h5, h6 {
-        font-size: 2vh;
-    }
-    .explicacion {
-        font-size: 1.5vh;
-    }
-    .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 2.5vw;
-    }
-    h2 {
-        font-size: 4vh
-    }
-}
-@media screen and (max-width: 475px) {
     h3 {
         font-size: 3vh;
     }
@@ -330,6 +290,46 @@ h3 {
     }
     .explicacion-izquierda {
         font-size: 4.5vw;
+    }
+    h2 {
+        font-size: 4vh
+    }
+}
+    @media screen and (max-width: 375px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 5vw;
+    }
+    h2 {
+        font-size: 4vh;
+    }
+}
+    @media screen and (max-width: 425px) {
+    h3 {
+        font-size: 3vh;
+    }
+    h4, h5, h6 {
+        font-size: 2vh;
+    }
+    .explicacion {
+        font-size: 1.5vh;
+    }
+    .grid-derecha {
+        padding: 0;
+    }
+    .explicacion-izquierda {
+        font-size: 2.5vw;
     }
     h2 {
         font-size: 4vh
