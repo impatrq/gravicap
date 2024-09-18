@@ -113,7 +113,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }        
 }
 @media screen and (max-width: 320px) {
@@ -148,7 +148,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
@@ -203,7 +203,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
@@ -318,7 +318,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (max-width: 600px) {
@@ -393,7 +393,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (max-width: 300px) {
@@ -428,7 +428,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (min-width: 301px), (max-width: 399px) {
@@ -463,7 +463,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 50vh;
+    height: 60vh;
     }                
 }
 @media screen and (min-width: 1024px) {
