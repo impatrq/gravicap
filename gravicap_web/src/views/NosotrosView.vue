@@ -105,15 +105,10 @@ h2 {
     height: 80vh;
     grid-template-columns: 0.7fr 1.5fr;
     grid-template-rows: 5fr;
+    gap: 5vw;            
     justify-content: space-between;
     padding-top: 5vh;
     font-family: carlito;
-    }
-    .grid-izquierda {
-    width: 35vw;
-    }
-    .grid-derecha {
-    width: 65vw;            
     }           
 }
 @media screen and (max-width: 320px) {
@@ -140,15 +135,10 @@ h2 {
     height: 80vh;
     grid-template-columns: 0.7fr 1.5fr;
     grid-template-rows: 5fr;
+    gap: 5vw;            
     justify-content: space-between;
     padding-top: 5vh;
     font-family: carlito;
-    }
-    .grid-izquierda {
-    width: 35vw;
-    }
-    .grid-derecha {
-    width: 65vw;            
     }        
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
