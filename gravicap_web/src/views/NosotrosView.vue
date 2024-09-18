@@ -133,13 +133,13 @@ h2 {
     .container {
     display: grid;
     height: 80vh;
-    grid-template-columns: auto auto;
+    grid-template-columns: 80vw;
     grid-template-rows: 5fr;
-    gap: 5vw;            
-    justify-content: space-between;
+    margin: 0;   
     padding-top: 5vh;
+    padding-left: 10vw;        
     font-family: carlito;
-    }        
+    }                   
 }
 @media screen and (max-width: 426px) and (min-width: 425px) {
     .quienes-somos {
