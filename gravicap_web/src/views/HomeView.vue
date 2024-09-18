@@ -81,7 +81,7 @@ h3 {
     border-radius: 5%;
     margin-top: 5%;
     max-height: 50vh;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 .batería {
     width: 7%;
