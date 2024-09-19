@@ -195,7 +195,7 @@ p {
         justify-content: center;
     }
     p {
-        font-size: 1.25vw;
+        font-size: 1.1rem;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -212,7 +212,7 @@ p {
         text-align: center;
     }
     p {
-        font-size: 1.25vw;
+        font-size: 1.1rem;
     }
 }
 @media only screen and (max-width: 425px) {
