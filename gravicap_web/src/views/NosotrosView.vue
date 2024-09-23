@@ -32,12 +32,12 @@
 }
 .grid-izquierda {
     background-color:  #C287E8;
-    border-radius: 5.5%;
+    border-radius: 5.5vw;
     max-height: 70vh;
 }
 .grid-derecha {
     background-color:  #C287E8;
-    border-radius: 5.5%;
+    border-radius: 5.5vw;
     height: 70vh;
 }
 .quienes-somos {
@@ -112,9 +112,12 @@ h2 {
     }
     .grid-derecha {
     background-color:  #C287E8;
-    border-radius: 5.5%;
+    border-radius: 5.5vw;
     height: 60vh;
-    }        
+    }
+    .grid-izquierda {
+    border-radius: 5.5vw;            
+    }
 }
 @media screen and (max-width: 320px) {
     .quienes-somos {
@@ -182,7 +185,13 @@ h2 {
     padding-top: 5vh;
     padding-left: 10vw;        
     font-family: carlito;
-    }              
+    }
+    .grid-derecha {
+    border-radius: 5.5vw;
+    }
+    .grid-izquierda {
+    border-radius: 5.5vw;
+    }        
 }
 @media screen and (max-width: 768px) {
     .quienes-somos {
