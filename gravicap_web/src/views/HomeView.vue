@@ -283,16 +283,17 @@ h3 {
     display: grid;
     margin: 0;
     grid-template-columns: 80vw;
+    grid-template-rows: repeat(2 30vh 50vh)
     gap: 0;
+    height: 80vh;
     }
     .grid-izquierda {
         margin-left: 10vw;
         height: 30vh;
-        margin-bottom: 8vh;
     }
     .grid-derecha {
         margin-left: 10vw;
-        height: 30vh;
+        height: 50vh;
         margin-bottom: 10vh;
     }
     h2 {
