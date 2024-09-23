@@ -152,7 +152,7 @@ h2 {
     }
     .grid-izquierda {
     border-radius: 5.5vw;
-    ]
+    }
 }
 @media screen and (max-width: 425px) {
     .quienes-somos {
