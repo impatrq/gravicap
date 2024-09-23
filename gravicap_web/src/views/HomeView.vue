@@ -276,6 +276,9 @@ h3 {
     }
 }
 @media screen and (max-width: 320px) {
+    body {
+        height: 100vh;
+    }
     .grid-layout {
     display: grid;
     margin: 0;
