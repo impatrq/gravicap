@@ -147,9 +147,11 @@ h2 {
     }
     .grid-derecha {
     background-color:  #C287E8;
-    border-radius: 5.5%;
+    border-radius: 5.5vw;
     height: 60vh;
-    }                
+    }
+    .grid-izquierda {
+    border-radius: 5.5vw;
 }
 @media screen and (max-width: 425px) {
     .quienes-somos {
