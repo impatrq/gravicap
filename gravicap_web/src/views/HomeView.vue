@@ -293,6 +293,7 @@ h3 {
     .grid-derecha {
         margin-left: 10vw;
         height: 30vh;
+        margin-bottom: 10vh;
     }
     h2 {
         font-size: 1.2rem; 
@@ -305,10 +306,10 @@ h3 {
     }
     h4, h5, h6 {
         padding: 0.1vh;
-        font-size: 0.7rem
+        font-size: 1.2rem
     }
     .explicacion {
-        font-size: 0.6rem;
+        font-size: 1.2rem;
     }
 }
     @media screen and (max-width: 375px) {
