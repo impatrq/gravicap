@@ -297,7 +297,7 @@ h3 {
     h2 {
         font-size: 1.2rem; 
     }
-    .explicacion-izq {
+    .explicacion-izquierda {
         font-size: 0.7rem;
         height: 10vh;
         padding: 0;
