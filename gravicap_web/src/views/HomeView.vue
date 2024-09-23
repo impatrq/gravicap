@@ -298,7 +298,7 @@ h3 {
         font-size: 1.2rem; 
     }
     .explicacion-izq {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         height: 10vh;
         padding: 0;
         width: 80vw;
