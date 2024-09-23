@@ -1,8 +1,8 @@
 <template>
 <div class="container">
             <div class="grid_1">
-                <p>Placa PCB MPPT</p>
-                <img class="imagenes" src="../../public/mppt-pcb.jpg" />
+                <p>Prueba de paneles solares</p>
+                <img class="imagenes" src="../../public/placeholder.jpg" />
             </div>
             <div class="grid_2">
                 <p>Prueba de paneles solares</p>
