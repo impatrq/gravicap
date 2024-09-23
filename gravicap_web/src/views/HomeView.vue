@@ -300,7 +300,7 @@ h3 {
         font-size: 1.2rem; 
     }
     .explicacion-izquierda {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         height: 10vh;
         padding: 0;
         width: 80vw;
@@ -336,7 +336,7 @@ h3 {
         font-size: 1.2rem; 
     }
     .explicacion-izquierda {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         height: 10vh;
         padding: 0;
         width: 80vw;
@@ -374,7 +374,7 @@ h3 {
         font-size: 1.2rem; 
     }
     .explicacion-izquierda {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         height: 10vh;
         padding: 0;
         width: 80vw;
