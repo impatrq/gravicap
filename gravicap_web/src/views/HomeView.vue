@@ -288,7 +288,7 @@ h3 {
     .grid-izquierda {
         margin-left: 10vw;
         height: 30vh;
-        margin-bottom: 17vh;
+        margin-bottom: 8vh;
     }
     .grid-derecha {
         margin-left: 10vw;
