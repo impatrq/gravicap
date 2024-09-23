@@ -349,24 +349,42 @@ h3 {
         font-size: 0.6rem;
     }
 }
-    @media screen and (max-width: 425px) {
-    h3 {
-        font-size: 3vh;
+@media screen and (max-width: 425px) {
+    body {
+        height: 100vh;
     }
-    h4, h5, h6 {
-        font-size: 2vh;
+    .grid-layout {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 80vw;
+    grid-template-rows: repeat(2 30vh 50vh);
+    gap: 0;
+    height: 80vh;
     }
-    .explicacion {
-        font-size: 1.5vh;
+    .grid-izquierda {
+        margin-left: 10vw;
+        height: 30vh;
     }
     .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 1.2rem;
+        margin-left: 10vw;
+        height: 50vh;
+        margin-bottom: 10vh;
     }
     h2 {
-        font-size: 4vh
+        font-size: 1.2rem; 
+    }
+    .explicacion-izquierda {
+        font-size: 0.7rem;
+        height: 10vh;
+        padding: 0;
+        width: 80vw;
+    }
+    h4, h5, h6 {
+        padding: 0.1vh;
+        font-size: 1.2rem
+    }
+    .explicacion {
+        font-size: 1.2rem;
     }
 }
 </style>
