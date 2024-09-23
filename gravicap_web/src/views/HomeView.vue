@@ -347,26 +347,6 @@ h3 {
         font-size: 0.6rem;
     }
 }
-    //media screen and (max-width: 375px) {
-    h3 {
-        font-size: 3vh;
-    }
-    h4, h5, h6 {
-        font-size: 2vh;
-    }
-    .explicacion {
-        font-size: 1.5vh;
-    }
-    .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 1.2rem;
-    }
-    h2 {
-        font-size: 4vh;
-    }
-}
     @media screen and (max-width: 425px) {
     h3 {
         font-size: 3vh;
