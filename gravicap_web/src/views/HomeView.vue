@@ -312,6 +312,42 @@ h3 {
     }
 }
     @media screen and (max-width: 375px) {
+    body {
+        height: 100vh;
+    }
+    .grid-layout {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 80vw;
+    gap: 0;
+    }
+    .grid-izquierda {
+        margin-left: 10vw;
+        height: 30vh;
+        margin-bottom: 17vh;
+    }
+    .grid-derecha {
+        margin-left: 10vw;
+        height: 30vh;
+    }
+    h2 {
+        font-size: 1.2rem; 
+    }
+    .explicacion-izquierda {
+        font-size: 0.7rem;
+        height: 10vh;
+        padding: 0;
+        width: 80vw;
+    }
+    h4, h5, h6 {
+        padding: 0.1vh;
+        font-size: 0.7rem
+    }
+    .explicacion {
+        font-size: 0.6rem;
+    }
+}
+    //media screen and (max-width: 375px) {
     h3 {
         font-size: 3vh;
     }
