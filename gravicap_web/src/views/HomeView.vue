@@ -276,23 +276,31 @@ h3 {
     }
 }
 @media screen and (max-width: 320px) {
-    h3 {
-        font-size: 3vh;
+    .grid-layout {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 80vw;
+    gap: 0;
     }
-    h4, h5, h6 {
-        font-size: 2vh;
-    }
-    .explicacion {
-        font-size: 1.5vh;
+    .grid-izquierda {
+        margin-left: 10vw;
+        height: 30vh;
     }
     .grid-derecha {
-        padding: 0;
-    }
-    .explicacion-izquierda {
-        font-size: 1.2rem;
+        margin-left: 10vw;
+        height: 30vh;
     }
     h2 {
-        font-size: 4vh
+        font-size: 1.2rem; 
+    }
+    .explicacion-izq {
+        font-size: 0.8rem;
+        height: 10vh;
+        padding: 0;
+        width: 80vw;
+    }
+    h4, h5, h6 {
+        padding: 0.1vh;
     }
 }
     @media screen and (max-width: 375px) {
