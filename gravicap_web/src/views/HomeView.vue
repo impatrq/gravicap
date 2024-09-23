@@ -283,7 +283,7 @@ h3 {
     display: grid;
     margin: 0;
     grid-template-columns: 80vw;
-    grid-template-rows: repeat(2 30vh 50vh)
+    grid-template-rows: repeat(2 30vh 50vh);
     gap: 0;
     height: 80vh;
     }
