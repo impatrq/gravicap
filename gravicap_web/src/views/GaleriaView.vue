@@ -142,7 +142,7 @@ p {
     width: 20vw;
     object-fit: contain;
     padding: 0;
-    max-width: 20vw;
+    max-width: 100%;
     margin: 0;
     align-items: center;
     justify-content: center;
