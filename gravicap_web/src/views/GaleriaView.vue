@@ -256,7 +256,7 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 }
 
@@ -288,7 +288,7 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 }
 
@@ -320,7 +320,7 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 }
 
@@ -352,7 +352,7 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 }
 
@@ -384,7 +384,7 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 }
             
