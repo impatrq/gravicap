@@ -362,7 +362,7 @@ p {
     display: grid;
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
-    gap: 3vh; 
+    gap: 1rem; 
     padding: 0; 
     align-self: center;
     align-items: center;
