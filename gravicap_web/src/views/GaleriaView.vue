@@ -260,7 +260,6 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 5vh;
     }
 }
 
