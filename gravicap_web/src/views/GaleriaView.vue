@@ -392,6 +392,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
+        margin-bottom: 2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
