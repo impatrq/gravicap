@@ -238,6 +238,7 @@ p {
     align-self: center;
     align-items: center;
     justify-content: center;
+    row-gap: 5vh;
     }
     .imagenes {
     width: 90%; 
@@ -258,7 +259,6 @@ p {
         align-self: center;
         margin-top: 10vh;
         padding: 0;
-        row-gap: 5vh;
     }
     .grid_1 {
         margin-top: 5vh;
