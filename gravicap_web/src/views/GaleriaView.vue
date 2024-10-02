@@ -259,6 +259,7 @@ p {
         align-self: center;
         margin-top: 10vh;
         padding: 0;
+        margin-bottom: 10vh;
     }
     .grid_1 {
         margin-top: 5vh;
