@@ -264,6 +264,9 @@ p {
     .grid_1 {
         margin-top: 5vh;
     }
+    header {
+        margin-bottom: 5vh;
+    }
 }
 
 @media only screen and (max-width: 375px) {
