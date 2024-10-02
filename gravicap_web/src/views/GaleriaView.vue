@@ -262,7 +262,6 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        row-gap: 5vh;
     }
 }
 
