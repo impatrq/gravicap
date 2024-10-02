@@ -256,7 +256,10 @@ p {
         justify-content: center;
         align-items: center;
         align-self: center;
-        margin-top: 15vh;
+        margin-top: 10vh;
+    }
+    .grid_1 {
+        margin-top: 5vh;
     }
 }
 
