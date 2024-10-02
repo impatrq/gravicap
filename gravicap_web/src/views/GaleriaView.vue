@@ -257,9 +257,12 @@ p {
         align-items: center;
         align-self: center;
         margin-top: 10vh;
+        padding: 0;
+        row-gap: 5vh;
     }
     .grid_1 {
         margin-top: 5vh;
+        row-gap: 5vh;
     }
 }
 
