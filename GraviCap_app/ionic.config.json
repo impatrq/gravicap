@@ -1,0 +1,7 @@
+{
+  "name": "GraviCap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
