@@ -233,7 +233,7 @@ p {
     display: grid;
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
-    gap: 2rem; 
+    gap: 3vh; 
     padding: 0; 
     align-self: center;
     align-items: center;
