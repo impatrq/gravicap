@@ -186,17 +186,11 @@ p {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .imagenes {
-        display: flex;
-        height: 70%;
-        width: 40vw; 
-        object-fit: contain;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-        text-align: center;
-        justify-content: center;
-        align-self: center;
+    width: 90%; 
+    height: auto; 
+    max-width: 100%; 
+    object-fit: contain;
+    border-radius: 1.5rem;
         
     }
     p {
@@ -209,18 +203,11 @@ p {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .imagenes {
-        display: flex;
-        height: 70%;
-        width: 40vw; 
-        object-fit: contain;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-        text-align: center;
-        justify-content: center;
-        align-self: center;
-        
+    width: 90%; 
+    height: auto; 
+    max-width: 100%; 
+    object-fit: contain;
+    border-radius: 1.5rem;
     }
     p {
         font-size: 1.5vw;
