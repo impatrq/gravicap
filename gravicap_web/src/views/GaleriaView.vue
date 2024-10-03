@@ -214,6 +214,14 @@ p {
     p {
         font-size: 1.5vw;
     }
+    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+                p {
+                            margin-bottom: 0;
+                }
+                .imagenes {
+                            margin-bottom: 3vh;
+                }
+    }
 }
 
 
