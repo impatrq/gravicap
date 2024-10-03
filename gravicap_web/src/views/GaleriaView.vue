@@ -25,12 +25,12 @@
             <img class="imagenes" src="../../public/visitaValeDobleRadio.png">
             </div>
             <div class="grid_7">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/visitaRadioVox.png">
+                <p>Visita de BernalTV</p>
+            <img class="imagenes" src="../../public/bernalTv.png">
             </div>
             <div class="grid_8">
                 <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/visitaRadioVox.png">
+            <img class="imagenes" src="../../public/placeholder.jpg">
             </div>
         </div>
 </template>
