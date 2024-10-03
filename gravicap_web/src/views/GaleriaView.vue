@@ -157,7 +157,7 @@ p {
     }
     .imagenes {
         height: 70%;
-        width: 80vw; 
+        width: 300px; 
         object-fit: contain;
         padding: 0;
         text-align: center;
