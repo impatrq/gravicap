@@ -157,7 +157,7 @@ p {
     }
     .imagenes {
         height: 70%;
-        width: 300px; 
+        width: 380px; 
         object-fit: contain;
         padding: 0;
         text-align: center;
@@ -208,7 +208,7 @@ p {
     }
     .imagenes {
         height: 70%;
-        width: 300px; 
+        width: 380px; 
         object-fit: contain;
         padding: 0;
         max-width: 100%;
