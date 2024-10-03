@@ -129,6 +129,9 @@
 p {
     font-family: carlito;
     text-align: center;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
     background-color: #fcedf2;
     width: 75%;
     height: 15%;
