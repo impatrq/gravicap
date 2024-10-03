@@ -6,11 +6,11 @@
             </div>
             <div class="grid_2">
                 <p>Creación del peso</p>
-            <img class="imagenes" src="../../public/creacionPeso.png">
+            <img class="imagenes" src="../../public/creacionPeso (1).png">
             </div>
             <div class="grid_3">
                 <p>Estructura sin pintar</p>
-            <img class="imagenes" src="../../public/estructuraSinPintar (1).png">
+            <img class="imagenes" src="../../public/estructuraSinPintar.png">
             </div>
             <div class="grid_4">
                 <p>Estructura pintada</p>
