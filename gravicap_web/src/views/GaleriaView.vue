@@ -187,7 +187,7 @@ p {
     }
     .imagenes {
     width: 90%; 
-    height: auto; 
+    height: 22vh; 
     max-width: 100%; 
     object-fit: contain;
     border-radius: 1.5rem;
