@@ -216,10 +216,10 @@ p {
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
                 p {
-                            margin-bottom: 0;
+                            margin-bottom: 1.748vh;
                 }
                 .imagenes {
-                            margin-bottom: 1.748vh;
+                            margin-bottom: 0.5vh;
                 }
     }
 }
