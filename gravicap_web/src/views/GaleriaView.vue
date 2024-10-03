@@ -160,7 +160,6 @@ p {
         width: 80vw; 
         object-fit: contain;
         padding: 0;
-        max-width: 100%;
         text-align: center;
         max-height: 22vh;
     }
