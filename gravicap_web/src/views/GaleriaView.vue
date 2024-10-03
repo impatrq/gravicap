@@ -219,7 +219,7 @@ p {
                             margin-bottom: 0;
                 }
                 .imagenes {
-                            margin-bottom: 3vh;
+                            margin-bottom: 0.5vh;
                 }
     }
 }
