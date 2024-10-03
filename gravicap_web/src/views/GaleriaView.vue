@@ -5,28 +5,28 @@
                 <img class="imagenes" src="../../public/PCB MPPT.png" />
             </div>
             <div class="grid_2">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Creación del peso</p>
+            <img class="imagenes" src="../../public/creacionPeso.png">
             </div>
             <div class="grid_3">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Estructura sin pintar</p>
+            <img class="imagenes" src="../../public/estructuraSinPintar.png">
             </div>
             <div class="grid_4">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Estructura pintada</p>
+            <img class="imagenes" src="../../public/estructuraPintada.png">
             </div>
             <div class="grid_5">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Visita a Radio Vox</p>
+            <img class="imagenes" src="../../public/visitaRadioVox.png">
             </div>
             <div class="grid_6">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Visita a Vale Doble Radio</p>
+            <img class="imagenes" src="../../public/visitaValeDobleRadio.png">
             </div>
             <div class="grid_7">
                 <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+            <img class="imagenes" src="../../visitaDeBernalTv/.png">
             </div>
             <div class="grid_8">
                 <p>Prueba de paneles solares</p>
