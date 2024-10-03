@@ -208,11 +208,12 @@ p {
     }
     .imagenes {
         height: 70%;
-        width: 20vw; 
+        width: 300px; 
         object-fit: contain;
         padding: 0;
         max-width: 100%;
         text-align: center;
+        max-height: 22vh;
     }
     p {
         font-size: 1.5vw;
