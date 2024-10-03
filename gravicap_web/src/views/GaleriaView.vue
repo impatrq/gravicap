@@ -430,7 +430,6 @@ p {
     max-width: 100%; 
     object-fit: contain;
     border-radius: 1.5rem;
-    max-height: 22vh;
     }
     p {
         font-size: 1rem;
