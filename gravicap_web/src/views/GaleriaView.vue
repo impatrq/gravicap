@@ -26,7 +26,7 @@
             </div>
             <div class="grid_7">
                 <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../visitaDeBernalTv/.png">
+            <img class="imagenes" src="../../visitaDeBernalTv.png">
             </div>
             <div class="grid_8">
                 <p>Prueba de paneles solares</p>
