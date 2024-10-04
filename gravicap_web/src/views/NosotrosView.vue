@@ -8,11 +8,11 @@
                 <h2>Integrantes</h2>
                 <div class="presentacion-integrantes">
                     <div class="integrante"></br>Tomás - Aplicación<img class="yatu" src="../../public/tomas.png"></div>
-                    <div class="integrante"></br>Fausto - Rezar<img class="yatu" src="../../public/fausto2.png"></div>
+                    <div class="integrante"></br>Fausto - Rezar<img class="yatu" src="../../public/fausto.png"></div>
                     <div class="integrante"></br>Augusto - Estructura<img class="yatu" src="../../public/augusto.png"></div>
                     <div class="integrante"></br>Tatiana - Electrónica<img class="yatu" src="../../public/tatiana.png"></div>
-                    <div class="integrante"></br>Gabriel - Redes sociales<img class="yatu" src="../../public/Logo.png"></div>
-                    <div class="integrante"></br>Mariano - Página Web<img class="yatu" src="../../public/mariano2.png"></div>
+                    <div class="integrante"></br>Gabriel - Redes sociales<img class="yatu" src="../../public/gabriel.png"></div>
+                    <div class="integrante"></br>Mariano - Página Web<img class="yatu" src="../../public/mariano.png"></div>
                 </div>
             </div>
         </div>
