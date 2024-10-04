@@ -158,7 +158,7 @@ object-fit: cover;
     }
     .integrante p {
     margin-bottom: 1vh;
-    font-size: 2vw;
+    font-size: 3vw;
     font-family: carlito;
 }
 }
@@ -204,7 +204,7 @@ object-fit: cover;
                 width: 20vw;
     }
     .integrante p {
-                font-size: 2vw;
+                font-size: 3vw;
     }
 }
 @media screen and (max-width: 425px) {
@@ -245,6 +245,9 @@ object-fit: cover;
     .yatu {
                 height: 20vw;
                 width: 20vw;
+    }
+    .integrante p {
+                font-size: 3vw;
     }
 }
 @media screen and (max-width: 768px) {
