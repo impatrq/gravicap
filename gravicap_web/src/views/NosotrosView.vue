@@ -133,6 +133,9 @@ object-fit: cover;
     height: 20vw;
     width: 20vw;
     }
+    br {
+    font-size: 1.5vh;
+    }
 }
 @media screen and (max-width: 320px) {
     .quienes-somos {
