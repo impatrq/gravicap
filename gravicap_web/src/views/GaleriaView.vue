@@ -168,7 +168,7 @@ p {
     }
     .grid_1 {
                 .imagenes {
-                            margin-bottom: 2vh;
+                            margin-bottom: 2vw;
                 }
     }
 }
