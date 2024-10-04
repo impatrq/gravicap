@@ -7,12 +7,30 @@
             <div class="grid-derecha">
                 <h2>Integrantes</h2>
                 <div class="presentacion-integrantes">
-                    <div class="integrante"></br>Tomás - Aplicación<img class="yatu" src="../../public/tomas.png"></div>
-                    <div class="integrante"></br>Fausto - Electrónica<img class="yatu" src="../../public/fausto.png"></div>
-                    <div class="integrante"></br>Augusto - Estructura<img class="yatu" src="../../public/augusto.png"></div>
-                    <div class="integrante"></br>Tatiana - Programación<img class="yatu" src="../../public/tatiana.png"></div>
-                    <div class="integrante"></br>Gabriel - Redes<img class="yatu" src="../../public/gabriel.png"></div>
-                    <div class="integrante"></br>Mariano - Página Web<img class="yatu" src="../../public/mariano.png"></div>
+                    <div class="integrante">
+                    <p>Tomás - Aplicación</p>
+                    <img class="yatu" src="../../public/tomas.png">
+                    </div>
+                    <div class="integrante">
+                    <p>Fausto - Electrónica</p>
+                    <img class="yatu" src="../../public/fausto.png">
+                    </div>
+                    <div class="integrante">
+                    <p>Augusto - Estructura</p>
+                    <img class="yatu" src="../../public/augusto.png">
+                    </div>
+                    <div class="integrante">
+                    <p>Tatiana - Programación</p>
+                    <img class="yatu" src="../../public/tatiana.png">
+                    </div>
+                    <div class="integrante">
+                    <p>Gabriel - Redes</p>
+                    <img class="yatu" src="../../public/gabriel.png">
+                    </div>
+                    <div class="integrante">
+                    <p>Mariano - Página Web</p>
+                    <img class="yatu" src="../../public/mariano.png">
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,6 +110,11 @@ h2 {
 border-radius: 50%;
 object-fit: cover;
 }
+.integrante p {
+    margin-bottom: 1vh;
+    font-size: 1.2vw;
+    font-family: carlito;
+}
 @media screen and (max-width: 375px) {
     .quienes-somos {
         font-size: 3vw;
@@ -133,9 +156,11 @@ object-fit: cover;
     height: 20vw;
     width: 20vw;
     }
-    br {
-    font-size: 1rem;
-    }
+    .integrante p {
+    margin-bottom: 1vh;
+    font-size: 1.2vw;
+    font-family: carlito;
+}
 }
 @media screen and (max-width: 320px) {
     .quienes-somos {
