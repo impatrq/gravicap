@@ -150,7 +150,7 @@ p {
     align-items: center;
     justify-content: center;
 }
-@media only screen and (min-width:768px, max-width: 769px) {
+@media only screen and (min-width:768px) {
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
