@@ -134,7 +134,7 @@ object-fit: cover;
     width: 20vw;
     }
     br {
-    font-size: 1.5vh;
+    font-size: 1rem;
     }
 }
 @media screen and (max-width: 320px) {
