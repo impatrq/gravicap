@@ -112,7 +112,7 @@ object-fit: cover;
 }
 .integrante p {
     margin-bottom: 1vh;
-    font-size: 2vw;
+    font-size: 1.2vw;
     font-family: carlito;
 }
 @media screen and (max-width: 375px) {
@@ -202,7 +202,10 @@ object-fit: cover;
     .yatu {
                 height:20vw;
                 width: 20vw;
-    }        
+    }
+    .integrante p {
+                font-size: 2vw;
+    }
 }
 @media screen and (max-width: 425px) {
     .quienes-somos {
