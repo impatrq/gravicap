@@ -103,7 +103,7 @@ object-fit: cover;
         font-size: 3vh;
     }
     .integrante {
-        font-size: 1.5vh;
+        font-size: 1rem;
         text-align: center;
     }
     .presentacion-integrantes {
