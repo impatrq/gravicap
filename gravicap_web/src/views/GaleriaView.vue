@@ -166,6 +166,11 @@ p {
     p {
         font-size: 1.5vw;
     }
+    .grid_1 {
+                .imagenes {
+                            margin-bottom: 2vh;
+                }
+    }
 }
 @media only screen and (max-width: 1024px) {
     .container {
