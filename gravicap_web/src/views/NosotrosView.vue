@@ -60,7 +60,7 @@ h2 {
     display: grid;
     height: 30vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-rows: 20vh 20vh;
     grid-gap: 5.5vh 5.5vw;
     text-align: center;
     border: 0;
