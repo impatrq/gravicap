@@ -30,7 +30,7 @@
             </div>
             <div class="grid_8">
                 <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+            <img class="imagenes" src="../../public/background.jpg">
             </div>
         </div>
 </template>
