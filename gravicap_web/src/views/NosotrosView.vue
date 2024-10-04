@@ -81,7 +81,6 @@ h2 {
     font-size: 1.2vw;
     padding: 0;
     margin: 0;
-    border-radius: 50%;
     overflow: hidden;
 }
 @media screen and (max-width: 375px) {
