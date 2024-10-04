@@ -83,6 +83,14 @@ h2 {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.integrante img {
+border-radius: 50%;
+object-fit: cover;
 }
 @media screen and (max-width: 375px) {
     .quienes-somos {
