@@ -241,8 +241,8 @@ object-fit: cover;
     height: 70vh;
     }
     .yatu {
-                height: 15vw;
-                width: 15vw;
+                height: 20vw;
+                width: 20vw;
     }
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
