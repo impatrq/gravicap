@@ -145,7 +145,7 @@ object-fit: cover;
         font-size: 3vh;
     }
     .integrante {
-        font-size: 2vh;
+        font-size: 1.5vh;
         text-align: center;
     }
     .presentacion-integrantes {
@@ -187,7 +187,7 @@ object-fit: cover;
         font-size: 3vh;
     }
     .integrante {
-        font-size: 2vh;
+        font-size: 1.5vh;
         text-align: center;
     }
     .presentacion-integrantes {
