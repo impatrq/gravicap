@@ -174,7 +174,7 @@ p {
     .grid_8 {
                 .imagenes {
                             max-width: 22vw;
-                            min-width: 353.3px;
+                            min-width: 310px;
                 }
     }
 }
