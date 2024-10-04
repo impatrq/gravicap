@@ -112,7 +112,7 @@ object-fit: cover;
 }
 .integrante p {
     margin-bottom: 1vh;
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: carlito;
 }
 @media screen and (max-width: 375px) {
