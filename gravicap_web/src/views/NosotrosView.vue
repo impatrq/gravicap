@@ -75,6 +75,7 @@ h2 {
     align-items: center;
     border-radius: 50%;
     object-fit: cover;
+    object-fit: contain;
 }
 .integrante {
     font-family: carlito;
