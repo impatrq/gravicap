@@ -68,13 +68,13 @@ h2 {
     align-items: center;
 }
 .yatu {
-    object-fit: contain;
     height: 15vh;
     width: 15vw;
     justify-content: center;
     align-self: center;
     align-items: center;
     border-radius: 50%;
+    object-fit: cover;
 }
 .integrante {
     font-family: carlito;
@@ -217,7 +217,7 @@ h2 {
     .grid-derecha {
     background-color:  #C287E8;
     border-radius: 5.5%;
-    height: 60vh;
+    height: 70vh;
     }                
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
