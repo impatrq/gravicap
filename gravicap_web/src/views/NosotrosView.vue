@@ -69,7 +69,7 @@ h2 {
 }
 .yatu {
     height: 10vw;
-    width: 15vw;
+    width: 10vw;
     justify-content: center;
     align-self: center;
     align-items: center;
