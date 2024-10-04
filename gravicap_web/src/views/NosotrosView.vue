@@ -239,7 +239,11 @@ object-fit: cover;
     background-color:  #C287E8;
     border-radius: 5.5%;
     height: 70vh;
-    }                
+    }
+    .yatu {
+                height: 15vw;
+                width: 15vw;
+    }
 }
 @media screen and (min-width:1440px) and (max-width: 1441px) {
     .quienes-somos {
