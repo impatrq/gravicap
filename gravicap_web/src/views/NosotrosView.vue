@@ -68,7 +68,7 @@ h2 {
     align-items: center;
 }
 .yatu {
-    height: 15vh;
+    height: 10vw;
     width: 15vw;
     justify-content: center;
     align-self: center;
@@ -128,6 +128,10 @@ object-fit: cover;
     }
     .grid-izquierda {
     border-radius: 5.5vw;            
+    }
+    .yatu {
+    height: 10vw;
+    width: 10vw;
     }
 }
 @media screen and (max-width: 320px) {
