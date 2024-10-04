@@ -158,7 +158,7 @@ object-fit: cover;
     }
     .integrante p {
     margin-bottom: 1vh;
-    font-size: 1.2vw;
+    font-size: 2vw;
     font-family: carlito;
 }
 }
