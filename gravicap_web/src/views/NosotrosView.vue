@@ -74,12 +74,15 @@ h2 {
     justify-content: center;
     align-self: center;
     align-items: center;
+    border-radius: 50%;
 }
 .integrante {
     font-family: carlito;
     font-size: 1.2vw;
     padding: 0;
     margin: 0;
+    border-radius: 50%;
+    overflow: hidden;
 }
 @media screen and (max-width: 375px) {
     .quienes-somos {
