@@ -12,7 +12,7 @@
                     <div class="integrante"></br>Augusto - Estructura<img class="yatu" src="../../public/augusto.png"></div>
                     <div class="integrante"></br>Tatiana - Electrónica<img class="yatu" src="../../public/tatiana.png"></div>
                     <div class="integrante"></br>Gabriel - Redes sociales<img class="yatu" src="../../public/Logo.png"></div>
-                    <div class="integrante"></br>Mariano - NADA<img class="yatu" src="../../public/mariano2.png"></div>
+                    <div class="integrante"></br>Mariano - Página Web<img class="yatu" src="../../public/mariano2.png"></div>
                 </div>
             </div>
         </div>
@@ -130,8 +130,8 @@ object-fit: cover;
     border-radius: 5.5vw;            
     }
     .yatu {
-    height: 10vw;
-    width: 10vw;
+    height: 20vw;
+    width: 20vw;
     }
 }
 @media screen and (max-width: 320px) {
@@ -171,6 +171,10 @@ object-fit: cover;
     .grid-izquierda {
     border-radius: 5.5vw;
     }
+    .yatu {
+                height:20vw;
+                width: 20vw;
+    }        
 }
 @media screen and (max-width: 425px) {
     .quienes-somos {
@@ -206,7 +210,11 @@ object-fit: cover;
     }
     .grid-izquierda {
     border-radius: 5.5vw;
-    }        
+    } 
+    .yatu {
+                height: 20vw;
+                width: 20vw;
+    }
 }
 @media screen and (max-width: 768px) {
     .quienes-somos {
