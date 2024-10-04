@@ -171,6 +171,11 @@ p {
                             margin-bottom: 1vw;
                 }
     }
+    .grid_8 {
+                .imagenes {
+                            max-width: 22vw;
+                }
+    }
 }
 @media only screen and (max-width: 1024px) {
     .container {
