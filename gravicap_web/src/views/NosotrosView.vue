@@ -11,7 +11,7 @@
                     <div class="integrante"></br>Fausto - Rezar<img class="yatu" src="../../public/fausto.png"></div>
                     <div class="integrante"></br>Augusto - Estructura<img class="yatu" src="../../public/augusto.png"></div>
                     <div class="integrante"></br>Tatiana - Electrónica<img class="yatu" src="../../public/tatiana.png"></div>
-                    <div class="integrante"></br>Gabriel - Redes sociales<img class="yatu" src="../../public/gabriel.png"></div>
+                    <div class="integrante"></br>Gabriel - Redes<img class="yatu" src="../../public/gabriel.png"></div>
                     <div class="integrante"></br>Mariano - Página Web<img class="yatu" src="../../public/mariano.png"></div>
                 </div>
             </div>
