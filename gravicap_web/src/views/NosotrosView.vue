@@ -2,7 +2,7 @@
 <div class="container">
             <div class="grid-izquierda">
                 <div class="quienes-somos">¿Quienes Somos?</div>
-                <p class="texto-quienes-somos">Gravicap es un proyecto creado por estudiantes de 7°1 Aviónica de la escuela secundaria técnica n°7 o Impa. Nuestro objetivo es mostrarle al mundo una nueva forma menos dañina y mas eficiente de almacenar energía usando nuestro proyecto como ejemplo.</p>
+                <p class="texto-quienes-somos">Gravicap es un proyecto creado por estudiantes de 7°1 Aviónica de la Escuela Secundaria Técnica N°7 o IMPA. Nuestro objetivo es mostrarle al mundo una nueva forma menos dañina y mas eficiente de almacenar energía usando nuestro proyecto como ejemplo.</p>
             </div>
             <div class="grid-derecha">
                 <h2>Integrantes</h2>
