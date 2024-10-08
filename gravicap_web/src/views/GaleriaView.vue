@@ -55,7 +55,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2vh;
     margin: 1vh 0; 
 }
 p {
