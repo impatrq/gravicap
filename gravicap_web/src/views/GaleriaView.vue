@@ -362,9 +362,6 @@ p {
     p {
         font-size: 1rem;
         text-align: center;
-        padding: 0.5rem 0;  /* Ajuste de padding */
-        margin: 0.5rem 0;   /* Ajuste de margin */
-        height: auto;       /* Ajustar la altura automáticamente */
     }
     .grid {
         display: flex;
