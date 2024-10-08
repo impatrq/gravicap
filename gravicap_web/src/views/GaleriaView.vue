@@ -207,7 +207,7 @@ p {
         margin-bottom: 5vh;
     }
     .grid_1 {
-    padding-top: 10vh;
+    margin-top: 10vh;
     }
 }
 
@@ -249,7 +249,7 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    padding-top: 10vh;
+    margin-top: 10vh;
     }
     header {
         margin-bottom: 5vh;
@@ -294,7 +294,7 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    padding-top: 10vh;            
+    margin-top: 10vh;            
     }
     header {
         margin-bottom: 5vh;
@@ -339,7 +339,7 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    padding-top: 10vh;            
+    margin-top: 10vh;            
     }
     header {
         margin-bottom: 5vh;
@@ -384,7 +384,7 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    padding-top: 10vh;            
+    margin-top: 10vh;            
     }
     header {
         margin-bottom: 5vh;
