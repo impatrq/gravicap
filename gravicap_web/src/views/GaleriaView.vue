@@ -77,7 +77,7 @@ p {
     object-fit: contain;
     padding: 0;
     max-width: 100%;
-    margin: 0;
+    margin: 1vh 0;
     align-items: center;
     justify-content: center;
 }
