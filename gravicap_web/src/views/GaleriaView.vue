@@ -51,7 +51,7 @@
     background-color: #C287E8;
     height: 100%;
     width: 100%;
-    border-radius: 5.5vw;
+    border-radius: 5%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -108,6 +108,7 @@ p {
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        border-radius: 7.5%;
     }
     .imagenes {
         height: 70%;
