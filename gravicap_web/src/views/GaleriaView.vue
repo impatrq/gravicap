@@ -384,7 +384,11 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    margin-top: 10vh;            
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    p, .imagenes {
+    position: fixed;
+    }
     }
     header {
         margin-bottom: 5vh;
