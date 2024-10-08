@@ -208,6 +208,7 @@ p {
     }
     .grid_1 {
     margin-top: 10vh;
+    margin_bottom: 10vh;
     }
 }
 
@@ -385,6 +386,7 @@ p {
     }
     .grid_1 {
     gap-top: 10vh;
+    gap-bottom: 10vh;
     }
     header {
         margin-bottom: 5vh;
