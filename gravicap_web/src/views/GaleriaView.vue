@@ -207,8 +207,6 @@ p {
         margin-bottom: 5vh;
     }
     .grid_1 {
-    margin-top: 10vh;
-    margin_bottom: 10vh;
     }
 }
 
@@ -294,8 +292,7 @@ p {
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
-    .grid_1 {
-    margin-top: 10vh;            
+    .grid_1 {        
     }
     header {
         margin-bottom: 5vh;
@@ -339,8 +336,7 @@ p {
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
-    .grid_1 {
-    margin-top: 10vh;            
+    .grid_1 {         
     }
     header {
         margin-bottom: 5vh;
@@ -385,8 +381,6 @@ p {
     padding-bottom: 2vh;
     }
     .grid_1 {
-    gap-top: 10vh;
-    gap-bottom: 10vh;
     }
     header {
         margin-bottom: 5vh;
