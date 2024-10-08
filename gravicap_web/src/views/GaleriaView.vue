@@ -206,6 +206,9 @@ p {
     header {
         margin-bottom: 5vh;
     }
+    .grid_1 {
+    padding-top: 10vh;
+    }
 }
 
 
@@ -244,6 +247,9 @@ p {
     }
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
+    }
+    .grid_1 {
+    padding-top: 10vh;
     }
     header {
         margin-bottom: 5vh;
@@ -287,6 +293,9 @@ p {
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
+    .grid_1 {
+    padding-top: 10vh;            
+    }
     header {
         margin-bottom: 5vh;
     }
@@ -329,6 +338,9 @@ p {
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
+    .grid_1 {
+    padding-top: 10vh;            
+    }
     header {
         margin-bottom: 5vh;
     }
@@ -370,6 +382,9 @@ p {
     }
     .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
+    }
+    .grid_1 {
+    padding-top: 10vh;            
     }
     header {
         margin-bottom: 5vh;
