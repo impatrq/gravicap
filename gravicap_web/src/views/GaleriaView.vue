@@ -97,10 +97,6 @@ p {
     p {
         font-size: 1.5vw;
     }
-    .grid_1 {
-                .imagenes {
-                            margin-bottom: 1.2vh;
-                }
     }
     .grid_8 {
                 .imagenes {
@@ -161,7 +157,7 @@ p {
     p {
         font-size: 1.5vw;
     }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
                 p {
                             margin-bottom: 1.748vh;
                 }
@@ -205,10 +201,6 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 1.2vh;
-    }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
@@ -251,11 +243,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 1.2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -297,11 +285,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 1.2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -343,11 +327,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 1.2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -389,11 +369,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 1.2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
