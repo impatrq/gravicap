@@ -173,7 +173,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -206,9 +207,6 @@ p {
     header {
         margin-bottom: 5vh;
     }
-    body {
-    margin-top: 10vh;
-    }
 }
 
 
@@ -218,7 +216,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -261,6 +260,7 @@ p {
     grid-template-rows: auto; 
     gap: 1rem; 
     padding: 0; 
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -302,7 +302,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -344,7 +345,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
