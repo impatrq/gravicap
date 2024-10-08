@@ -108,7 +108,7 @@ p {
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        border-radius: 7.5%;
+        border-radius: 2.5vw;
     }
     .imagenes {
         height: 70%;
