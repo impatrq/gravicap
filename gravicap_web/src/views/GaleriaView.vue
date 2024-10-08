@@ -168,7 +168,7 @@ p {
     }
     .grid_1 {
                 .imagenes {
-                            margin-bottom: 1vw;
+                            margin-bottom: 1.2vh;
                 }
     }
     .grid_8 {
@@ -276,7 +276,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
@@ -322,7 +322,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
@@ -368,7 +368,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
@@ -414,7 +414,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
@@ -460,7 +460,7 @@ p {
     }
     .grid_1 {
         margin-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.2vh;
     }
     .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
