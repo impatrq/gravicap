@@ -51,7 +51,7 @@
     background-color: #C287E8;
     height: 100%;
     width: 100%;
-    border-radius: 5%;
+    border-radius: 5.5vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
