@@ -97,7 +97,6 @@ p {
     p {
         font-size: 1.5vw;
     }
-    }
     .grid_8 {
                 .imagenes {
                             max-width: 22vw;
