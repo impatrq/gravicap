@@ -206,6 +206,9 @@ p {
     header {
         margin-bottom: 5vh;
     }
+    body {
+    margin-top: 10vh;
+    }
 }
 
 
