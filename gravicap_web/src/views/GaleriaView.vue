@@ -201,7 +201,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
