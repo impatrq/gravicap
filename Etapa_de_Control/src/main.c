@@ -16,7 +16,7 @@
 
 int main(void) {
   stdio_init_all();
-  //sleep_ms(1000);
+  multicore_launch_core1(core_1_task);
 
   xTaskCreate(
     task_init, "Task Init",
@@ -36,11 +36,29 @@ int main(void) {
   );
 
   xTaskCreate(
-    task_lectura_sensor_ina219, "Lectura INA219 0x41 SALIDA DEL PANEL",
+    task_lectura_sensor_ina219, "Lectura INA219 0x41 SALIDA DEL MPPT",
     4 * configMINIMAL_STACK_SIZE, 
     // Le mando como parámetro la ubicación (&) de una estructura de ina219 para que labure con ese
     (void*) &m_ina0x41,
     tskIDLE_PRIORITY + 2UL, 
+    NULL
+  );
+
+  xTaskCreate(
+    task_lectura_sensor_ina219, "Lectura INA219 0x44 CONSUMO DE LA BATERÍA",
+    4 * configMINIMAL_STACK_SIZE, 
+    // Le mando como parámetro la ubicación (&) de una estructura de ina219 para que labure con ese
+    (void*) &m_ina0x41,
+    tskIDLE_PRIORITY + 4UL, 
+    NULL
+  );
+
+  xTaskCreate(
+    task_lectura_sensor_ina219, "Lectura INA219 0x45 ENTREGA DEL PANEL SOLAR",
+    4 * configMINIMAL_STACK_SIZE, 
+    // Le mando como parámetro la ubicación (&) de una estructura de ina219 para que labure con ese
+    (void*) &m_ina0x41,
+    tskIDLE_PRIORITY + 4UL, 
     NULL
   );
 
@@ -52,13 +70,13 @@ int main(void) {
     NULL 
   );
 
-xTaskCreate(
-  task_encoder, "Encoder Task",
-  1024,
-  NULL,
-  1,
-  NULL
-);
+  xTaskCreate(
+    task_send_uart, "SEND UART PARA ESP8266-01",
+    4 * configMINIMAL_STACK_SIZE,
+    NULL,
+    tskIDLE_PRIORITY + 3UL,
+    NULL 
+  );
 
 // Arranco el scheduler
   vTaskStartScheduler();
