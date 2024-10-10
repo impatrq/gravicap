@@ -4,17 +4,17 @@
 #define rele_2 7 // Bajada
 
 #define led_1 8 // Led de encendido del sistema
-#define led_2 9
-#define led_3 10
-#define led_4 11
-#define led_5 12
-#define led_6 13
-#define led_7 14
-#define led_8 15
-#define led_9 26
+#define led_2 9 // Led_1 azul del cargador
+#define led_3 10 // Led_2 verde del cargador
+#define led_4 11 // Led_3 verde del cargador
+#define led_5 12 // Led_4 amarillo del cargador
+#define led_6 13 // Led_5 amarillo del cargador
+#define led_7 14 // Led_6 rojo del cargador
+#define led_8 15 // Led de carga blanco
+#define led_9 26 // Led de descarga rojo
 
-#define PIN_A 27
-#define PIN_B 28
+#define PIN_A 27 //Encoder
+#define PIN_B 28 //Encoder
 
 #define complete_laps 50
 #define min_needed_laps 2
@@ -31,6 +31,15 @@ ina219_t ina219_0x41; // Entrega del panel, salida del motor
 ina219_t ina219_0x44; // Consumo de la batería
 ina219_t ina219_0x45;
 
+// Cadenas de caracteres declaradas para enviar por puerto uart
+char uart_consumo[];
+char uart_entrega_panel[];
+char uart_consumo_bat[];
+char uart_carga[];
+
+// Variables para almacenar lecturas que serán enviadas
+float corriente_consumo, entrega_panel, consumo_bat, carga;
+
 QueueHandle_t queue_ina219;
 
 SemaphoreHandle_t semaphore_encoder = NULL;
@@ -38,23 +47,26 @@ SemaphoreHandle_t semaphore_encoder = NULL;
 volatile int counter = 0;
 volatile bool last_A = 0;
 int p_r = 600;
-float motor_angle;
-float lap_counter;
+float motor_angle, carga, last_carga, lap_counter;
 bool test_up, test_down;
 bool rele1, rele2;
 
 // variable de prueba, futuro reemplazo de un sensor
-float consumo_motor;
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
 
 void task_init(void *params) {
 
   // Configuración del i2c
   i2c_init(i2c0, 400000);
-  gpio_set_function(4, GPIO_FUNC_I2C);
-  gpio_set_function(5, GPIO_FUNC_I2C);
-  gpio_pull_up(4);
-  gpio_pull_up(5);
+  gpio_set_function(2, GPIO_FUNC_I2C);
+  gpio_set_function(3, GPIO_FUNC_I2C);
+  gpio_pull_up(2);
+  gpio_pull_up(3);
+
+  // Configuración UART1
+  uart_init(uart1, 9600);  // Configura UART0 con un baud rate de 9600
+  gpio_set_function(4, GPIO_FUNC_UART);  // Configura GPIO4 como TX
+  gpio_set_function(5, GPIO_FUNC_UART);  // Configura GPIO5 como RX
 
   // Pines de salida de los relés
   gpio_set_dir(rele_1, GPIO_OUT);
@@ -88,9 +100,6 @@ void task_init(void *params) {
   // Creo Queue de sensores
   queue_ina219 = xQueueCreate(2, sizeof(mediciones_ina219));
 
-  //semaphore_encoder = xSemaphoreCreateBinary();
-  //gpio_set_irq_enabled_with_callback(PIN_A, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &encoder_isr);
-
   // Inicio el encoder
   gpio_init(PIN_A);
   gpio_set_dir(PIN_A, GPIO_IN);
@@ -102,22 +111,31 @@ void task_init(void *params) {
 
   // Declaro pines de salida para leds
   gpio_init(led_1);
-  gpio_set_dir(led_1, GPIO_IN);
+  gpio_set_dir(led_1, GPIO_OUT);
 
   gpio_init(led_2);
-  gpio_set_dir(led_2, GPIO_IN);
+  gpio_set_dir(led_2, GPIO_OUT);
 
   gpio_init(led_3);
-  gpio_set_dir(led_3, GPIO_IN);
+  gpio_set_dir(led_3, GPIO_OUT);
 
   gpio_init(led_4);
-  gpio_set_dir(led_4, GPIO_IN);
+  gpio_set_dir(led_4, GPIO_OUT);
 
   gpio_init(led_5);
-  gpio_set_dir(led_5, GPIO_IN);
+  gpio_set_dir(led_5, GPIO_OUT);
 
   gpio_init(led_6);
-  gpio_set_dir(led_6, GPIO_IN);
+  gpio_set_dir(led_6, GPIO_OUT);
+  
+  gpio_init(led_7);
+  gpio_set_dir(led_7, GPIO_OUT);
+
+  gpio_init(led_8);
+  gpio_set_dir(led_8, GPIO_OUT);
+
+  gpio_init(led_9);
+  gpio_set_dir(led_9, GPIO_OUT);
 
   // Enciendo led de chequeo (ENCENDIDO)
   gpio_pull_up(led_1);
@@ -158,13 +176,12 @@ void task_consulta_all(void *params) {
     // Considero el los valores de consumo de corriente obtenidos de la cola
     status(); // Acá obtengo los valores de los test
 
-    // El panel entrega tensión contante y corriente variable
     if((m_ina0x40.corriente > m_ina0x41.corriente) && (test_up == 0)){
 
       // Si el consumidor pide más que lo que entrega
       printf("PEDIMOS DE LA RED \n");
       gpio_pull_up(led_2);
-      // Cargamos la batería //CONSULTAMOS ESTADO
+      // Cargamos la batería
       task_rele_on(rele_1);
     }
 
@@ -187,34 +204,44 @@ void task_consulta_all(void *params) {
 }
 
 // Funciones de lectura de los datos del encoder
-void task_encoder(void *pvParameters) {
-  // Definimos que el peso abajo, es el 0
-  while (1) {
-    // Espera a que el semáforo sea liberado por la interrupción
-    if (multicore_fifo_pop_blocking() == 1) {
-      // Leer el estado de las señales A y B
-      bool current_A = gpio_get(PIN_A);
-      bool current_B = gpio_get(PIN_B);
+void task_encoder() {//(void *pvParameters) {
+  last_carga == 0;
 
-      // Detectar el flanco ascendente de A
-      if (last_A == 0 && current_A == 1) {
-        if (current_B == 0) {
-          counter++;  // Sentido horario
-        } else {
-          counter--;  // Sentido antihorario
-        }
+  while (1) {
+    // Leer el estado de las señales A y B
+    bool current_A = gpio_get(PIN_A);
+    bool current_B = gpio_get(PIN_B);
+
+    // Detectar el flanco ascendente de A
+    if (last_A == 0 && current_A == 1) {
+      if (current_B == 0) {
+        counter++;  // Sentido horario
+      } else {
+        counter--;  // Sentido antihorario
       }
-      last_A = current_A;
-      motor_angle = (p_r / counter) * 360;
-      lap_counter = (p_r / counter);
-      printf("Contador: %d\n", counter);
+    }
+    last_A = current_A;
+    motor_angle = (p_r / counter) * 360;
+    lap_counter = (p_r / counter);
+    carga = (lap_counter * 100) / complete_laps;
+
+    if (fabs(carga - last_carga) >= 15.0) {
+      // Si la diferencia entre la carga actual y la anterior es por lo menos de 15%
+      multicore_fifo_push_blocking(carga);
+      // Envío bloqueo al core_0 con el dato de la carga
+      last_carga = carga;
     }
   }
 }
 
-void encoder_isr(uint gpio, uint32_t events) {
-  multicore_fifo_push_blocking(1);
-  // Enviar un valor de notificación al core0
+void core_1_task(){
+  // El core_1 espera un cambio en el pin_a, cuando lo detecta ejecuta la función
+  gpio_set_irq_enabled_with_callback(PIN_A, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &task_encoder);
+  // acá irían otras funciones del core1
+  while (1) {
+      // El core1 maneja el procesamiento continuo del encoder
+      tight_loop_contents();  // Evita que el core1 entre en reposo
+  }
 }
 
 // Función para encender el motor solicitado
@@ -246,7 +273,11 @@ void status(){
   }
 }
 
-void core1_task(){
-  gpio_set_irq_enabled_with_callback(PIN_A, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &encoder_isr);
-  // acá irían otras funciones del core1
+// Función que trasforma los valores limpios de las lecturas en
+// una cadena de caracteres armada para mandarla por uart a la esp
+void prepare_char_uart_mediciones(void *params){
+  mediciones_ina219 medicion = *((mediciones_ina219*)params);
+
+  if(medicion.ina_name == )
+  
 }
