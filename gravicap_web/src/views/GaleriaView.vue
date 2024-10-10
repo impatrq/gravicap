@@ -5,32 +5,32 @@
                 <img class="imagenes" src="../../public/PCB MPPT.png" />
             </div>
             <div class="grid_2">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Creación del peso</p>
+            <img class="imagenes" src="../../public/creacionPeso (1).png">
             </div>
             <div class="grid_3">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Estructura sin pintar</p>
+            <img class="imagenes" src="../../public/estructuraSinPintar.png">
             </div>
             <div class="grid_4">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Estructura pintada</p>
+            <img class="imagenes" src="../../public/estructuraPintada (2).png">
             </div>
             <div class="grid_5">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Visita a Radio Vox</p>
+            <img class="imagenes" src="../../public/visitaRadioVox.png">
             </div>
             <div class="grid_6">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Visita a Vale Doble Radio</p>
+            <img class="imagenes" src="../../public/visitaValeDobleRadio.png">
             </div>
             <div class="grid_7">
-                <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+                <p>Visita de BernalTV</p>
+            <img class="imagenes" src="../../public/bernalTv.png">
             </div>
             <div class="grid_8">
                 <p>Prueba de paneles solares</p>
-            <img class="imagenes" src="../../public/placeholder.jpg">
+            <img class="imagenes" src="../../public/background.jpg">
             </div>
         </div>
 </template>
@@ -46,89 +46,23 @@
     padding-top: 5vh;
     font-family: carlito;
 }
-.grid_1 {
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8 {
     display: flex;
-    background-color:  #C287E8;
+    background-color: #C287E8;
     height: 100%;
     width: 100%;
     border-radius: 5%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.grid_2 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_3 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_4 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_5 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_6 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_7 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.grid_8 {
-    display: flex;
-    background-color:  #C287E8;
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: 1vh 0; 
 }
 p {
     font-family: carlito;
     text-align: center;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
     background-color: #fcedf2;
     width: 75%;
     height: 15%;
@@ -143,25 +77,31 @@ p {
     object-fit: contain;
     padding: 0;
     max-width: 100%;
-    margin: 0;
+    margin: 1vh 0;
     align-items: center;
     justify-content: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width:768px) {
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .imagenes {
         height: 70%;
-        width: 40vw; 
+        width: 380px; 
         object-fit: contain;
         padding: 0;
-        max-width: 100%;
         text-align: center;
+        max-height: 22vh;
     }
     p {
         font-size: 1.5vw;
+    }
+    .grid_8 {
+                .imagenes {
+                            max-width: 22vw;
+                            min-width: 310px;
+                }
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -187,44 +127,42 @@ p {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .imagenes {
-        display: flex;
         height: 70%;
         width: 40vw; 
         object-fit: contain;
         padding: 0;
-        margin-left: 0;
-        margin-right: 0;
         max-width: 100%;
         text-align: center;
-        justify-content: center;
-        align-self: center;
-        
     }
     p {
         font-size: 1.5vw;
     }
 }
+
 @media only screen and (max-width: 2560px) {
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .imagenes {
-        display: flex;
         height: 70%;
-        width: 40vw; 
+        width: 380px; 
         object-fit: contain;
         padding: 0;
-        margin-left: 0;
-        margin-right: 0;
         max-width: 100%;
         text-align: center;
-        justify-content: center;
-        align-self: center;
-        
+        max-height: 22vh;
     }
     p {
         font-size: 1.5vw;
+    }
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+                p {
+                            margin-bottom: 1.748vh;
+                }
+                .imagenes {
+                            margin-bottom: 0.5vh;
+                }
     }
 }
 
@@ -235,7 +173,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -262,11 +201,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -281,7 +216,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -308,11 +244,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -328,6 +260,7 @@ p {
     grid-template-rows: auto; 
     gap: 1rem; 
     padding: 0; 
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -354,11 +287,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -373,7 +302,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -400,11 +330,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
@@ -419,7 +345,8 @@ p {
     grid-template-columns: 80vw; 
     grid-template-rows: auto; 
     gap: 1rem; 
-    padding: 0; 
+    padding: 0;
+    margin-top: 5vh;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -446,11 +373,7 @@ p {
         padding: 0;
         margin-bottom: 10vh;
     }
-    .grid_1 {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-    }
-    .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
+    .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, grid_8 {
     padding-bottom: 2vh;
     }
     header {
