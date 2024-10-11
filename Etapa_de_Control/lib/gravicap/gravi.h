@@ -2,22 +2,24 @@
 #define _gravi_h
 
 #include "hardware/irq.h"
+#include "hardware/i2c.h"
+#include "hardware/uart.h"
+#include "ina219.h"
 #include "pico/stdlib.h"
-//#include <stdint.h> 
 #include "FreeRTOS.h"
+#include "pico/multicore.h"
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
-#include "hardware/i2c.h"
 #include <stdio.h>
 #include <string.h>
-#include "ina219.h"
 #include <math.h>
 // Estructuras
 
 typedef struct {
     // ina_name es un puntero, referirá a una ubicación
-    ina219_t *ina_name;
+    char* ina_name;
+    ina219_t *ina;
     float corriente;
     float voltage;
     float power;
@@ -27,9 +29,10 @@ typedef struct {
 // Función de inicio
 void task_init(void *params);
 
-// Función de lectura de ina219, le doy la ubicación de
-// una estructura (mediciones) y los datos quedan guardados ahí
-void task_lectura_sensor_ina219(void *params);
+void task_lectura_sensor_ina219_0x40();
+void task_lectura_sensor_ina219_0x41();
+void task_lectura_sensor_ina219_0x44();
+void task_lectura_sensor_ina219_0x45();
 
 // Función que manda a cargar o descargar la batería de
 // acuerdo a los datos medidos (espera en queue)
@@ -45,9 +48,9 @@ void status();
 void core_1_task();
 
 // Convierte los leídos en char para mandarlos por uart
-void prepare_char_uart(int value);
+void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubicacion_size, float porcentaje_carga);
 
 // Envía el char que digas por uart a la esp
-void send_uart();
+void task_send_uart(void *params);
 
 #endif // _gravi_h
