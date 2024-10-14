@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include "pico/util/queue.h"
 // Estructuras
 
 typedef struct {
@@ -42,10 +43,10 @@ void task_consulta_all(void *params);
 void task_rele_on(int rele);
 
 // Usando el número de vueltas, le da valores a los test
-void status();
+bool status(void);
 
 // Función del core1
-void core_1_task();
+void core_1_task(void);
 
 // Convierte los leídos en char para mandarlos por uart
 void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubicacion_size, float porcentaje_carga);

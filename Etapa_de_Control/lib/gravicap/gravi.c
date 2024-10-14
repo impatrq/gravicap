@@ -46,6 +46,8 @@ float corriente_consumo, entrega_panel, consumo_bat, carga;
 QueueHandle_t queue_ina219_consulta_all;
 QueueHandle_t queue_ina219_send_uart;
 
+queue_t queue_core_1;
+
 SemaphoreHandle_t semaphore_encoder = NULL;
 
 volatile int counter = 0;
@@ -106,6 +108,8 @@ void task_init(void *params) {
   // Creo Queue de sensores
   queue_ina219_consulta_all = xQueueCreate(2, sizeof(mediciones_ina219));
   queue_ina219_send_uart = xQueueCreate(4, sizeof(mediciones_ina219));
+
+  queue_init(&queue_core_1, sizeof(carga), 1);
 
   // Inicio el encoder
   gpio_init(PIN_A);
@@ -232,36 +236,41 @@ void task_consulta_all(void *params) {
 
     xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000));
     // Considero el los valores de consumo de corriente obtenidos de la cola
-    status(); // Acá obtengo los valores de los test
+    if(status() == 0){
+      // Acá obtengo los valores de los test
 
-    if((m_ina0x40.corriente > m_ina0x41.corriente) && (test_up == 0)){
+      if((m_ina0x40.corriente > m_ina0x41.corriente) && (test_up == 0)){
 
-      // Si el consumidor pide más que lo que entrega
-      printf("PEDIMOS DE LA RED \n");
-      gpio_pull_up(led_2);
-      // Cargamos la batería
-      task_rele_on(rele_1);
-    }
-
-    else if ((m_ina0x40.corriente <= m_ina0x41.corriente) && (test_down == 0)){
-
-      // Si el consumidor pide menos de lo que entrega
-      gpio_pull_up(led_3);
-      // Descargamos la batería
-      task_rele_on(rele_2);
-
-      // Si la corriente generada > a la usada, el sobrante se puede usar para cargar la batería?
-      if(((m_ina0x40.corriente - m_ina0x41.corriente) >= needed) && (test_up == 0)){
-
+        // Si el consumidor pide más que lo que entrega
+        printf("PEDIMOS DE LA RED \n");
         gpio_pull_up(led_2);
         // Cargamos la batería
         task_rele_on(rele_1);
       }
+
+      else if ((m_ina0x40.corriente <= m_ina0x41.corriente) && (test_down == 0)){
+
+        // Si el consumidor pide menos de lo que entrega
+        gpio_pull_up(led_3);
+        // Descargamos la batería
+        task_rele_on(rele_2);
+
+        // Si la corriente generada > a la usada, el sobrante se puede usar para cargar la batería?
+        if(((m_ina0x40.corriente - m_ina0x41.corriente) >= needed) && (test_up == 0)){
+
+          gpio_pull_up(led_2);
+          // Cargamos la batería
+          task_rele_on(rele_1);
+        }
+      }
+    }
+    else if (status() == 1){
+      vTaskDelay(1000);
     }
   }
 }
 
-void core_1_task() {
+void core_1_task(void) {
   last_carga == 0;
 
   while (1) {
@@ -286,8 +295,9 @@ void core_1_task() {
 
     if (fabs(carga - last_carga) >= 15.0) {
       // Si la diferencia entre la carga actual y la anterior es por lo menos de 15%
-      multicore_fifo_push_blocking(carga);
-      // Envío bloqueo al core_0 con el dato de la carga
+      // Agrego el dato a una cola (no de freertos)
+      queue_add_blocking(&queue_core_1, &carga);
+
       last_carga = carga;
     }
   }
@@ -303,24 +313,32 @@ void task_rele_on(int rele) {
 // Función que le da valores a los test, habilitando o no los motores
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
-void status(){
-  uint32_t porcentaje_carga = multicore_fifo_pop_blocking();
-
-  // El peso abajo, está en 0, mientras sube aumenta
-  if(porcentaje_carga < min_critico){ 
-    // El peso está cerquita del piso
-    test_up = 0;
-    test_down = 1;
+bool status(void){
+  if(queue_try_peek(&queue_core_1, &carga)){
+    // El peso abajo, está en 0, mientras sube aumenta
+    if(carga < min_critico){ 
+      // El peso está cerquita del piso
+      test_up = 0;
+      test_down = 1;
+    }
+    else if((carga > min_critico) && (carga) < (100 - min_critico)){
+      // El peso está dentro del rango donde puede hacer cualquier cosa
+      test_up = 0;
+      test_down = 0;
+    }
+    else if(carga > (100 - min_critico)){
+      // El peso está muy arriba
+      test_up = 1;
+      test_down = 0;
+    }
+    else{
+      test_up = 1;
+      test_down = 1;
+    }
+    return 0;
   }
-  else if((porcentaje_carga > min_critico) && (porcentaje_carga) < (100 - min_critico)){
-    // El peso está dentro del rango donde puede hacer cualquier cosa
-    test_up = 0;
-    test_down = 0;
-  }
-  else if(porcentaje_carga > (100 - min_critico)){
-    // El peso está muy arriba
-    test_up = 1;
-    test_down = 0;
+  else {
+    return 1;
   }
 }
 
@@ -338,15 +356,17 @@ void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubic
 // Envía el char que digas por uart a la esp
 void task_send_uart(void *params){
   mediciones_ina219 medicion = *((mediciones_ina219*)params);
-  xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000));
+  while(true){
+    xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000));
 
-  prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
-  prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
-  prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
-  prepare_char_uart(uart_carga, &m_ina0x45, CHAR_UART, carga);
+    prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
+    prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
+    prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
+    prepare_char_uart(uart_carga, &m_ina0x45, CHAR_UART, carga);
 
-  uart_puts(uart1, uart_consumo);
-  uart_puts(uart1, uart_entrega_panel);
-  uart_puts(uart1, uart_consumo_bat);
-  uart_puts(uart1, uart_carga);
+    uart_puts(uart1, uart_consumo);
+    uart_puts(uart1, uart_entrega_panel);
+    uart_puts(uart1, uart_consumo_bat);
+    uart_puts(uart1, uart_carga);
+  }
 }
