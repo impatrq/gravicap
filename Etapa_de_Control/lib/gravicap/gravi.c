@@ -4,14 +4,18 @@
 #define rele_2 7 // Bajada
 
 #define led_1 8 // Led de encendido del sistema
+
 #define led_2 9 // Led_1 azul del cargador
 #define led_3 10 // Led_2 verde del cargador
 #define led_4 11 // Led_3 verde del cargador
 #define led_5 12 // Led_4 amarillo del cargador
 #define led_6 13 // Led_5 amarillo del cargador
 #define led_7 14 // Led_6 rojo del cargador
-#define led_8 15 // Led de carga blanco
-#define led_9 26 // Led de descarga rojo
+
+#define led_carga 15 // Led de carga blanco
+#define led_descarga 26 // Led de descarga rojo
+#define led_stop 29 // Led de stop 
+
 
 #define pin_a_encoder 27 //Encoder
 #define pin_b_encoder 28//Encoder
@@ -65,6 +69,10 @@ bool rele1, rele2;
 
 // variable de prueba, futuro reemplazo de un sensor
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
+
+int leds_encendidos_previos = -1;  // Inicialmente -1 para asegurar la primera actualización
+
+int leds[6] = {led_7, led_6, led_5, led_4, led_3, led_2};
 
 void task_init(void *params) {
 
@@ -146,11 +154,14 @@ void task_init(void *params) {
   gpio_init(led_7);
   gpio_set_dir(led_7, GPIO_OUT);
 
-  gpio_init(led_8);
-  gpio_set_dir(led_8, GPIO_OUT);
+  gpio_init(led_carga);
+  gpio_set_dir(led_carga, GPIO_OUT);
 
-  gpio_init(led_9);
-  gpio_set_dir(led_9, GPIO_OUT);
+  gpio_init(led_descarga);
+  gpio_set_dir(led_descarga, GPIO_OUT);
+
+  gpio_init(led_stop);
+  gpio_set_dir(led_stop, GPIO_OUT);
 
   // Enciendo led de chequeo (ENCENDIDO)
   gpio_pull_up(led_1);
@@ -248,9 +259,6 @@ void task_consulta_all(void *params) {
 
           if(test_down == 0){
             // Si es posible descargar la batería
-            rele_off(rele_1);
-            // Apago el relé_1 por si estuviera encendida la carga
-            gpio_pull_up(led_3);
             // Descargamos la batería
             rele_on(rele_2);
           }
@@ -270,9 +278,6 @@ void task_consulta_all(void *params) {
 
             if(test_up == 0){
               // Si la carga puede subir
-              rele_off(rele_2);
-              // Apago el relé_2 por si estuviera encendida la descarga
-              gpio_pull_up(led_2);
               // Cargamos la batería
               rele_on(rele_1);
             }
@@ -291,7 +296,6 @@ void task_consulta_all(void *params) {
           }
         }
       }
-
       else if (status() == 1){
         vTaskDelay(1000);
       }
@@ -337,7 +341,32 @@ void core_1_task(void) {
 
 // Función para encender el motor
 void rele_on(int rele) {
+  // Primero apagamos todo lo que pueda estar encendido
+  if(rele_1 == 1 && rele_2 == 1){
+    // Si el motor está en stop
+    rele_off(rele_1);
+    rele_off(rele_2);
+    gpio_pull_down(led_stop);
+  }
+  else if(rele == rele_1 && rele_2 == 1){
+    // Si queremos mandar a cargar y está descargando
+    rele_off(rele_2);
+    gpio_pull_down(led_descarga);
+  }
+  else if(rele == rele_2 && rele_1 == 1){
+    // Si queremos mandar a descargar y está cargando
+    rele_off(rele_1);
+    gpio_pull_down(led_carga);
+  }
+
   gpio_put(rele, 1);
+  if(rele == rele_1){
+    gpio_pull_up(led_carga);
+  }
+  else if(rele == rele_2){
+    gpio_pull_up(led_descarga);
+  }
+
   printf("relé %d on", rele);
   vTaskDelay(1000);
 }
@@ -357,41 +386,70 @@ void motor_stop() {
   vTaskDelay(1000);
 }
 
+// Función para encender los LEDs según el porcentaje de carga
+void actualizar_leds(float porcentaje_carga) {
+  int leds_encendidos = (int)(porcentaje_carga / 100.0 * 6);
+
+  // Solo actualizar si el número de LEDs encendidos cambia
+  if (leds_encendidos != leds_encendidos_previos) {
+    // Apagar los LEDs que ya no deben estar encendidos
+    for (int i = leds_encendidos; i < 6; i++) {
+      gpio_pull_down(leds[i]);
+    }
+
+    // Encender los LEDs necesarios
+    for (int i = 0; i < leds_encendidos; i++) {
+      gpio_pull_up(leds[i]);
+    }
+
+    // Actualizar el estado anterior
+    leds_encendidos_previos = leds_encendidos;
+  }
+}
+
 // Función que le da valores a los test, habilitando o no los motores
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(void){
   if(queue_try_peek(&queue_core_1, &carga)){
-    // El peso abajo, está en 0, mientras sube aumenta
-    if(carga < min_critico){ 
-      // El peso está cerquita del piso
-      test_up = 0;
-      test_down = 1;
+    if(carga < 100 && carga > 0){
+      actualizar_leds(carga);
+
+      // El peso abajo, está en 0, mientras sube aumenta
+      if(carga < min_critico){ 
+        // El peso está cerquita del piso
+        test_up = 0;
+        test_down = 1;
+      }
+      else if((carga > min_critico) && (carga) < (100 - min_critico)){
+        // El peso está dentro del rango donde puede hacer cualquier cosa
+        test_up = 0;
+        test_down = 0;
+      }
+      else if(carga > (100 - min_critico)){
+        // El peso está muy arriba
+        test_up = 1;
+        test_down = 0;
+      }
+      else{
+        test_up = 1;
+        test_down = 1;
+      }
+      return 0;
     }
-    else if((carga > min_critico) && (carga) < (100 - min_critico)){
-      // El peso está dentro del rango donde puede hacer cualquier cosa
-      test_up = 0;
-      test_down = 0;
+    else if(carga < 0 || carga > 100){
+      return 1;
     }
-    else if(carga > (100 - min_critico)){
-      // El peso está muy arriba
-      test_up = 1;
-      test_down = 0;
-    }
-    else{
-      test_up = 1;
-      test_down = 1;
-    }
-    return 0;
   }
   else {
     return 1;
   }
+  return 1;
 }
 
 // Convierte los datos leídos
 void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubicacion_size, float porcentaje_carga) {
-  // POngo en 0 el contenido de la cadena
+  // Pongo en 0 el contenido de la cadena
   memset(ubicacion, 0, ubicacion_size);
 
   snprintf(ubicacion, ubicacion_size,

@@ -44,6 +44,8 @@ void rele_on(int rele);
 void rele_off(int rele);
 void motor_stop();
 
+void actualizar_leds(float porcentaje_carga);
+
 // Usando el número de vueltas, le da valores a los test
 bool status(void);
 
