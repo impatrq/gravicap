@@ -13,10 +13,16 @@
 #define led_8 15 // Led de carga blanco
 #define led_9 26 // Led de descarga rojo
 
-#define PIN_A 27 //Encoder
-#define PIN_B 28 //Encoder
+#define pin_a_encoder 27 //Encoder
+#define pin_b_encoder 28//Encoder
 
-#define CHAR_UART 256 // Tamaño suficiente para almacenar el JSON
+#define pin_i2c_1 2
+#define pin_i2c_2 3
+
+#define pin_uart_1 4
+#define pin_uart_2 5
+
+#define CHAR_UART 256 // Tamaño de los char para mandar por puerto UART
 #define BAUD_RATE 115200
 
 #define complete_laps 50
@@ -64,29 +70,27 @@ void task_init(void *params) {
 
   // Configuración del i2c
   i2c_init(i2c0, 400000);
-  gpio_set_function(2, GPIO_FUNC_I2C);
-  gpio_set_function(3, GPIO_FUNC_I2C);
-  gpio_pull_up(2);
-  gpio_pull_up(3);
+  gpio_set_function(pin_i2c_1, GPIO_FUNC_I2C);
+  gpio_set_function(pin_i2c_2, GPIO_FUNC_I2C);
+  gpio_pull_up(pin_i2c_1);
+  gpio_pull_up(pin_i2c_2);
 
   // Configuración UART1
   uart_init(uart1, BAUD_RATE);  // Configura UART0 con un baud rate de 115200
-  gpio_set_function(4, GPIO_FUNC_UART);  // Configura GPIO4 como TX
-  gpio_set_function(5, GPIO_FUNC_UART);  // Configura GPIO5 como RX
+  gpio_set_function(pin_uart_1, GPIO_FUNC_UART);  // Configura GPIO4 como TX
+  gpio_set_function(pin_uart_2, GPIO_FUNC_UART);  // Configura GPIO5 como RX
   uart_set_format(uart1, 8, 1, UART_PARITY_NONE);
-  // configuro el puerto, uart1, 8 bits que se transmiten, 1 bit de parada y sin paridad
+  // configuro el puerto, N° puerto, 8 bits que se transmiten, 1 bit de parada y sin paridad
 
   // Pines de salida de los relés
   gpio_set_dir(rele_1, GPIO_OUT);
   gpio_set_dir(rele_2, GPIO_OUT);
-  
-  printf("inside");
 
   // Declaro nombres de cada ina219
   ina219_0x40 = ina219_get_default_config(); // Consumo
   ina219_0x41 = ina219_get_default_config(); // Entrega de la batería, salida del motor
   ina219_0x44 = ina219_get_default_config(); // Consumo de la batería
-  ina219_0x45 = ina219_get_default_config();
+  ina219_0x45 = ina219_get_default_config(); // Entrea del panel solar
 
   // Modifico sus direcciones particulares
   ina219_0x41.addr = 0x41;
@@ -105,20 +109,20 @@ void task_init(void *params) {
   ina219_calibrate(ina219_0x44, 100, 0.8);
   ina219_calibrate(ina219_0x45, 100, 0.8);
   
-  // Creo Queue de sensores
+  // Creo Queue de sensores de FreeRTOS
   queue_ina219_consulta_all = xQueueCreate(2, sizeof(mediciones_ina219));
   queue_ina219_send_uart = xQueueCreate(4, sizeof(mediciones_ina219));
-
+  // Creo Queue ajeno a FreeRTOS
   queue_init(&queue_core_1, sizeof(carga), 1);
 
   // Inicio el encoder
-  gpio_init(PIN_A);
-  gpio_set_dir(PIN_A, GPIO_IN);
-  gpio_pull_up(PIN_A);
+  gpio_init(pin_a_encoder);
+  gpio_set_dir(pin_a_encoder, GPIO_IN);
+  gpio_pull_up(pin_a_encoder);
 
-  gpio_init(PIN_B);
-  gpio_set_dir(PIN_B, GPIO_IN);
-  gpio_pull_up(PIN_B);
+  gpio_init(pin_b_encoder);
+  gpio_set_dir(pin_b_encoder, GPIO_IN);
+  gpio_pull_up(pin_b_encoder);
 
   // Declaro pines de salida para leds
   gpio_init(led_1);
@@ -234,61 +238,65 @@ void task_consulta_all(void *params) {
   while(1){
     mediciones_ina219 medicion = *((mediciones_ina219*)params);
 
-    xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000));
-    // Considero el los valores de consumo de corriente obtenidos de la cola
-    if(status() == 0){
-      // Acá obtengo los valores de los test
+    if(xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))){
+      // Considero el los valores de consumo de corriente obtenidos de la cola
+      if(status() == 0){
+        // Acá obtengo los valores de los test
 
-      if(m_ina0x40.corriente > m_ina0x41.corriente){
-        // Si el consumidor pide más que lo que entrega
+        if(m_ina0x40.corriente > m_ina0x41.corriente){
+          // Si el consumidor pide más que lo que entrega
 
-        if(test_down == 0){
-          // Si es posible descargar la batería
-          rele_off(rele_1);
-          // Apago el relé_1 por si estuviera encendida la carga
-          gpio_pull_up(led_3);
-          // Descargamos la batería
-          rele_on(rele_2);
-        }
-
-        else if(test_down == 1){
-          // Si no es posible descargarla
-          motor_stop;
-          printf("PEDIMOS DE LA RED \n");
-        }
-      }
-
-      else if(m_ina0x40.corriente <= m_ina0x41.corriente){
-        // Si el consumidor pide menos de lo que entrega o lo mismo
-
-        if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed){ //se puede sumar un margen
-          // Si sobra energía y es suficiente para cargar la batería
-
-          if(test_up == 0){
-            // Si la carga puede subir
-            rele_off(rele_2);
-            // Apago el relé_2 por si estuviera encendida la descarga
-            gpio_pull_up(led_2);
-            // Cargamos la batería
-            rele_on(rele_1);
+          if(test_down == 0){
+            // Si es posible descargar la batería
+            rele_off(rele_1);
+            // Apago el relé_1 por si estuviera encendida la carga
+            gpio_pull_up(led_3);
+            // Descargamos la batería
+            rele_on(rele_2);
           }
 
-          else if(test_up == 1){
-            // No puede subir, entonces nada
+          else if(test_down == 1){
+            // Si no es posible descargarla
+            motor_stop;
+            printf("PEDIMOS DE LA RED \n");
+          }
+        }
+
+        else if(m_ina0x40.corriente <= m_ina0x41.corriente){
+          // Si el consumidor pide menos de lo que entrega o lo mismo
+
+          if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed){ //se puede sumar un margen
+            // Si sobra energía y es suficiente para cargar la batería
+
+            if(test_up == 0){
+              // Si la carga puede subir
+              rele_off(rele_2);
+              // Apago el relé_2 por si estuviera encendida la descarga
+              gpio_pull_up(led_2);
+              // Cargamos la batería
+              rele_on(rele_1);
+            }
+
+            else if(test_up == 1){
+              // No puede subir, entonces nada
+              motor_stop();
+              printf("100%% DESDE EL PANEL\n");
+            }
+          }
+
+          else if((m_ina0x41.corriente - m_ina0x40.corriente) < needed){
+            // Pausamos el motor
             motor_stop();
             printf("100%% DESDE EL PANEL\n");
           }
         }
+      }
 
-        else if((m_ina0x41.corriente - m_ina0x40.corriente) < needed){
-          // Pausamos el motor
-          motor_stop();
-          printf("100%% DESDE EL PANEL\n");
-        }
+      else if (status() == 1){
+        vTaskDelay(1000);
       }
     }
-
-    else if (status() == 1){
+    else{
       vTaskDelay(1000);
     }
   }
@@ -299,8 +307,8 @@ void core_1_task(void) {
 
   while (1) {
     // Leer el estado de las señales A y B
-    bool current_A = gpio_get(PIN_A);
-    bool current_B = gpio_get(PIN_B);
+    bool current_A = gpio_get(pin_a_encoder);
+    bool current_B = gpio_get(pin_b_encoder);
 
     // Detectar el flanco ascendente de A
     if (last_A == 0 && current_A == 1) {
@@ -381,8 +389,11 @@ bool status(void){
   }
 }
 
-// Convierte los datos leídos por 
+// Convierte los datos leídos
 void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubicacion_size, float porcentaje_carga) {
+  // POngo en 0 el contenido de la cadena
+  memset(ubicacion, 0, ubicacion_size);
+
   snprintf(ubicacion, ubicacion_size,
   "{\"carga\":%.2f,\"nombre\":\"%s\",\"corriente\":%.2f,\"voltage\":%.2f,\"potencia\":%.2f}",
   porcentaje_carga, 
@@ -396,16 +407,20 @@ void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubic
 void task_send_uart(void *params){
   mediciones_ina219 medicion = *((mediciones_ina219*)params);
   while(true){
-    xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000));
+    if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))){
 
-    prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
-    prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
-    prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
-    prepare_char_uart(uart_carga, &m_ina0x45, CHAR_UART, carga);
+      prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
+      prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
+      prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
+      prepare_char_uart(uart_carga, &m_ina0x45, CHAR_UART, carga);
 
-    uart_puts(uart1, uart_consumo);
-    uart_puts(uart1, uart_entrega_panel);
-    uart_puts(uart1, uart_consumo_bat);
-    uart_puts(uart1, uart_carga);
+      uart_puts(uart1, uart_consumo);
+      uart_puts(uart1, uart_entrega_panel);
+      uart_puts(uart1, uart_consumo_bat);
+      uart_puts(uart1, uart_carga);
+    }
+    else{
+      vTaskDelay(1000);
+    }
   }
 }
