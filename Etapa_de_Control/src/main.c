@@ -28,7 +28,7 @@ int main(void) {
     task_init, "Task Init",
     7 * configMINIMAL_STACK_SIZE,
     NULL, 
-    tskIDLE_PRIORITY + 1UL,
+    tskIDLE_PRIORITY + 6UL,
     NULL
   );
 
@@ -36,7 +36,7 @@ int main(void) {
     task_lectura_sensor_ina219_0x40, "Lectura INA219 0x40 CONSUMIDOR",
     4 * configMINIMAL_STACK_SIZE,
     NULL,
-    tskIDLE_PRIORITY + 2UL, 
+    tskIDLE_PRIORITY + 5UL, 
     NULL
   );
 
@@ -44,23 +44,7 @@ int main(void) {
     task_lectura_sensor_ina219_0x41, "Lectura INA219 0x41 SALIDA DEL MPPT",
     4 * configMINIMAL_STACK_SIZE, 
     NULL,
-    tskIDLE_PRIORITY + 2UL, 
-    NULL
-  );
-
-  xTaskCreate(
-    task_lectura_sensor_ina219_0x44, "Lectura INA219 0x44 CONSUMO DE LA BATERÍA",
-    4 * configMINIMAL_STACK_SIZE, 
-    NULL,
-    tskIDLE_PRIORITY + 4UL, 
-    NULL
-  );
-
-  xTaskCreate(
-    task_lectura_sensor_ina219_0x45, "Lectura INA219 0x45 ENTREGA DEL PANEL SOLAR",
-    4 * configMINIMAL_STACK_SIZE, 
-    NULL,
-    tskIDLE_PRIORITY + 4UL, 
+    tskIDLE_PRIORITY + 5UL, 
     NULL
   );
 
@@ -73,10 +57,26 @@ int main(void) {
   );
 
   xTaskCreate(
+    task_lectura_sensor_ina219_0x44, "Lectura INA219 0x44 CONSUMO DE LA BATERÍA",
+    4 * configMINIMAL_STACK_SIZE, 
+    NULL,
+    tskIDLE_PRIORITY + 2UL, 
+    NULL
+  );
+  
+  xTaskCreate(
+    task_lectura_sensor_ina219_0x45, "Lectura INA219 0x45 ENTREGA DEL PANEL SOLAR",
+    4 * configMINIMAL_STACK_SIZE, 
+    NULL,
+    tskIDLE_PRIORITY + 2UL, 
+    NULL
+  );
+
+  xTaskCreate(
     task_send_uart, "SEND UART PARA ESP8266-01",
     4 * configMINIMAL_STACK_SIZE,
     NULL,
-    tskIDLE_PRIORITY + 3UL,
+    tskIDLE_PRIORITY + 1UL,
     NULL 
   );
 
