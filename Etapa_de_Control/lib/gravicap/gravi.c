@@ -239,31 +239,55 @@ void task_consulta_all(void *params) {
     if(status() == 0){
       // Acá obtengo los valores de los test
 
-      if((m_ina0x40.corriente > m_ina0x41.corriente) && (test_up == 0)){
-
+      if(m_ina0x40.corriente > m_ina0x41.corriente){
         // Si el consumidor pide más que lo que entrega
-        printf("PEDIMOS DE LA RED \n");
-        gpio_pull_up(led_2);
-        // Cargamos la batería
-        task_rele_on(rele_1);
+
+        if(test_down == 0){
+          // Si es posible descargar la batería
+          rele_off(rele_1);
+          // Apago el relé_1 por si estuviera encendida la carga
+          gpio_pull_up(led_3);
+          // Descargamos la batería
+          rele_on(rele_2);
+        }
+
+        else if(test_down == 1){
+          // Si no es posible descargarla
+          motor_stop;
+          printf("PEDIMOS DE LA RED \n");
+        }
       }
 
-      else if ((m_ina0x40.corriente <= m_ina0x41.corriente) && (test_down == 0)){
+      else if(m_ina0x40.corriente <= m_ina0x41.corriente){
+        // Si el consumidor pide menos de lo que entrega o lo mismo
 
-        // Si el consumidor pide menos de lo que entrega
-        gpio_pull_up(led_3);
-        // Descargamos la batería
-        task_rele_on(rele_2);
+        if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed){ //se puede sumar un margen
+          // Si sobra energía y es suficiente para cargar la batería
 
-        // Si la corriente generada > a la usada, el sobrante se puede usar para cargar la batería?
-        if(((m_ina0x40.corriente - m_ina0x41.corriente) >= needed) && (test_up == 0)){
+          if(test_up == 0){
+            // Si la carga puede subir
+            rele_off(rele_2);
+            // Apago el relé_2 por si estuviera encendida la descarga
+            gpio_pull_up(led_2);
+            // Cargamos la batería
+            rele_on(rele_1);
+          }
 
-          gpio_pull_up(led_2);
-          // Cargamos la batería
-          task_rele_on(rele_1);
+          else if(test_up == 1){
+            // No puede subir, entonces nada
+            motor_stop();
+            printf("100%% DESDE EL PANEL\n");
+          }
+        }
+
+        else if((m_ina0x41.corriente - m_ina0x40.corriente) < needed){
+          // Pausamos el motor
+          motor_stop();
+          printf("100%% DESDE EL PANEL\n");
         }
       }
     }
+
     else if (status() == 1){
       vTaskDelay(1000);
     }
@@ -303,10 +327,25 @@ void core_1_task(void) {
   }
 }
 
-// Función para encender el motor solicitado
-void task_rele_on(int rele) {
+// Función para encender el motor
+void rele_on(int rele) {
   gpio_put(rele, 1);
   printf("relé %d on", rele);
+  vTaskDelay(1000);
+}
+
+// Función para encender el motor
+void rele_off(int rele) {
+  gpio_put(rele, 0);
+  printf("relé %d off", rele);
+  vTaskDelay(1000);
+}
+
+// Función para frenar el motor
+void motor_stop() {
+  gpio_put(rele_1, 1);
+  gpio_put(rele_2, 1);
+  printf("MOTOR EN PAUSA");
   vTaskDelay(1000);
 }
 

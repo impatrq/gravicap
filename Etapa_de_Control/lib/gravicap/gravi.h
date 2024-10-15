@@ -40,7 +40,9 @@ void task_lectura_sensor_ina219_0x45();
 void task_consulta_all(void *params);
 
 // Prende el relé indicado
-void task_rele_on(int rele);
+void rele_on(int rele);
+void rele_off(int rele);
+void motor_stop();
 
 // Usando el número de vueltas, le da valores a los test
 bool status(void);
