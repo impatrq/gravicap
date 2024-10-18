@@ -40,8 +40,11 @@ void task_lectura_sensor_ina219_0x45();
 void task_consulta_all(void *params);
 
 // Prende el relé indicado
-void rele_on(int rele);
-void rele_off(int rele);
+//void rele_on(int rele);
+//void rele_off(int rele);
+
+void carga_motor();
+int descarga_motor();
 void motor_stop();
 
 void actualizar_leds(float porcentaje_carga);

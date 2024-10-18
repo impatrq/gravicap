@@ -57,13 +57,14 @@ QueueHandle_t queue_ina219_consulta_all;
 QueueHandle_t queue_ina219_send_uart;
 
 queue_t queue_core_1;
+queue_t queue_core_1_motor;
 
 SemaphoreHandle_t semaphore_encoder = NULL;
 
 volatile int counter = 0;
 volatile bool last_A = 0;
 int p_r = 600;
-float motor_angle, carga, last_carga, lap_counter;
+float motor_angle, carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter;
 bool test_up, test_down;
 bool rele1, rele2;
 
@@ -122,6 +123,7 @@ void task_init(void *params) {
   queue_ina219_send_uart = xQueueCreate(4, sizeof(mediciones_ina219));
   // Creo Queue ajeno a FreeRTOS
   queue_init(&queue_core_1, sizeof(carga), 1);
+  queue_init(&queue_core_1_motor, sizeof(carga), 1);
 
   // Inicio el encoder
   gpio_init(pin_a_encoder);
@@ -180,11 +182,11 @@ void task_lectura_sensor_ina219_0x40() {
 
     if(sent_40_all == false){ 
       xQueueSend(queue_ina219_consulta_all, &m_ina0x40, pdMS_TO_TICKS(1000));
-      sent_40_all == true;
+      sent_40_all = true;
     }
     if(sent_40_uart == false){ 
       xQueueSend(queue_ina219_send_uart, &m_ina0x40, pdMS_TO_TICKS(1000));
-      sent_40_uart == true;
+      sent_40_uart = true;
     }
     vTaskDelay(1000);
   }
@@ -201,11 +203,11 @@ void task_lectura_sensor_ina219_0x41() {
 
     if(sent_41_all == false){ 
       xQueueSend(queue_ina219_consulta_all, &m_ina0x41, pdMS_TO_TICKS(1000));
-      sent_41_all == true;
+      sent_41_all = true;
     }
     if(sent_41_uart == false){ 
       xQueueSend(queue_ina219_send_uart, &m_ina0x41, pdMS_TO_TICKS(1000));
-      sent_41_uart == true;
+      sent_41_uart = true;
     }
     vTaskDelay(1000);
   }
@@ -260,7 +262,13 @@ void task_consulta_all(void *params) {
           if(test_down == 0){
             // Si es posible descargar la batería
             // Descargamos la batería
-            rele_on(rele_2);
+            if(descarga_motor == 1){
+              vTaskDelay(1000);
+            }
+            else if(descarga_motor == 0){
+              printf("seguimos descargando sin problemas");
+              vTaskDelay(1000);
+            }
           }
 
           else if(test_down == 1){
@@ -269,7 +277,6 @@ void task_consulta_all(void *params) {
             printf("PEDIMOS DE LA RED \n");
           }
         }
-
         else if(m_ina0x40.corriente <= m_ina0x41.corriente){
           // Si el consumidor pide menos de lo que entrega o lo mismo
 
@@ -279,7 +286,7 @@ void task_consulta_all(void *params) {
             if(test_up == 0){
               // Si la carga puede subir
               // Cargamos la batería
-              rele_on(rele_1);
+              carga_motor;
             }
 
             else if(test_up == 1){
@@ -288,7 +295,6 @@ void task_consulta_all(void *params) {
               printf("100%% DESDE EL PANEL\n");
             }
           }
-
           else if((m_ina0x41.corriente - m_ina0x40.corriente) < needed){
             // Pausamos el motor
             motor_stop();
@@ -307,7 +313,7 @@ void task_consulta_all(void *params) {
 }
 
 void core_1_task(void) {
-  last_carga == 0;
+  last_carga_core_1 == 0;
 
   while (1) {
     // Leer el estado de las señales A y B
@@ -325,57 +331,82 @@ void core_1_task(void) {
     last_A = current_A;
 
     // Cálculo de parámetros
-    //motor_angle = (p_r / counter) * 360;
-    lap_counter = (p_r / counter);
+    lap_counter = (counter / p_r);
     carga = (lap_counter * 100) / complete_laps;
 
-    if (fabs(carga - last_carga) >= 15.0) {
+    if (fabs(carga - last_carga_core_1) >= 5.0) {
       // Si la diferencia entre la carga actual y la anterior es por lo menos de 15%
       // Agrego el dato a una cola (no de freertos)
       queue_add_blocking(&queue_core_1, &carga);
 
-      last_carga = carga;
+      last_carga_core_1 = carga;
     }
   }
 }
 
-// Función para encender el motor
-void rele_on(int rele) {
-  // Primero apagamos todo lo que pueda estar encendido
-  if(rele_1 == 1 && rele_2 == 1){
-    // Si el motor está en stop
-    rele_off(rele_1);
-    rele_off(rele_2);
-    gpio_pull_down(led_stop);
+void carga_motor(){
+  /// Esta serie de condiciones avala que el motor este en pausa
+  // o si el motor está en descarga
+  if(rele_2 == 1){
+    gpio_put(rele_2, 0);
+    if(led_stop == 1){
+      gpio_put(led_stop, 0);
+    }
+    else if (led_descarga == 1){
+      gpio_put(led_descarga, 0);
+    }
   }
-  else if(rele == rele_1 && rele_2 == 1){
-    // Si queremos mandar a cargar y está descargando
-    rele_off(rele_2);
-    gpio_pull_down(led_descarga);
+  //  Si está apagado el relé de carga lo prende
+  if(rele_1 == 0){
+    gpio_put(rele_1, 1);
   }
-  else if(rele == rele_2 && rele_1 == 1){
-    // Si queremos mandar a descargar y está cargando
-    rele_off(rele_1);
-    gpio_pull_down(led_carga);
-  }
+  gpio_put(led_carga, 1);
 
-  gpio_put(rele, 1);
-  if(rele == rele_1){
-    gpio_pull_up(led_carga);
-  }
-  else if(rele == rele_2){
-    gpio_pull_up(led_descarga);
-  }
-
-  printf("relé %d on", rele);
-  vTaskDelay(1000);
 }
 
-// Función para encender el motor
-void rele_off(int rele) {
-  gpio_put(rele, 0);
-  printf("relé %d off", rele);
-  vTaskDelay(1000);
+int descarga_motor(){
+  //Cuando llamo a descargar el motor
+  // primero apago la carga si estuviera prendido
+  if(queue_try_peek(&queue_core_1_motor, &carga)){
+    last_carga_motor = carga;
+    queue_add_blocking (&queue_core_1_motor, &carga);
+  }
+  else{
+    // FALLAS EN EL ENCODER, NO ESTÁ MANDANDO DATOS
+    printf("POSIBLE FALLA EN EL ENCODER");
+    return 2;
+  }
+  if(rele_1 == 1){
+    gpio_put(rele_1, 0);
+    if(led_stop == 1){
+      gpio_put(led_stop, 0);
+    }
+    else if (led_carga == 1){
+      gpio_put(led_carga, 0);
+    }
+  }
+  // Prendo y apago
+  gpio_put(rele_2, 1);
+  gpio_put(led_descarga, 1);
+  gpio_put(rele_2, 0);
+  vTaskDelay(400);
+  
+  // a confirmar si el tiempo es suficiente para que el valor de carga difiera
+  if(queue_try_peek(&queue_core_1_motor, &carga)){
+    if(last_carga_motor == carga){
+      // significa que el motor se frenó y no está descargando
+      gpio_put(rele_2, 1);
+      gpio_put(rele_2, 0);
+      // Luego de recibir un pulso, debería ser suficiente para seguir la descarga
+      return 0;
+    }
+    else{
+      return 1;
+    }
+  }
+  else{
+    return 1;
+  }
 }
 
 // Función para frenar el motor
@@ -412,6 +443,7 @@ void actualizar_leds(float porcentaje_carga) {
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(void){
   if(queue_try_peek(&queue_core_1, &carga)){
+    queue_add_blocking (&queue_core_1, &carga);
     if(carga < 100 && carga > 0){
       actualizar_leds(carga);
 
@@ -440,6 +472,7 @@ bool status(void){
     else if(carga < 0 || carga > 100){
       return 1;
     }
+    return 1;
   }
   else {
     return 1;
