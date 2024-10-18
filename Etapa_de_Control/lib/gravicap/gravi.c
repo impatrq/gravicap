@@ -16,7 +16,6 @@
 #define led_descarga 26 // Led de descarga rojo
 #define led_stop 29 // Led de stop 
 
-
 #define pin_a_encoder 27 //Encoder
 #define pin_b_encoder 28//Encoder
 
@@ -168,6 +167,9 @@ void task_init(void *params) {
   // Enciendo led de chequeo (ENCENDIDO)
   gpio_pull_up(led_1);
 
+  // Aseguro que el motor esté frenado al principio
+  motor_stop();
+
   // Elimino la tarea
   vTaskDelete(NULL);
 }
@@ -260,12 +262,13 @@ void task_consulta_all(void *params) {
           // Si el consumidor pide más que lo que entrega
 
           if(test_down == 0){
+            int result = descarga_motor();
             // Si es posible descargar la batería
             // Descargamos la batería
-            if(descarga_motor == 1){
+            if(result == 1){
               vTaskDelay(1000);
             }
-            else if(descarga_motor == 0){
+            else if(result == 0){
               printf("seguimos descargando sin problemas");
               vTaskDelay(1000);
             }
