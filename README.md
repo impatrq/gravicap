@@ -2,7 +2,7 @@
 
 # Proyecto GraviCap
 
-<img src="/Imagenes/Íconos/GRAVICAP.png" height="250">
+<img src="/Imagenes/Íconos/GRAVICAP.png" height="500">
 
 &nbsp;
 
@@ -21,10 +21,6 @@
 ## Beneficios
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GraviCap es un proyecto ideado para acompañar a los distintos generadores de energías renovables, adaptándose a las dimensiones que desee utilizar su consumidor acorde a la capacidad de su red eléctrica. Procura resguardar su huella de carbono al estar conformado por piezas simples sin requerimientos técnicos en demasía. Gracias a esto, pueden estar fabricadas por materiales reutilizados, derivados de materias primas locales o biomateriales. Permite prescindir aquellos materiales que perjudican al ambiente durante su producción o con su posterior desecho, ya que no hay materiales peligrosos para proteger.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Almacenar energía gravitatoria nos permite ser también sustentables, ya que depende únicamente de un peso y la altura. El almacenamiento de energía es una problemática cada vez mayor, y con un planeta con crecientes problemas ambientales surgen problemas si estos son contaminantes.<br>
-
-## ¿Quiénes somos?
-
-Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 ## Integrantes:
 <div align="center">
