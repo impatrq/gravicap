@@ -8,7 +8,7 @@
 
 | Página web | Email | Instagram |
 |------------|-------|-----------|
-|[Página Web]((https://gravicap.vercel.app/home))|gravicap.arg@gmail.com|[@gravi.cap](https://www.instagram.com/gravi.cap/)|
+|[Página Web](https://gravicap.vercel.app/home)|gravicap.arg@gmail.com|[@gravi.cap](https://www.instagram.com/gravi.cap/)|
 
 &nbsp;
 
