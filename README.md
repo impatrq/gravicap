@@ -2,7 +2,7 @@
 
 # Proyecto GraviCap
 
-<img src="/Imagenes/Íconos/GRAVICAP.png" height="100" width="450" />
+<img src="/Imagenes/Íconos/GRAVICAP.png" height="250">
 
 &nbsp;
 
