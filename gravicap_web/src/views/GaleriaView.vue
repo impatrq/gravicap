@@ -9,11 +9,11 @@
             <img class="imagenes" src="../../public/creacionPeso (1).png">
             </div>
             <div class="grid_3">
-                <p>Estructura sin pintar</p>
+                <p>Competimos en las ONIET</p>
             <img class="imagenes" src="../../public/presentacionUBP.png">
             </div>
             <div class="grid_4">
-                <p>Estructura pintada</p>
+                <p>Ganamos medallas</p>
             <img class="imagenes" src="../../public/visitaUBP.png">
             </div>
             <div class="grid_5">
