@@ -1,8 +1,10 @@
-import { IonApp, IonBackButton, IonButton, IonButtons, IonCard, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {IonBackButton, IonButtons, IonCard, IonContent, IonHeader, IonToolbar } from '@ionic/react';
 import React from 'react';
+import "./CSS BatteryValues.css"
+import BarChart from './GraphicValues';
 
 function BatteryValues () {
-  return (
+	return (
 		<>
 			<IonHeader>
 				<IonToolbar>
@@ -12,16 +14,32 @@ function BatteryValues () {
 				</IonToolbar>
 			</IonHeader>
 			<IonContent className="ion-padding">
-				<IonCard>
-					{/*colocar grafico del porcentaje de carga de la batería*/}
-				</IonCard>
-				<IonCard><p>valores batería</p></IonCard> {/*grafico de columnas de valores de la bateria hacerlo con valores de la base de datos*/}
-				<IonCard> {/*carta de valores del grafico poner valores de la base de datos */}
-					<p>Voltaje</p> <p>Amperaje</p> <p>Wataje</p>
-					<IonCard><p>x V</p></IonCard>
-					<IonCard><p>x A</p></IonCard>
-					<IonCard><p>x W</p></IonCard>
-				</IonCard>
+        <div id= "paginavaloresbateria">
+          <IonCard>
+            <BarChart></BarChart>
+          </IonCard>
+          <div id="carta">
+            <IonCard>
+              <div id= "contenedor3valores">
+                <div id= "voltajecolumna">
+                  <IonCard>
+                    <strong>24V</strong>
+                  </IonCard>
+                </div>
+                <div id= "corrientecolumna">
+                  <IonCard>
+                    <strong>5A</strong>
+                  </IonCard>
+                </div>
+                <div id= "potenciacolumna">
+                  <IonCard>
+                    <strong>15W</strong>
+                  </IonCard>
+                </div>
+              </div>
+            </IonCard>
+          </div>
+        </div>
 			</IonContent>
 		</>
 	)

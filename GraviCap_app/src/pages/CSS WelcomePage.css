@@ -1,4 +1,25 @@
-.logo{
-  width: 250px;
+ion-content {
+  --background: #c18de1;
+}
+
+ion-button {
+  --background: #e2e415;
+  margin-top: 80px;
+}
+
+#bienvenida {
+  text-align: center;
+}
+
+#bienvenida img {
   height: auto;
+  width: 300px;
+}
+
+#letrasbienvenida {
+  margin-top: 40px;
+}
+
+#bienvenida strong {
+  font-size: 20px;
 }

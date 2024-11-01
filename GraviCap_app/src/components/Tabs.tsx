@@ -1,37 +1,31 @@
-import { IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from "@ionic/react";
+import { IonIcon, IonLabel, IonNavLink, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route } from "react-router";
+import { Redirect, Route } from "react-router";
 import Start from "../pages/StartPage";
 import Graphics from "../pages/GraphicsPage";
-import User from "../pages/UserPage";
-import { homeOutline, personCircleOutline, trendingUpSharp } from "ionicons/icons";
+import { homeOutline, trendingUpSharp } from "ionicons/icons";
 
 function Tabs () {
   return(
-    <IonReactRouter> 
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/StartPage" render={() => <Start />} exact={true} />
-          <Route path="/GraphicsPage" render={() => <Graphics />} exact={true} />
-          <Route path="/UserPage" render={() => <User />} exact={true} />
-
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="Graphics" href="/GraphicsPage">
-              <IonIcon icon={trendingUpSharp} />
-              <IonLabel>Graficos de Potencia</IonLabel>
-            </IonTabButton>
-
-            <IonTabButton tab="Start" href="/StartPage">
-              <IonIcon icon={homeOutline} />
-              <IonLabel>Inicio</IonLabel>
-            </IonTabButton>
-
-            <IonTabButton tab="User" href="/UserPage">
-              <IonIcon icon={personCircleOutline} />
-              <IonLabel>Usuario</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
+          <Redirect exact path="/" to="../StartPage" />
+          {/*Use the render method to reduce the number of renders your component will have due to a route change.
+          Use the component prop when your component depends on the RouterComponentProps passed in automatically.*/}
+          <Route path="../StartPage" render={() => <Start />} exact={true} />
+          <Route path="../GraphicsPage" render={() => <Graphics />} exact={true} />
         </IonRouterOutlet>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="Graphics" href="../GraphicsPage">
+            <IonIcon icon={trendingUpSharp} />
+            <IonLabel>Graficos de Potencia</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="Start" href="../StartPage">
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Inicio</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
       </IonTabs>
     </IonReactRouter>
   );

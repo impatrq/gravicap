@@ -1,4 +1,165 @@
 ion-card {
   --background: #FFFFFF;
   --color: #000000;
+  border-radius: 3%;
 }  
+
+ion-content {
+  --background: #c18de1;
+}
+
+#inicio {
+  text-align: center;
+}
+
+#textoredes p {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+#contenedoreb {
+  display: flex;
+}
+
+#circuloporcentaje {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+#circuloatras ion-card {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #810ec8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#circuloadelante ion-card {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #c18de1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#circuloadelante p {
+  font-size: 45px;
+}
+
+#imagenbateria {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 55px;
+  width: 100px;
+  height: auto;
+}
+
+#consumo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#consumo ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#consumo img {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#consumo p {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+#panelsolar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#panelsolar ion-card{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#panelsolar img {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#panelsolar p {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+#valoresbateria {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#valoresbateria ion-card{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#valoresbateria img {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#valoresbateria p {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+#contenedorde3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+#inicio ion-button {
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-right: 172px;
+}

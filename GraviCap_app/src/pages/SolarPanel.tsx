@@ -1,5 +1,6 @@
-import { IonApp, IonBackButton, IonButton, IonButtons, IonCard, IonContent, IonDatetime, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButtons, IonCard, IonContent, IonHeader, IonToolbar } from '@ionic/react';
 import React from 'react';
+import "./CSS SolarPanel.css"
 
 function SolarPanel () {
   return (
@@ -11,16 +12,39 @@ function SolarPanel () {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-
       <IonContent className="ion-padding">
-        <IonCard><img src= "/Icono Panel Solar.png" alt= "Consumo" /></IonCard>
-          {/*carta para los valores de voltaje y potencia del panel solar*/}
-          <IonCard>
-            <p>Valores del Panel Solar</p> {/*Poner los valores en sus deternminadas cartas sacando los valores de la base de datos*/}
-            <IonCard> Voltaje </IonCard> 
-            <IonCard> Potencia </IonCard> 
-            <IonDatetime></IonDatetime>
-          </IonCard>
+        <div id= "paginapanel">
+          <div id= "circulopanel">
+            <IonCard>
+              <img src= "/Icono Panel Solar.png" alt= "Consumo" />
+            </IonCard>
+          </div>
+          <div id= "contenedorvalores">
+            <IonCard className='cartablanca'>
+              <strong><p>Valores Panel Solar</p></strong>
+              <div id= "valoresconsumo">
+                <IonCard className='voltaje'>
+                  Voltaje
+                </IonCard> 
+                <IonCard className='potencia'>
+                  Potencia 
+                </IonCard> 
+              </div>
+              <div id= "contenedorcirculos">
+                <div id= "circulovoltaje">
+                  <IonCard>
+                    <strong><p>24V</p></strong>
+                  </IonCard>
+                </div>
+                <div id= "circulopotencia">
+                  <IonCard>
+                    <strong><p>30W</p></strong>
+                  </IonCard>
+                </div>
+              </div>
+            </IonCard>
+          </div>
+        </div>
       </IonContent>
     </>
 	)

@@ -1,0 +1,58 @@
+#paginaconsumo {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#circuloconsumo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#circuloconsumo ion-card {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#circuloconsumo img {
+  width: 220px;
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#valorredondeado p {
+  font-size: 20px;
+}
+
+#valorconsumo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#valorconsumo ion-card {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#valorconsumo p {
+  font-size: 55px;
+  color: #000000;
+}

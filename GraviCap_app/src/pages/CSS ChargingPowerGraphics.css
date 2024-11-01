@@ -1,0 +1,13 @@
+ion-content {
+  --background: #c18de1;
+}
+
+#contenidocarga {
+  margin-top: 150px;
+}
+
+#contendidocarga ion-card {
+  display: flex;
+  margin-top: 150px;
+}
+
