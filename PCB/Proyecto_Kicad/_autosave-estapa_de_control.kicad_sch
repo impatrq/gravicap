@@ -3563,11 +3563,11 @@
 		(uuid "515cb7c9-f5c6-46fa-b6a3-92fc1dad5540")
 	)
 	(no_connect
-		(at 31.75 58.42)
+		(at 36.83 58.42)
 		(uuid "5fcc58a4-d322-4f7b-877a-e6e6126daef7")
 	)
 	(no_connect
-		(at 87.63 60.96)
+		(at 91.44 60.96)
 		(uuid "764e6719-2500-4244-af42-1c1ac27ac5d4")
 	)
 	(no_connect
@@ -3575,7 +3575,7 @@
 		(uuid "8038c432-7d01-4843-b9f4-ae7e4a7ef468")
 	)
 	(no_connect
-		(at 87.63 58.42)
+		(at 91.44 58.42)
 		(uuid "901bb873-ac5f-4d0a-b5f0-cd1566f91aea")
 	)
 	(no_connect
@@ -3583,23 +3583,19 @@
 		(uuid "93b6cbc8-0830-476c-9d37-bf79130c22af")
 	)
 	(no_connect
-		(at 31.75 34.29)
+		(at 36.83 34.29)
 		(uuid "95c12529-b0a2-4422-9868-47e8ad45efff")
 	)
 	(no_connect
-		(at 87.63 34.29)
+		(at 91.44 34.29)
 		(uuid "987fe78c-e991-46a2-af7c-bb72c54c002c")
 	)
 	(no_connect
-		(at 203.2 119.38)
-		(uuid "98874f3c-9511-4f14-938e-1d0f1e202980")
-	)
-	(no_connect
-		(at 31.75 31.75)
+		(at 36.83 31.75)
 		(uuid "cf069d56-c0ef-426d-9424-a1bf208be721")
 	)
 	(no_connect
-		(at 87.63 31.75)
+		(at 91.44 31.75)
 		(uuid "d6da3be2-e0cf-49e5-a540-4153339b07f2")
 	)
 	(no_connect
@@ -3607,8 +3603,12 @@
 		(uuid "d941f4df-af73-4950-9c7a-ed11146350bb")
 	)
 	(no_connect
-		(at 31.75 60.96)
+		(at 36.83 60.96)
 		(uuid "da0d5fa7-de76-4251-8945-3d961faeb321")
+	)
+	(no_connect
+		(at 203.2 114.3)
+		(uuid "f558ce24-55b2-41c8-b226-ea837982bcd7")
 	)
 	(no_connect
 		(at 226.06 80.01)
@@ -3908,7 +3908,7 @@
 	)
 	(global_label "RPZ_I2C_SCL"
 		(shape input)
-		(at 31.75 53.34 180)
+		(at 36.83 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3918,7 +3918,7 @@
 		)
 		(uuid "00283f64-0a7d-4b84-b209-90c18b288abd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.4882 53.34 0)
+			(at 21.5682 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3996,7 +3996,7 @@
 	)
 	(global_label "RPZ_I2C_SDA"
 		(shape input)
-		(at 31.75 29.21 180)
+		(at 36.83 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4006,7 +4006,7 @@
 		)
 		(uuid "10d0983f-75b2-4dd7-ad5c-d08f2429896f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.4277 29.21 0)
+			(at 21.5077 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4128,7 +4128,7 @@
 	)
 	(global_label "RPZ_I2C_SCL"
 		(shape input)
-		(at 87.63 53.34 180)
+		(at 91.44 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4138,29 +4138,7 @@
 		)
 		(uuid "26caca26-1533-44ad-8ac4-5c8e71b6d91a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.3682 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor_Vin+"
-		(shape input)
-		(at 203.2 114.3 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "28d7217c-f36c-437e-9ce2-70d32db0b706")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.5711 114.3 0)
+			(at 76.1782 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4172,7 +4150,7 @@
 	)
 	(global_label "Vin+_Consumo"
 		(shape input)
-		(at 54.61 25.4 0)
+		(at 59.69 25.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4182,7 +4160,7 @@
 		)
 		(uuid "2b08163c-e5de-41c3-9e86-ad21bb744876")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.565 25.4 0)
+			(at 76.645 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4214,6 +4192,28 @@
 			)
 		)
 	)
+	(global_label "Panel_Solar_+"
+		(shape input)
+		(at 59.69 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "35a4cc19-d8ad-4d61-b241-28c45c23782f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.4635 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RPZ_LED_6"
 		(shape input)
 		(at 246.38 53.34 270)
@@ -4238,7 +4238,7 @@
 	)
 	(global_label "RPZ_I2C_SDA"
 		(shape input)
-		(at 87.63 55.88 180)
+		(at 91.44 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4248,7 +4248,7 @@
 		)
 		(uuid "46b6809a-dc41-490f-84a1-795980724cdb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.3077 55.88 0)
+			(at 76.1177 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4326,7 +4326,7 @@
 	)
 	(global_label "Motor_Vin-"
 		(shape input)
-		(at 110.49 29.21 0)
+		(at 114.3 29.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4336,7 +4336,7 @@
 		)
 		(uuid "59880443-8ea1-4a0d-a8db-0e05b6b597fb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.1189 29.21 0)
+			(at 127.9289 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4414,7 +4414,7 @@
 	)
 	(global_label "Consumidor_+"
 		(shape input)
-		(at 54.61 29.21 0)
+		(at 59.69 29.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4424,7 +4424,7 @@
 		)
 		(uuid "6b23a373-f982-4999-ac12-0fb8fc7dae26")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.2626 29.21 0)
+			(at 76.3426 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4434,24 +4434,24 @@
 			)
 		)
 	)
-	(global_label "Panel_Solar_+"
+	(global_label "Motor_Vin+"
 		(shape input)
-		(at 110.49 52.07 0)
+		(at 203.2 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "75df6031-8416-4aca-9fc0-b2df3d60b4b1")
+		(uuid "7ad76bb6-4cd6-4317-85d4-c7e56e67bf22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.2635 52.07 0)
+			(at 189.5711 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4502,7 +4502,7 @@
 	)
 	(global_label "RPZ_I2C_SCL"
 		(shape input)
-		(at 87.63 26.67 180)
+		(at 91.44 26.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4512,7 +4512,7 @@
 		)
 		(uuid "81a277c1-6e9a-40d5-a76e-8e81461f2a12")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.3682 26.67 0)
+			(at 76.1782 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4633,7 +4633,7 @@
 	)
 	(global_label "RPZ_I2C_SDA"
 		(shape input)
-		(at 87.63 29.21 180)
+		(at 91.44 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4643,7 +4643,7 @@
 		)
 		(uuid "8cc1c6fc-ce5b-41ff-a1a2-47fd0b877ca7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.3077 29.21 0)
+			(at 76.1177 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4851,28 +4851,6 @@
 			)
 		)
 	)
-	(global_label "MPPT_+"
-		(shape input)
-		(at 54.61 52.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a2ecf9c1-fd88-4e28-8999-c366b8b5e3c1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 65.0942 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RPZ_LED_8"
 		(shape input)
 		(at 233.68 44.45 180)
@@ -5026,9 +5004,9 @@
 			)
 		)
 	)
-	(global_label "Vin-_Solar"
+	(global_label "Vin-_MPPT"
 		(shape input)
-		(at 110.49 55.88 0)
+		(at 114.3 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5038,7 +5016,7 @@
 		)
 		(uuid "cc7cfb1b-4a41-4796-a020-5e2e5240f762")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.8165 55.88 0)
+			(at 127.6266 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5114,7 +5092,7 @@
 			)
 		)
 	)
-	(global_label "Vin-_Solar"
+	(global_label "Vin-_MPPT"
 		(shape input)
 		(at 172.72 128.27 180)
 		(fields_autoplaced yes)
@@ -5126,7 +5104,7 @@
 		)
 		(uuid "dc02eb69-cab6-4936-93b1-f4ac2140c560")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.3935 128.27 0)
+			(at 159.3934 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5138,7 +5116,7 @@
 	)
 	(global_label "Motor_Vin+"
 		(shape input)
-		(at 110.49 25.4 0)
+		(at 114.3 25.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5148,7 +5126,29 @@
 		)
 		(uuid "dffaf6ba-5d7d-4583-b1e9-843a140333a0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.1189 25.4 0)
+			(at 127.9289 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MPPT_+"
+		(shape input)
+		(at 114.3 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e1cc0c05-40e7-46b3-9f28-3d12fae06002")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 124.7842 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5226,7 +5226,7 @@
 	)
 	(global_label "RPZ_I2C_SCL"
 		(shape input)
-		(at 31.75 26.67 180)
+		(at 36.83 26.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5236,7 +5236,7 @@
 		)
 		(uuid "fcc2c14c-a02a-48f6-9408-d126d63c6b4a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.4882 26.67 0)
+			(at 21.5682 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5270,7 +5270,7 @@
 	)
 	(global_label "RPZ_I2C_SDA"
 		(shape input)
-		(at 31.75 55.88 180)
+		(at 36.83 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5280,7 +5280,7 @@
 		)
 		(uuid "fe4a8f57-3558-4399-9843-632999a94a50")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.4277 55.88 0)
+			(at 21.5077 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5935,7 +5935,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f5c5279-1b04-4356-97d2-25a0a563ece0")
-		(property "Reference" "Encoder"
+		(property "Reference" "Encoder1"
 			(at 139.7 179.59 90)
 			(effects
 				(font
@@ -5998,7 +5998,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "Encoder")
+					(reference "Encoder1")
 					(unit 1)
 				)
 			)
@@ -6072,7 +6072,7 @@
 	(symbol
 		(lib_name "module_ina219_2")
 		(lib_id "usini_sensors:module_ina219")
-		(at 87.63 26.67 0)
+		(at 91.44 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6080,7 +6080,7 @@
 		(dnp no)
 		(uuid "15e5e5f8-696c-4e8b-8ce4-d37617198b08")
 		(property "Reference" "0X44_Consumo_motor1"
-			(at 67.564 39.624 0)
+			(at 71.374 39.624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6089,7 +6089,7 @@
 			)
 		)
 		(property "Value" "module_ina219"
-			(at 75.184 37.592 0)
+			(at 78.994 37.592 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6099,7 +6099,7 @@
 			)
 		)
 		(property "Footprint" "RP2040-Zero:module_ina219"
-			(at 100.33 44.45 0)
+			(at 104.14 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6108,7 +6108,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 26.67 0)
+			(at 91.44 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6117,7 +6117,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 26.67 0)
+			(at 91.44 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6296,7 +6296,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 54.61 55.88 90)
+		(at 59.69 55.88 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6304,7 +6304,7 @@
 		(dnp no)
 		(uuid "1c431710-973f-439b-ae55-15e9b0f678bd")
 		(property "Reference" "#PWR016"
-			(at 60.96 55.88 0)
+			(at 66.04 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6313,7 +6313,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 61.214 55.88 90)
+			(at 66.294 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6321,7 +6321,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 55.88 0)
+			(at 59.69 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6330,7 +6330,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 55.88 0)
+			(at 59.69 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6339,7 +6339,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 54.61 55.88 0)
+			(at 59.69 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6944,7 +6944,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 31.75 48.26 90)
+		(at 36.83 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6953,7 +6953,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cfe3f42-869f-48ba-b7f3-6c09d427afa3")
 		(property "Reference" "#PWR09"
-			(at 35.56 48.26 0)
+			(at 40.64 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6962,7 +6962,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 27.94 48.2599 90)
+			(at 33.02 48.2599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6971,7 +6971,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 48.26 0)
+			(at 36.83 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6980,7 +6980,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 48.26 0)
+			(at 36.83 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6989,7 +6989,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 31.75 48.26 0)
+			(at 36.83 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7018,7 +7018,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2f98f924-0989-4767-a5f7-da0ba1c0ee53")
-		(property "Reference" "MPPT"
+		(property "Reference" "MPPT1"
 			(at 88.9 179.59 90)
 			(effects
 				(font
@@ -7072,7 +7072,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "MPPT")
+					(reference "MPPT1")
 					(unit 1)
 				)
 			)
@@ -7286,7 +7286,7 @@
 	(symbol
 		(lib_name "module_ina219_3")
 		(lib_id "usini_sensors:module_ina219")
-		(at 31.75 26.67 0)
+		(at 36.83 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7294,7 +7294,7 @@
 		(dnp no)
 		(uuid "3aea4ce4-2076-4ebc-a86c-01e6d5fcc8da")
 		(property "Reference" "0X40_Consumidor1"
-			(at 15.748 39.624 0)
+			(at 20.828 39.624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7303,7 +7303,7 @@
 			)
 		)
 		(property "Value" "module_ina219"
-			(at 54.61 19.05 0)
+			(at 59.69 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7313,7 +7313,7 @@
 			)
 		)
 		(property "Footprint" "RP2040-Zero:module_ina219"
-			(at 44.45 44.45 0)
+			(at 49.53 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7322,7 +7322,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 26.67 0)
+			(at 36.83 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7331,7 +7331,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 31.75 26.67 0)
+			(at 36.83 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7738,7 +7738,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "48ba13ba-9226-422f-b949-43d2a00bdeae")
-		(property "Reference" "Motor"
+		(property "Reference" "Motor1"
 			(at 71.12 179.59 90)
 			(effects
 				(font
@@ -7792,7 +7792,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "Motor")
+					(reference "Motor1")
 					(unit 1)
 				)
 			)
@@ -8157,7 +8157,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 31.75 21.59 90)
+		(at 36.83 21.59 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8166,7 +8166,7 @@
 		(fields_autoplaced yes)
 		(uuid "524a96dc-1e17-449a-8a2f-10a72fb862fe")
 		(property "Reference" "#PWR07"
-			(at 35.56 21.59 0)
+			(at 40.64 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8175,7 +8175,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 27.94 21.5899 90)
+			(at 33.02 21.5899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8184,7 +8184,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 21.59 0)
+			(at 36.83 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8193,7 +8193,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 21.59 0)
+			(at 36.83 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8202,7 +8202,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 31.75 21.59 0)
+			(at 36.83 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8300,15 +8300,15 @@
 	(symbol
 		(lib_name "module_ina219_1")
 		(lib_id "usini_sensors:module_ina219")
-		(at 87.63 53.34 0)
+		(at 91.44 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "587fac50-4882-44eb-a26a-a7ca4c5db774")
-		(property "Reference" "0X45_Entrega_panel_solar1"
-			(at 63.5 66.294 0)
+		(property "Reference" "0X41_MPPT1"
+			(at 81.534 66.294 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8317,7 +8317,7 @@
 			)
 		)
 		(property "Value" "module_ina219"
-			(at 74.93 64.262 0)
+			(at 78.74 64.262 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8327,7 +8327,7 @@
 			)
 		)
 		(property "Footprint" "RP2040-Zero:module_ina219"
-			(at 100.33 71.12 0)
+			(at 104.14 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8336,7 +8336,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 53.34 0)
+			(at 91.44 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8345,7 +8345,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 53.34 0)
+			(at 91.44 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8380,7 +8380,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "0X45_Entrega_panel_solar1")
+					(reference "0X41_MPPT1")
 					(unit 1)
 				)
 			)
@@ -8395,7 +8395,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5b15292c-48b9-4344-957f-731a921e6994")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR021"
 			(at 95.25 171.45 0)
 			(effects
 				(font
@@ -8445,7 +8445,7 @@
 		(instances
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR025")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -8652,7 +8652,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 87.63 21.59 90)
+		(at 91.44 21.59 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8660,8 +8660,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "63931fa2-8c27-4737-8e6d-1a579f857132")
-		(property "Reference" "#PWR021"
-			(at 91.44 21.59 0)
+		(property "Reference" "#PWR022"
+			(at 95.25 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8670,7 +8670,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 83.82 21.5899 90)
+			(at 87.63 21.5899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8679,7 +8679,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 21.59 0)
+			(at 91.44 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8688,7 +8688,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 21.59 0)
+			(at 91.44 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8697,7 +8697,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 87.63 21.59 0)
+			(at 91.44 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8711,7 +8711,7 @@
 		(instances
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR021")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -8858,7 +8858,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6870682d-4fdb-49c3-b283-7f9fa4175ecc")
-		(property "Reference" "Panel_Solar"
+		(property "Reference" "Panel_Solar1"
 			(at 113.03 179.59 90)
 			(effects
 				(font
@@ -8912,7 +8912,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "Panel_Solar")
+					(reference "Panel_Solar1")
 					(unit 1)
 				)
 			)
@@ -8920,15 +8920,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 87.63 24.13 270)
+		(at 91.44 24.13 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6a09dcb9-be60-4432-86ff-249c4ff189c0")
-		(property "Reference" "#PWR022"
-			(at 81.28 24.13 0)
+		(property "Reference" "#PWR023"
+			(at 85.09 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8937,7 +8937,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 81.026 24.13 90)
+			(at 84.836 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8945,7 +8945,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 24.13 0)
+			(at 91.44 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8954,7 +8954,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 24.13 0)
+			(at 91.44 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8963,7 +8963,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 87.63 24.13 0)
+			(at 91.44 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,7 +8977,7 @@
 		(instances
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR022")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -9251,15 +9251,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 87.63 50.8 270)
+		(at 91.44 50.8 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6db8820f-5d7c-430e-84a0-8e2958742533")
-		(property "Reference" "#PWR024"
-			(at 81.28 50.8 0)
+		(property "Reference" "#PWR025"
+			(at 85.09 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9268,7 +9268,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 81.026 50.8 90)
+			(at 84.836 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9276,7 +9276,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 50.8 0)
+			(at 91.44 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9285,7 +9285,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 50.8 0)
+			(at 91.44 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9294,7 +9294,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 87.63 50.8 0)
+			(at 91.44 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9308,7 +9308,7 @@
 		(instances
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR024")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -9383,7 +9383,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 87.63 48.26 90)
+		(at 91.44 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9391,8 +9391,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70f0e62e-d466-48ae-bd7f-8b29ed5fa40f")
-		(property "Reference" "#PWR023"
-			(at 91.44 48.26 0)
+		(property "Reference" "#PWR024"
+			(at 95.25 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9401,7 +9401,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 83.82 48.2599 90)
+			(at 87.63 48.2599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9410,7 +9410,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 48.26 0)
+			(at 91.44 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9419,7 +9419,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 48.26 0)
+			(at 91.44 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9428,7 +9428,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 87.63 48.26 0)
+			(at 91.44 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9442,7 +9442,7 @@
 		(instances
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10192,15 +10192,15 @@
 	)
 	(symbol
 		(lib_id "usini_sensors:module_ina219")
-		(at 31.75 53.34 0)
+		(at 36.83 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8718c42a-3f78-48ae-8dcb-a4e2f1ea0d13")
-		(property "Reference" "0X41_MPPT1"
-			(at 21.59 66.548 0)
+		(property "Reference" "0X45_Panel_Solar1"
+			(at 20.066 66.294 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10209,7 +10209,7 @@
 			)
 		)
 		(property "Value" "module_ina219"
-			(at 52.324 45.974 0)
+			(at 57.404 45.974 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10219,7 +10219,7 @@
 			)
 		)
 		(property "Footprint" "RP2040-Zero:module_ina219"
-			(at 44.45 71.12 0)
+			(at 49.53 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10228,7 +10228,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 53.34 0)
+			(at 36.83 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10237,7 +10237,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 31.75 53.34 0)
+			(at 36.83 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10272,7 +10272,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "0X41_MPPT1")
+					(reference "0X45_Panel_Solar1")
 					(unit 1)
 				)
 			)
@@ -11026,7 +11026,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 31.75 24.13 270)
+		(at 36.83 24.13 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11034,7 +11034,7 @@
 		(dnp no)
 		(uuid "9f946d17-15f0-4fac-a426-3f23fe16a16e")
 		(property "Reference" "#PWR08"
-			(at 25.4 24.13 0)
+			(at 30.48 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11043,7 +11043,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 25.4 24.13 90)
+			(at 30.48 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11051,7 +11051,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 24.13 0)
+			(at 36.83 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11060,7 +11060,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 24.13 0)
+			(at 36.83 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11069,7 +11069,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 31.75 24.13 0)
+			(at 36.83 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11369,7 +11369,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 31.75 50.8 270)
+		(at 36.83 50.8 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11377,7 +11377,7 @@
 		(dnp no)
 		(uuid "aa447d81-4f67-436b-8db3-91ae20a62bb9")
 		(property "Reference" "#PWR010"
-			(at 25.4 50.8 0)
+			(at 30.48 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11386,7 +11386,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 25.146 50.8 90)
+			(at 30.226 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11394,7 +11394,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 50.8 0)
+			(at 36.83 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11403,7 +11403,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 50.8 0)
+			(at 36.83 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11412,7 +11412,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 31.75 50.8 0)
+			(at 36.83 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12170,7 +12170,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bfd9df9b-3ced-49fc-9248-bee63d803790")
-		(property "Reference" "Fuente_5V"
+		(property "Reference" "Fuente_5V1"
 			(at 25.4 179.59 90)
 			(effects
 				(font
@@ -12224,7 +12224,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "Fuente_5V")
+					(reference "Fuente_5V1")
 					(unit 1)
 				)
 			)
@@ -12306,7 +12306,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0c047cc-d6b5-4cc3-bc4c-fa51ae8e86f9")
-		(property "Reference" "Consumidor"
+		(property "Reference" "Consumidor1"
 			(at 49.53 179.59 90)
 			(effects
 				(font
@@ -12360,7 +12360,7 @@
 		(instances
 			(project ""
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "Consumidor")
+					(reference "Consumidor1")
 					(unit 1)
 				)
 			)
