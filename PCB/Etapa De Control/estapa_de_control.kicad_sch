@@ -3559,6 +3559,10 @@
 		(uuid "21991c98-b0d5-482f-99c0-62fe37f412b8")
 	)
 	(no_connect
+		(at 59.69 55.88)
+		(uuid "2514550d-5cb2-4aa0-bddf-4d4a9de511c4")
+	)
+	(no_connect
 		(at 233.68 36.83)
 		(uuid "515cb7c9-f5c6-46fa-b6a3-92fc1dad5540")
 	)
@@ -6289,71 +6293,6 @@
 			(project "estapa_de_control"
 				(path "/11118c33-1e61-460d-834e-50a314dee972"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDREF")
-		(at 59.69 55.88 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1c431710-973f-439b-ae55-15e9b0f678bd")
-		(property "Reference" "#PWR016"
-			(at 66.04 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDREF"
-			(at 66.294 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 59.69 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "409f23cf-46d3-414a-b047-582776c3c848")
-		)
-		(instances
-			(project "estapa_de_control"
-				(path "/11118c33-1e61-460d-834e-50a314dee972"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
