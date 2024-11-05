@@ -151,63 +151,63 @@ void task_consulta_all(void *params) {
   while(1){
     mediciones_ina219 medicion = *((mediciones_ina219*)params);
 
-    if(xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))){
+    if (xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))) {
       // Considero el los valores de consumo de corriente obtenidos de la cola
-      if(status() == 0){
+      if (status() == 0) {
         // Acá obtengo los valores de los test
 
-        if(m_ina0x40.power > m_ina0x41.power){
+        if (m_ina0x40.power > m_ina0x41.power) {
           // Si el consumidor pide más que lo que entrega
 
-          if(test_down == 0){
+          if (test_down == 0) {
             int result = descarga_motor();
             // Si es posible descargar la batería
             // Descargamos la batería
-            if(result == 1){
+            if (result == 1) {
               vTaskDelay(1000);
             }
-            else if(result == 0){
+            else if (result == 0) {
               printf("seguimos descargando sin problemas\n");
               vTaskDelay(1000);
             }
           }
 
-          else if(test_down == 1){
+          else if (test_down == 1) {
             // Si no es posible descargarla
-            motor_stop;
+            motor_stop();
             printf("PEDIMOS DE LA RED \n");
           }
         }
-        else if(m_ina0x40.corriente <= m_ina0x41.corriente){
+        else if (m_ina0x40.corriente <= m_ina0x41.corriente) {
           // Si el consumidor pide menos de lo que entrega o lo mismo
 
-          if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed){ //se puede sumar un margen
+          if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed) { //se puede sumar un margen
             // Si sobra energía y es suficiente para cargar la batería
 
-            if(test_up == 0){
+            if (test_up == 0) {
               // Si la carga puede subir
               // Cargamos la batería
-              carga_motor;
+              carga_motor();
             }
 
-            else if(test_up == 1){
+            else if (test_up == 1) {
               // No puede subir, entonces nada
               motor_stop();
               printf("100%% DESDE EL PANEL\n");
             }
           }
-          else if((m_ina0x41.corriente - m_ina0x40.corriente) < needed){
+          else if ((m_ina0x41.corriente - m_ina0x40.corriente) < needed) {
             // Pausamos el motor
             motor_stop();
             printf("100%% DESDE EL PANEL\n");
           }
         }
       }
-      else if (status() == 1){
+      else if (status() == 1) {
         vTaskDelay(1000);
       }
     }
-    else{
+    else {
       vTaskDelay(1000);
     }
   }
@@ -233,7 +233,7 @@ void core_1_task(void) {
 
     // Cálculo de parámetros
     lap_counter = (counter / p_r);
-    carga = (lap_counter * 100) / complete_laps;
+    carga = (lap_counter * 100) / COMPLETE_LAPS;
 
     if (fabs(carga - last_carga_core_1) >= 2.5) {
       // Si la diferencia entre la carga actual y la anterior es por lo menos de 2,5%
@@ -271,35 +271,35 @@ void actualizar_leds(float porcentaje_carga) {
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(void){
-  if(queue_try_peek(&queue_core_1, &carga)){
+  if (queue_try_peek(&queue_core_1, &carga)) {
     queue_remove_blocking (&queue_core_1, &carga);
     queue_add_blocking (&queue_core_1_motor, &carga);
-    if(carga < 100 && carga > 0){
+    if (carga < 100 && carga > 0) {
       actualizar_leds(carga);
 
       // El peso abajo, está en 0, mientras sube aumenta
-      if(carga < min_critico){ 
+      if (carga < MIN_CRITICO) { 
         // El peso está cerquita del piso
         test_up = 0;
         test_down = 1;
       }
-      else if((carga > min_critico) && (carga) < (100 - min_critico)){
+      else if ((carga > MIN_CRITICO) && (carga) < (100 - MIN_CRITICO)) {
         // El peso está dentro del rango donde puede hacer cualquier cosa
         test_up = 0;
         test_down = 0;
       }
-      else if(carga > (100 - min_critico)){
+      else if (carga > (100 - MIN_CRITICO)) {
         // El peso está muy arriba
         test_up = 1;
         test_down = 0;
       }
-      else{
+      else {
         test_up = 1;
         test_down = 1;
       }
       return 0;
     }
-    else if(carga < 0 || carga > 100){
+    else if (carga < 0 || carga > 100) {
       return 1;
     }
     return 1;
@@ -325,12 +325,11 @@ void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubic
 }
 
 // Envía el char que digas por uart a la esp
-void task_send_uart(void *params){
+void task_send_uart(void *params) {
   mediciones_ina219 medicion = *((mediciones_ina219*)params);
-  while(true){
-    if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))){
+  while(true) {
+    if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))) {
 
-        // CHEQUEAR SI NO HACE FALTA VACIAR LA COLA
       prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
       prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
       prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
@@ -341,7 +340,7 @@ void task_send_uart(void *params){
       uart_puts(uart1, uart_consumo_bat);
       uart_puts(uart1, uart_carga);
     }
-    else{
+    else {
       vTaskDelay(1000);
     }
   }

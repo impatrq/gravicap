@@ -13,7 +13,7 @@ extern float carga, last_carga_motor;
 
 int down = 0;
 
-void carga_motor(int rele_carga){
+void carga_motor(int rele_carga) {
   down = 0;
   gpio_put(RELE_DESCARGA, 0);
   gpio_put(RELE_STOP, 1);
@@ -25,8 +25,8 @@ void carga_motor(int rele_carga){
 
 }
 
-int descarga_motor(){
-  if(down == 0){
+int descarga_motor() {
+  if (down == 0) {
     // Cuando llamo a descargar el motor
 
     // Configuro relés y leds para el estado de descarga
@@ -40,11 +40,11 @@ int descarga_motor(){
 
       // Trato de recoger los datos de una queue con los datos
       // la última carga del motor y la más reciente
-    if(queue_try_peek(&queue_core_1_motor, &carga)){
+    if (queue_try_peek(&queue_core_1_motor, &carga)) {
       queue_remove_blocking (&queue_core_1_motor, &carga);
       last_carga_motor = carga;
     }
-    else{
+    else {
       // FALLAS EN EL ENCODER, NO ESTÁ MANDANDO DATOS
       printf("POSIBLE FALLA EN EL ENCODER NO HAY TRANSFERENCIA DE DATOS\n");
       return 2;
@@ -56,29 +56,29 @@ int descarga_motor(){
     down = 1;
     return 1; // lleva a un delay
   }
-  else if (down == 1){
-    if(queue_try_peek(&queue_core_1_motor, &carga)){
-      queue_remove_blocking (&queue_core_1_motor, &carga);
+  else if (down == 1) {
+    if (queue_try_peek(&queue_core_1_motor, &carga)) {
+      queue_remove_blocking(&queue_core_1_motor, &carga);
     }
-    else{
+    else {
       printf("POSIBLE FALLA EN EL ENCODER NO HAY TRANSFERENCIA DE DATOS\n");
       return 2;
     }
     
     // YA TRATÓ DE DESCARGAR UNA VEZ SIN PASAR POR UNA CARGA O STOP
-    if (last_carga_motor == carga){
+    if (last_carga_motor == carga) {
       // No está descargando
       gpio_put(RELE_DESCARGA, 1);
       gpio_put(RELE_DESCARGA, 0);
       return 1; // delay
     }
-    else{
+    else {
       // debería estar descargando, lo llevo a un delay
       return 1; // delay
     }
 
   }
-  else{
+  else {
     return 1;
   }
 }

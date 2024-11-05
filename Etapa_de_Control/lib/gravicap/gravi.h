@@ -45,8 +45,8 @@
 #define CHAR_UART 256 // Tamaño de los char para mandar por puerto UART
 #define BAUD_RATE 115200
 
-#define complete_laps 50
-#define min_critico 20.0
+#define COMPLETE_LAPS 50
+#define MIN_CRITICO 20.0
 
 typedef struct {
     // ina_name es un puntero, referirá a una ubicación
