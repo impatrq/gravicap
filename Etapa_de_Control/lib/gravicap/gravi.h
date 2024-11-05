@@ -60,11 +60,6 @@ typedef struct {
 // Función de inicio
 void task_init(void *params);
 
-void task_lectura_sensor_ina219_0x40();
-void task_lectura_sensor_ina219_0x41();
-void task_lectura_sensor_ina219_0x44();
-void task_lectura_sensor_ina219_0x45();
-
 // Función que manda a cargar o descargar la batería de
 // acuerdo a los datos medidos (espera en queue)
 void task_consulta_all(void *params);

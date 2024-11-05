@@ -9,7 +9,7 @@ extern mediciones_ina219 m_ina0x45;
 
 extern queue_t queue_core_1_motor;
 
-void carga_motor(int rele_carga, ){
+void carga_motor(int rele_carga){
   gpio_put(rele_descarga, 0);
   gpio_put(rele_stop, 1);
   gpio_put(rele_carga, 1);
