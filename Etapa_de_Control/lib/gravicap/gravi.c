@@ -1,35 +1,5 @@
 #include "gravi.h"
-
-#define rele_1 6 // Subida
-#define rele_2 7 // Bajada
-
-#define led_1 8 // Led de encendido del sistema
-
-#define led_2 9 // Led_1 azul del cargador
-#define led_3 10 // Led_2 verde del cargador
-#define led_4 11 // Led_3 verde del cargador
-#define led_5 12 // Led_4 amarillo del cargador
-#define led_6 13 // Led_5 amarillo del cargador
-#define led_7 14 // Led_6 rojo del cargador
-
-#define led_carga 15 // Led de carga blanco
-#define led_descarga 26 // Led de descarga rojo
-#define led_stop 29 // Led de stop 
-
-#define pin_a_encoder 27 //Encoder
-#define pin_b_encoder 28//Encoder
-
-#define pin_i2c_1 2
-#define pin_i2c_2 3
-
-#define pin_uart_1 4
-#define pin_uart_2 5
-
-#define CHAR_UART 256 // Tamaño de los char para mandar por puerto UART
-#define BAUD_RATE 115200
-
-#define complete_laps 50
-#define min_critico 20.0
+#include "cap_motor.h"
 
 // Variables para las mediciones particulares de cada sensor
 mediciones_ina219 m_ina0x40;
@@ -57,8 +27,6 @@ QueueHandle_t queue_ina219_send_uart;
 
 queue_t queue_core_1;
 queue_t queue_core_1_motor;
-
-SemaphoreHandle_t semaphore_encoder = NULL;
 
 volatile int counter = 0;
 volatile bool last_A = 0;
@@ -91,8 +59,8 @@ void task_init(void *params) {
   // configuro el puerto, N° puerto, 8 bits que se transmiten, 1 bit de parada y sin paridad
 
   // Pines de salida de los relés
-  gpio_set_dir(rele_1, GPIO_OUT);
-  gpio_set_dir(rele_2, GPIO_OUT);
+  gpio_set_dir(rele_carga, GPIO_OUT);
+  gpio_set_dir(rele_descarga, GPIO_OUT);
 
   // Declaro nombres de cada ina219
   ina219_0x40 = ina219_get_default_config(); // Consumo
@@ -173,6 +141,9 @@ void task_init(void *params) {
   // Elimino la tarea
   vTaskDelete(NULL);
 }
+
+// Cada ina tiene un valor de tensión en su rshunt (lo mide el vshunt
+//que estamos ignorando) y una lectura de tensión entre v+ y gnd
 
 void task_lectura_sensor_ina219_0x40() {
   while(1){
@@ -258,7 +229,7 @@ void task_consulta_all(void *params) {
       if(status() == 0){
         // Acá obtengo los valores de los test
 
-        if(m_ina0x40.corriente > m_ina0x41.corriente){
+        if(m_ina0x40.power > m_ina0x41.power){
           // Si el consumidor pide más que lo que entrega
 
           if(test_down == 0){
@@ -337,8 +308,8 @@ void core_1_task(void) {
     lap_counter = (counter / p_r);
     carga = (lap_counter * 100) / complete_laps;
 
-    if (fabs(carga - last_carga_core_1) >= 5.0) {
-      // Si la diferencia entre la carga actual y la anterior es por lo menos de 15%
+    if (fabs(carga - last_carga_core_1) >= 2.5) {
+      // Si la diferencia entre la carga actual y la anterior es por lo menos de 2,5%
       // Agrego el dato a una cola (no de freertos)
       queue_add_blocking(&queue_core_1, &carga);
 
@@ -347,78 +318,6 @@ void core_1_task(void) {
   }
 }
 
-void carga_motor(){
-  /// Esta serie de condiciones avala que el motor este en pausa
-  // o si el motor está en descarga
-  if(rele_2 == 1){
-    gpio_put(rele_2, 0);
-    if(led_stop == 1){
-      gpio_put(led_stop, 0);
-    }
-    else if (led_descarga == 1){
-      gpio_put(led_descarga, 0);
-    }
-  }
-  //  Si está apagado el relé de carga lo prende
-  if(rele_1 == 0){
-    gpio_put(rele_1, 1);
-  }
-  gpio_put(led_carga, 1);
-
-}
-
-int descarga_motor(){
-  //Cuando llamo a descargar el motor
-  // primero apago la carga si estuviera prendido
-  if(queue_try_peek(&queue_core_1_motor, &carga)){
-    last_carga_motor = carga;
-    queue_add_blocking (&queue_core_1_motor, &carga);
-  }
-  else{
-    // FALLAS EN EL ENCODER, NO ESTÁ MANDANDO DATOS
-    printf("POSIBLE FALLA EN EL ENCODER");
-    return 2;
-  }
-  if(rele_1 == 1){
-    gpio_put(rele_1, 0);
-    if(led_stop == 1){
-      gpio_put(led_stop, 0);
-    }
-    else if (led_carga == 1){
-      gpio_put(led_carga, 0);
-    }
-  }
-  // Prendo y apago
-  gpio_put(rele_2, 1);
-  gpio_put(led_descarga, 1);
-  gpio_put(rele_2, 0);
-  vTaskDelay(400);
-  
-  // a confirmar si el tiempo es suficiente para que el valor de carga difiera
-  if(queue_try_peek(&queue_core_1_motor, &carga)){
-    if(last_carga_motor == carga){
-      // significa que el motor se frenó y no está descargando
-      gpio_put(rele_2, 1);
-      gpio_put(rele_2, 0);
-      // Luego de recibir un pulso, debería ser suficiente para seguir la descarga
-      return 0;
-    }
-    else{
-      return 1;
-    }
-  }
-  else{
-    return 1;
-  }
-}
-
-// Función para frenar el motor
-void motor_stop() {
-  gpio_put(rele_1, 1);
-  gpio_put(rele_2, 1);
-  printf("MOTOR EN PAUSA");
-  vTaskDelay(1000);
-}
 
 // Función para encender los LEDs según el porcentaje de carga
 void actualizar_leds(float porcentaje_carga) {

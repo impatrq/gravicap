@@ -15,7 +15,37 @@
 #include <string.h>
 #include <math.h>
 #include "pico/util/queue.h"
-// Estructuras
+
+#define rele_carga 6 // Subida
+#define rele_descarga 7 // Bajada
+
+#define led_1 8 // Led de encendido del sistema
+
+#define led_2 29 // Led_1 azul del cargador
+#define led_3 26 // Led_2 verde del cargador
+#define led_4 15 // Led_3 verde del cargador
+#define led_5 14 // Led_4 amarillo del cargador
+#define led_6 13 // Led_5 amarillo del cargador
+#define led_7 12 // Led_6 rojo del cargador
+
+#define led_carga 15 // Led de carga blanco
+#define led_descarga 26 // Led de descarga rojo
+#define led_stop 29 // Led de stop 
+
+#define pin_a_encoder 27 //Encoder
+#define pin_b_encoder 28//Encoder
+
+#define pin_i2c_1 2
+#define pin_i2c_2 3
+
+#define pin_uart_1 4
+#define pin_uart_2 5
+
+#define CHAR_UART 256 // Tamaño de los char para mandar por puerto UART
+#define BAUD_RATE 115200
+
+#define complete_laps 50
+#define min_critico 20.0
 
 typedef struct {
     // ina_name es un puntero, referirá a una ubicación
@@ -38,14 +68,6 @@ void task_lectura_sensor_ina219_0x45();
 // Función que manda a cargar o descargar la batería de
 // acuerdo a los datos medidos (espera en queue)
 void task_consulta_all(void *params);
-
-// Prende el relé indicado
-//void rele_on(int rele);
-//void rele_off(int rele);
-
-void carga_motor();
-int descarga_motor();
-void motor_stop();
 
 void actualizar_leds(float porcentaje_carga);
 
