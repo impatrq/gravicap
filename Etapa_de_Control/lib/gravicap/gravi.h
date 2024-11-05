@@ -20,7 +20,7 @@
 #define RELE_DESCARGA 7 // Bajada
 #define RELE_STOP 8 // Parada
 
-#define LED_1 1  // Led de encendido del sistema
+#define LED_ENCENDIDO 1  // Led de encendido del sistema
 
 #define LED_2 26 // Led_1 azul del cargador
 #define LED_3 15 // Led_2 verde del cargador

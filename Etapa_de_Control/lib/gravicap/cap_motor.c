@@ -11,7 +11,10 @@ extern queue_t queue_core_1_motor;
 
 extern float carga, last_carga_motor;
 
+int down = 0;
+
 void carga_motor(int rele_carga){
+  down = 0;
   gpio_put(RELE_DESCARGA, 0);
   gpio_put(RELE_STOP, 1);
   gpio_put(RELE_CARGA, 1);
@@ -23,52 +26,57 @@ void carga_motor(int rele_carga){
 }
 
 int descarga_motor(){
-  //Cuando llamo a descargar el motor
-  // primero apago la carga si estuviera prendido
-  if(queue_try_peek(&queue_core_1_motor, &carga)){
-    last_carga_motor = carga;
-    queue_add_blocking (&queue_core_1_motor, &carga);
-  }
-  else{
-    // FALLAS EN EL ENCODER, NO ESTÁ MANDANDO DATOS
-    printf("POSIBLE FALLA EN EL ENCODER");
-    return 2;
-  }
-  gpio_put(RELE_STOP, 1);
-  gpio_put(RELE_CARGA, 0);
-  gpio_put(RELE_DESCARGA, 1);
-  
-  gpio_put(LED_STOP, 0);
-  gpio_put(LED_DESCARGA, 1);
-  gpio_put(LED_CARGA, 0);
+  if(down == 0){
+    // Cuando llamo a descargar el motor
 
-  if(RELE_CARGA == 1){
-    // Si el motor está cargando, cancelamos la carga
+    // Configuro relés y leds para el estado de descarga
+    gpio_put(RELE_STOP, 1);
     gpio_put(RELE_CARGA, 0);
-    if(LED_STOP == 1){
-      gpio_put(LED_STOP, 0);
-    }
-    else if (LED_CARGA == 1){
-      gpio_put(LED_CARGA, 0);
-    }
-  }
-  // Prendo y apago
-  gpio_put(RELE_DESCARGA, 1);
-  gpio_put(LED_DESCARGA, 1);
-  gpio_put(RELE_DESCARGA, 0);
-  
-  // a confirmar si el tiempo es suficiente para que el valor de carga difiera
-  if(queue_try_peek(&queue_core_1_motor, &carga)){
-    if(last_carga_motor == carga){
-      // significa que el motor se frenó y no está descargando
-      gpio_put(RELE_DESCARGA, 1);
-      gpio_put(RELE_DESCARGA, 0);
-      // Luego de recibir un pulso, debería ser suficiente para seguir la descarga
-      return 0;
+    gpio_put(RELE_DESCARGA, 1);
+    
+    gpio_put(LED_STOP, 0);
+    gpio_put(LED_DESCARGA, 1);
+    gpio_put(LED_CARGA, 0);
+
+      // Trato de recoger los datos de una queue con los datos
+      // la última carga del motor y la más reciente
+    if(queue_try_peek(&queue_core_1_motor, &carga)){
+      queue_remove_blocking (&queue_core_1_motor, &carga);
+      last_carga_motor = carga;
     }
     else{
-      return 1;
+      // FALLAS EN EL ENCODER, NO ESTÁ MANDANDO DATOS
+      printf("POSIBLE FALLA EN EL ENCODER NO HAY TRANSFERENCIA DE DATOS\n");
+      return 2;
     }
+
+    gpio_put(RELE_DESCARGA, 0);
+    // YA RECIBIÓ SU PRIMER VALOR DE CARGA
+    // Y DIO UN PULSO DE DESCARGA
+    down = 1;
+    return 1; // lleva a un delay
+  }
+  else if (down == 1){
+    if(queue_try_peek(&queue_core_1_motor, &carga)){
+      queue_remove_blocking (&queue_core_1_motor, &carga);
+    }
+    else{
+      printf("POSIBLE FALLA EN EL ENCODER NO HAY TRANSFERENCIA DE DATOS\n");
+      return 2;
+    }
+    
+    // YA TRATÓ DE DESCARGAR UNA VEZ SIN PASAR POR UNA CARGA O STOP
+    if (last_carga_motor == carga){
+      // No está descargando
+      gpio_put(RELE_DESCARGA, 1);
+      gpio_put(RELE_DESCARGA, 0);
+      return 1; // delay
+    }
+    else{
+      // debería estar descargando, lo llevo a un delay
+      return 1; // delay
+    }
+
   }
   else{
     return 1;
@@ -77,6 +85,7 @@ int descarga_motor(){
 
 // Función para frenar el motor
 void motor_stop() {
+  down = 0;
   gpio_put(RELE_DESCARGA, 0);
   gpio_put(RELE_DESCARGA, 0);
   gpio_put(RELE_STOP, 0); // Al ser un normal cerrado, se mantiene cerrado en 0, está puenteado
@@ -85,5 +94,5 @@ void motor_stop() {
   gpio_put(LED_DESCARGA, 0);
   gpio_put(LED_CARGA, 0);
 
-  printf("MOTOR EN PAUSA");
+  printf("MOTOR EN PAUSA\n");
 }

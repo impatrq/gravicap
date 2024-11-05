@@ -61,6 +61,7 @@ void task_init(void *params) {
   // Pines de salida de los relés
   gpio_set_dir(RELE_CARGA, GPIO_OUT);
   gpio_set_dir(RELE_DESCARGA, GPIO_OUT);
+  gpio_set_dir(RELE_STOP, GPIO_OUT);
 
   // Declaro nombres de cada ina219
   ina219_0x40 = ina219_get_default_config(); // Consumo
@@ -102,8 +103,8 @@ void task_init(void *params) {
   gpio_pull_up(PIN_B_ENCODER);
 
   // Declaro pines de salida para leds
-  gpio_init(LED_1);
-  gpio_set_dir(LED_1, GPIO_OUT);
+  gpio_init(LED_ENCENDIDO);
+  gpio_set_dir(LED_ENCENDIDO, GPIO_OUT);
 
   gpio_init(LED_2);
   gpio_set_dir(LED_2, GPIO_OUT);
@@ -133,7 +134,7 @@ void task_init(void *params) {
   gpio_set_dir(LED_STOP, GPIO_OUT);
 
   // Enciendo led de chequeo (ENCENDIDO)
-  gpio_pull_up(LED_1);
+  gpio_pull_up(LED_ENCENDIDO);
 
   // Aseguro que el motor esté frenado al principio
   motor_stop();
@@ -166,7 +167,7 @@ void task_consulta_all(void *params) {
               vTaskDelay(1000);
             }
             else if(result == 0){
-              printf("seguimos descargando sin problemas");
+              printf("seguimos descargando sin problemas\n");
               vTaskDelay(1000);
             }
           }
@@ -271,7 +272,8 @@ void actualizar_leds(float porcentaje_carga) {
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(void){
   if(queue_try_peek(&queue_core_1, &carga)){
-    queue_add_blocking (&queue_core_1, &carga);
+    queue_remove_blocking (&queue_core_1, &carga);
+    queue_add_blocking (&queue_core_1_motor, &carga);
     if(carga < 100 && carga > 0){
       actualizar_leds(carga);
 
@@ -328,6 +330,7 @@ void task_send_uart(void *params){
   while(true){
     if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))){
 
+        // CHEQUEAR SI NO HACE FALTA VACIAR LA COLA
       prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
       prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
       prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
