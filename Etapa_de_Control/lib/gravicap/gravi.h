@@ -16,30 +16,31 @@
 #include <math.h>
 #include "pico/util/queue.h"
 
-#define rele_carga 6 // Subida
-#define rele_descarga 7 // Bajada
+#define RELE_CARGA 6 // Subida
+#define RELE_DESCARGA 7 // Bajada
+#define RELE_STOP 8 // Parada
 
-#define led_1 8 // Led de encendido del sistema
+#define LED_1 1  // Led de encendido del sistema
 
-#define led_2 29 // Led_1 azul del cargador
-#define led_3 26 // Led_2 verde del cargador
-#define led_4 15 // Led_3 verde del cargador
-#define led_5 14 // Led_4 amarillo del cargador
-#define led_6 13 // Led_5 amarillo del cargador
-#define led_7 12 // Led_6 rojo del cargador
+#define LED_2 26 // Led_1 azul del cargador
+#define LED_3 15 // Led_2 verde del cargador
+#define LED_4 14 // Led_3 verde del cargador
+#define LED_5 13 // Led_4 amarillo del cargador
+#define LED_6 12 // Led_5 amarillo del cargador
+#define LED_7 11 // Led_6 rojo del cargador
 
-#define led_carga 15 // Led de carga blanco
-#define led_descarga 26 // Led de descarga rojo
-#define led_stop 29 // Led de stop 
+#define LED_CARGA 9 // Led de carga blanco
+#define LED_DESCARGA 10 // Led de descarga rojo
+#define LED_STOP 0 // Led de stop 
 
-#define pin_a_encoder 27 //Encoder
-#define pin_b_encoder 28//Encoder
+#define PIN_A_ENCODER 28 //Encoder
+#define PIN_B_ENCODER 29 //Encoder
 
-#define pin_i2c_1 2
-#define pin_i2c_2 3
+#define PIN_I2C_1 2 // SDA
+#define PIN_I2C_2 3 // SCL
 
-#define pin_uart_1 4
-#define pin_uart_2 5
+#define PIN_UART_1 4
+#define PIN_UART_2 5
 
 #define CHAR_UART 256 // Tamaño de los char para mandar por puerto UART
 #define BAUD_RATE 115200

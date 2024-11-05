@@ -32,36 +32,35 @@ queue_t queue_core_1_motor;
 volatile int counter = 0;
 volatile bool last_A = 0;
 int p_r = 600;
-float motor_angle, carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter;
+float carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter;
 bool test_up, test_down;
-bool rele1, rele2;
 
 // variable de prueba, futuro reemplazo de un sensor
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
 
 int leds_encendidos_previos = -1;  // Inicialmente -1 para asegurar la primera actualización
 
-int leds[6] = {led_7, led_6, led_5, led_4, led_3, led_2};
+int leds[6] = {LED_7, LED_6, LED_5, LED_4, LED_3, LED_2};
 
 void task_init(void *params) {
 
   // Configuración del i2c
   i2c_init(i2c0, 400000);
-  gpio_set_function(pin_i2c_1, GPIO_FUNC_I2C);
-  gpio_set_function(pin_i2c_2, GPIO_FUNC_I2C);
-  gpio_pull_up(pin_i2c_1);
-  gpio_pull_up(pin_i2c_2);
+  gpio_set_function(PIN_I2C_1, GPIO_FUNC_I2C);
+  gpio_set_function(PIN_I2C_2, GPIO_FUNC_I2C);
+  gpio_pull_up(PIN_I2C_1);
+  gpio_pull_up(PIN_I2C_2);
 
   // Configuración UART1
   uart_init(uart1, BAUD_RATE);  // Configura UART0 con un baud rate de 115200
-  gpio_set_function(pin_uart_1, GPIO_FUNC_UART);  // Configura GPIO4 como TX
-  gpio_set_function(pin_uart_2, GPIO_FUNC_UART);  // Configura GPIO5 como RX
+  gpio_set_function(PIN_UART_1, GPIO_FUNC_UART);  // Configura GPIO4 como TX
+  gpio_set_function(PIN_UART_2, GPIO_FUNC_UART);  // Configura GPIO5 como RX
   uart_set_format(uart1, 8, 1, UART_PARITY_NONE);
   // configuro el puerto, N° puerto, 8 bits que se transmiten, 1 bit de parada y sin paridad
 
   // Pines de salida de los relés
-  gpio_set_dir(rele_carga, GPIO_OUT);
-  gpio_set_dir(rele_descarga, GPIO_OUT);
+  gpio_set_dir(RELE_CARGA, GPIO_OUT);
+  gpio_set_dir(RELE_DESCARGA, GPIO_OUT);
 
   // Declaro nombres de cada ina219
   ina219_0x40 = ina219_get_default_config(); // Consumo
@@ -94,47 +93,47 @@ void task_init(void *params) {
   queue_init(&queue_core_1_motor, sizeof(carga), 1);
 
   // Inicio el encoder
-  gpio_init(pin_a_encoder);
-  gpio_set_dir(pin_a_encoder, GPIO_IN);
-  gpio_pull_up(pin_a_encoder);
+  gpio_init(PIN_A_ENCODER);
+  gpio_set_dir(PIN_A_ENCODER, GPIO_IN);
+  gpio_pull_up(PIN_A_ENCODER);
 
-  gpio_init(pin_b_encoder);
-  gpio_set_dir(pin_b_encoder, GPIO_IN);
-  gpio_pull_up(pin_b_encoder);
+  gpio_init(PIN_B_ENCODER);
+  gpio_set_dir(PIN_B_ENCODER, GPIO_IN);
+  gpio_pull_up(PIN_B_ENCODER);
 
   // Declaro pines de salida para leds
-  gpio_init(led_1);
-  gpio_set_dir(led_1, GPIO_OUT);
+  gpio_init(LED_1);
+  gpio_set_dir(LED_1, GPIO_OUT);
 
-  gpio_init(led_2);
-  gpio_set_dir(led_2, GPIO_OUT);
+  gpio_init(LED_2);
+  gpio_set_dir(LED_2, GPIO_OUT);
 
-  gpio_init(led_3);
-  gpio_set_dir(led_3, GPIO_OUT);
+  gpio_init(LED_3);
+  gpio_set_dir(LED_3, GPIO_OUT);
 
-  gpio_init(led_4);
-  gpio_set_dir(led_4, GPIO_OUT);
+  gpio_init(LED_4);
+  gpio_set_dir(LED_4, GPIO_OUT);
 
-  gpio_init(led_5);
-  gpio_set_dir(led_5, GPIO_OUT);
+  gpio_init(LED_5);
+  gpio_set_dir(LED_5, GPIO_OUT);
 
-  gpio_init(led_6);
-  gpio_set_dir(led_6, GPIO_OUT);
+  gpio_init(LED_6);
+  gpio_set_dir(LED_6, GPIO_OUT);
   
-  gpio_init(led_7);
-  gpio_set_dir(led_7, GPIO_OUT);
+  gpio_init(LED_7);
+  gpio_set_dir(LED_7, GPIO_OUT);
 
-  gpio_init(led_carga);
-  gpio_set_dir(led_carga, GPIO_OUT);
+  gpio_init(LED_CARGA);
+  gpio_set_dir(LED_CARGA, GPIO_OUT);
 
-  gpio_init(led_descarga);
-  gpio_set_dir(led_descarga, GPIO_OUT);
+  gpio_init(LED_DESCARGA);
+  gpio_set_dir(LED_DESCARGA, GPIO_OUT);
 
-  gpio_init(led_stop);
-  gpio_set_dir(led_stop, GPIO_OUT);
+  gpio_init(LED_STOP);
+  gpio_set_dir(LED_STOP, GPIO_OUT);
 
   // Enciendo led de chequeo (ENCENDIDO)
-  gpio_pull_up(led_1);
+  gpio_pull_up(LED_1);
 
   // Aseguro que el motor esté frenado al principio
   motor_stop();
@@ -218,8 +217,8 @@ void core_1_task(void) {
 
   while (1) {
     // Leer el estado de las señales A y B
-    bool current_A = gpio_get(pin_a_encoder);
-    bool current_B = gpio_get(pin_b_encoder);
+    bool current_A = gpio_get(PIN_A_ENCODER);
+    bool current_B = gpio_get(PIN_B_ENCODER);
 
     // Detectar el flanco ascendente de A
     if (last_A == 0 && current_A == 1) {
