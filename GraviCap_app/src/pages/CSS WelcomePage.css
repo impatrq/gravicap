@@ -4,7 +4,8 @@ ion-content {
 
 ion-button {
   --background: #e2e415;
-  margin-top: 80px;
+  margin-top: 200px;
+  color: #000000;
 }
 
 #bienvenida {
@@ -13,11 +14,11 @@ ion-button {
 
 #bienvenida img {
   height: auto;
-  width: 300px;
+  width: 270px;
 }
 
 #letrasbienvenida {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 #bienvenida strong {
