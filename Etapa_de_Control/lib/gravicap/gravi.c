@@ -105,36 +105,46 @@ void task_init(void *params) {
   // Declaro pines de salida para leds
   gpio_init(LED_ENCENDIDO);
   gpio_set_dir(LED_ENCENDIDO, GPIO_OUT);
+  gpio_pull_up(LED_ENCENDIDO);
 
   gpio_init(LED_2);
   gpio_set_dir(LED_2, GPIO_OUT);
+  gpio_pull_up(LED_2);
 
   gpio_init(LED_3);
   gpio_set_dir(LED_3, GPIO_OUT);
+  gpio_pull_up(LED_3);
 
   gpio_init(LED_4);
   gpio_set_dir(LED_4, GPIO_OUT);
+  gpio_pull_up(LED_4);
 
   gpio_init(LED_5);
   gpio_set_dir(LED_5, GPIO_OUT);
+  gpio_pull_up(LED_5);
 
   gpio_init(LED_6);
   gpio_set_dir(LED_6, GPIO_OUT);
+  gpio_pull_up(LED_6);
   
   gpio_init(LED_7);
   gpio_set_dir(LED_7, GPIO_OUT);
+  gpio_pull_up(LED_7);
 
   gpio_init(LED_CARGA);
   gpio_set_dir(LED_CARGA, GPIO_OUT);
+  gpio_pull_up(LED_CARGA);
 
   gpio_init(LED_DESCARGA);
   gpio_set_dir(LED_DESCARGA, GPIO_OUT);
+  gpio_pull_up(LED_DESCARGA);
 
   gpio_init(LED_STOP);
   gpio_set_dir(LED_STOP, GPIO_OUT);
+  gpio_pull_up(LED_STOP);
 
   // Enciendo led de chequeo (ENCENDIDO)
-  gpio_pull_up(LED_ENCENDIDO);
+  gpio_put(LED_ENCENDIDO, 1);
 
   // Aseguro que el motor esté frenado al principio
   motor_stop();
@@ -161,12 +171,12 @@ void task_consulta_all(void *params) {
 
           if (test_down == 0) {
             int result = descarga_motor();
-            // Si es posible descargar la batería
-            // Descargamos la batería
+            // Si es posible descargar la batería, descargamos
             if (result == 1) {
               vTaskDelay(1000);
             }
             else if (result == 0) {
+              // Ya dio su valor de last_carga_motor, down = 1;
               printf("seguimos descargando sin problemas\n");
               vTaskDelay(1000);
             }
@@ -178,10 +188,10 @@ void task_consulta_all(void *params) {
             printf("PEDIMOS DE LA RED \n");
           }
         }
-        else if (m_ina0x40.corriente <= m_ina0x41.corriente) {
+        else if (m_ina0x40.power <= m_ina0x41.power) {
           // Si el consumidor pide menos de lo que entrega o lo mismo
 
-          if ((m_ina0x41.corriente - m_ina0x40.corriente) >= needed) { //se puede sumar un margen
+          if ((m_ina0x41.power - m_ina0x40.power) >= needed) { //se puede sumar un margen
             // Si sobra energía y es suficiente para cargar la batería
 
             if (test_up == 0) {
@@ -196,7 +206,7 @@ void task_consulta_all(void *params) {
               printf("100%% DESDE EL PANEL\n");
             }
           }
-          else if ((m_ina0x41.corriente - m_ina0x40.corriente) < needed) {
+          else if ((m_ina0x41.power - m_ina0x40.power) < needed) {
             // Pausamos el motor
             motor_stop();
             printf("100%% DESDE EL PANEL\n");

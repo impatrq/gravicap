@@ -54,7 +54,7 @@ int descarga_motor() {
     // YA RECIBIÓ SU PRIMER VALOR DE CARGA
     // Y DIO UN PULSO DE DESCARGA
     down = 1;
-    return 1; // lleva a un delay
+    return 0; // lleva a un delay
   }
   else if (down == 1) {
     if (queue_try_peek(&queue_core_1_motor, &carga)) {
