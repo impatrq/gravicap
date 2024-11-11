@@ -1,1 +1,1 @@
-# Acá se van a añadir las diferentes imágenes del proyecto.
+# Acá se van a añadir las diferentes imágenes y vídeos relacionados al proyecto.
