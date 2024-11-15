@@ -5,6 +5,7 @@ const char* password = "";
 
 WiFiServer server(5000);
 
+
 String json = "NO hay datos";
 
 void setup() {
