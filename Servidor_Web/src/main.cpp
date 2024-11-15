@@ -1,12 +1,9 @@
 #include <ESP8266WiFi.h>
 
-//const char* ssid = "FeliWiFi-Fibe-2.4";       // Cambia por tu SSID
-//const char* password = "feliwifi";  // Cambia por tu contraseña
+const char* ssid = "Cooperadora Alumnos";
+const char* password = "";
 
-const char* ssid = "Cooperadora Alumnos";       // Cambia por tu SSID
-const char* password = "";  // Cambia por tu contraseña
-
-WiFiServer server(80);
+WiFiServer server(5000);
 
 String json = "NO hay datos";
 
@@ -40,7 +37,7 @@ void setup() {
 void loop() {
   // Comprobar si hay datos disponibles desde el RP2040 por UART
   if (Serial.available()) {
-    json = Serial.readStringUntil('\n');  // Leer el JSON completo
+    json = Serial.readStringUntil('\n');  // Leer el JSON completo desde el puerto uart
     Serial.println("Datos recibidos por UART:");
     Serial.println(json);
   }
@@ -65,21 +62,24 @@ void loop() {
           // Enviar la respuesta HTTP con los datos JSON
           client.print("HTTP/1.1 200 OK\r\n");
           client.print("Content-Type: application/json\r\n\r\n");
+          client.print("Acces-Control-Allow-Origin: *\r\n"); //Permito CORS
           client.print(json);  // Enviar el JSON recibido desde UART
           Serial.println("JSON enviado al cliente: " + json);
+
         } else {
           // Responder con 404 si se solicita un recurso no válido
           client.print("HTTP/1.1 404 Not Found\r\n");
           client.print("Content-Type: text/plain\r\n\r\n");
+          client.print("Acces-Control-Allow-Origin: *\r\n"); //Permito CORS
           client.print("Recurso no encontrado");
-          Serial.println("Recurso no encontrado");
+          Serial.println("Recurso no encontrado\n\n\n");
         }
         //break;  // Salir tras procesar la petición
       }
     }
-
+    client.flush();
     delay(1);  // Breve pausa antes de cerrar la conexión
     client.stop();  // Cerrar la conexión con el cliente
-    Serial.println("Cliente desconectado");
+    Serial.println("Cliente desconectado\n\n");
   }
 }
