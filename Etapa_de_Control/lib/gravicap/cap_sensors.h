@@ -2,8 +2,6 @@
 #define _cap_sensors_h
 
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "pico/stdlib.h"
 
 void task_lectura_sensor_ina219_0x40();

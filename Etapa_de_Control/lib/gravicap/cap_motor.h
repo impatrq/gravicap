@@ -2,8 +2,6 @@
 #define _cap_motor_h
 
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "pico/stdlib.h"
 
 void carga_motor();

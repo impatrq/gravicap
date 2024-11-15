@@ -10,10 +10,8 @@
 #include "pico/multicore.h"
 #include "task.h"
 #include "queue.h"
-#include "semphr.h"
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
 #include "pico/util/queue.h"
 
 #define RELE_CARGA 6 // Subida
@@ -61,8 +59,7 @@ typedef struct {
 // Función de inicio
 void task_init(void *params);
 
-// Función que manda a cargar o descargar la batería de
-// acuerdo a los datos medidos (espera en queue)
+// Función que manda a cargar o descargar la batería de acuerdo a los datos medidos
 void task_consulta_all(void *params);
 
 void actualizar_leds(float porcentaje_carga);

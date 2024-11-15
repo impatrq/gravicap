@@ -16,9 +16,9 @@ ina219_t ina219_0x45; // Entrega del panel solar
 
 // Cadenas de caracteres declaradas para enviar por puerto uart
 char uart_consumo[CHAR_UART];
-char uart_entrega_panel[CHAR_UART];
+char uart_mppt[CHAR_UART];
 char uart_consumo_bat[CHAR_UART];
-char uart_carga[CHAR_UART];
+char uart_panel[CHAR_UART];
 
 // Variables para almacenar lecturas que serán enviadas
 float corriente_consumo, entrega_panel, consumo_bat, carga;
@@ -153,10 +153,6 @@ void task_init(void *params) {
   vTaskDelete(NULL);
 }
 
-// Cada ina tiene un valor de tensión en su rshunt (lo mide el vshunt
-//que estamos ignorando) y una lectura de tensión entre v+ y gnd
-
-// Función que pide los estados de corriente de por ahí.
 void task_consulta_all(void *params) {
   while(1){
     mediciones_ina219 medicion = *((mediciones_ina219*)params);
@@ -341,14 +337,14 @@ void task_send_uart(void *params) {
     if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))) {
 
       prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
-      prepare_char_uart(uart_entrega_panel, &m_ina0x41, CHAR_UART, carga);
+      prepare_char_uart(uart_mppt, &m_ina0x41, CHAR_UART, carga);
       prepare_char_uart(uart_consumo_bat, &m_ina0x44, CHAR_UART, carga);
-      prepare_char_uart(uart_carga, &m_ina0x45, CHAR_UART, carga);
+      prepare_char_uart(uart_panel, &m_ina0x45, CHAR_UART, carga);
 
       uart_puts(uart1, uart_consumo);
-      uart_puts(uart1, uart_entrega_panel);
+      uart_puts(uart1, uart_mppt);
       uart_puts(uart1, uart_consumo_bat);
-      uart_puts(uart1, uart_carga);
+      uart_puts(uart1, uart_panel);
     }
     else {
       vTaskDelay(1000);
