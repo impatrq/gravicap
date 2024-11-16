@@ -1,86 +1,165 @@
 #include <ESP8266WiFi.h>
+#include "ESPAsyncWebServer.h"
+#include <Arduino.h>
+#include <ArduinoJson.h>
+
+bool pruebaEnviada = 0;
+
+struct lectura {
+  float carga;
+  String nombre;
+  float corriente;
+  float voltage;
+  float potencia;
+};
+
+lectura sensor_0x40;
+lectura sensor_0x41;
+lectura sensor_0x44;
+lectura sensor_0x45;
 
 const char* ssid = "Cooperadora Alumnos";
 const char* password = "";
 
-WiFiServer server(5000);
+AsyncWebServer server(80);
 
+void addCORSHeaders(AsyncWebServerResponse* response) {
+  response->addHeader("Access-Control-Allow-Origin", "*");
+  response->addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  response->addHeader("Access-Control-Allow-Headers", "Content-Type, X-Custom-Header");
+}
 
-String json = "NO hay datos";
+void handleCORS(AsyncWebServerRequest *request) {
+  AsyncWebServerResponse* response = request->beginResponse(200);
+  addCORSHeaders(response);
+  request->send(response);
+}
+
+void procesarJson(String json) {
+  StaticJsonDocument<256> doc; // JsonDocument específico para tamaño estático
+  DeserializationError error = deserializeJson(doc, json);
+  if (error) {
+    Serial.println("Error al parsear JSON:");
+    Serial.println(error.c_str());
+    return;
+  }
+
+  String nombre = doc["nombre"];  // Ahora se usa el campo "nombre" del JSON
+  lectura* sensor = nullptr;
+
+  // Compara el nombre para determinar a qué sensor se refiere
+  if (nombre == "Sensor_0x40") {
+    sensor = &sensor_0x40;
+  } else if (nombre == "Sensor_0x41") {
+    sensor = &sensor_0x41;
+  } else if (nombre == "Sensor_0x44") {
+    sensor = &sensor_0x44;
+  } else if (nombre == "Sensor_0x45") {
+    sensor = &sensor_0x45;
+  }
+
+  if (sensor) {
+    sensor->carga = doc["carga"];
+    sensor->nombre = nombre;
+    sensor->corriente = doc["corriente"];
+    sensor->voltage = doc["voltage"];
+    sensor->potencia = doc["potencia"];
+  } else {
+    Serial.println("Sensor no reconocido: " + nombre);
+  }
+}
+
+String generarRespuestaJson(lectura sensor) {
+  StaticJsonDocument<256> doc; // JsonDocument estático
+  doc["carga"] = sensor.carga;
+  doc["nombre"] = sensor.nombre;
+  doc["corriente"] = sensor.corriente;
+  doc["voltage"] = sensor.voltage;
+  doc["potencia"] = sensor.potencia;
+
+  String response;
+  serializeJson(doc, response);
+  return response;
+}
+
+void setup_servidor() {
+  server.on("/", HTTP_OPTIONS, handleCORS);
+  server.on("/sensor", HTTP_OPTIONS, handleCORS);
+  //server.on("/todos", HTTP_OPTIONS, handleCORS);
+
+  server.on("/sensor", HTTP_GET, [](AsyncWebServerRequest *request) {
+    if (!request->hasParam("nombre")) {
+      AsyncWebServerResponse* response = request->beginResponse(400, "text/plain", "Falta el parámetro 'nombre'.");
+      addCORSHeaders(response);
+      request->send(response);
+      return;
+    }
+
+    String sensorNombre = request->getParam("nombre")->value();
+    String responseJson;
+
+    // Compara el nombre recibido en la solicitud para determinar el sensor
+    if (sensorNombre == "Sensor_0x40") {
+      responseJson = generarRespuestaJson(sensor_0x40);
+    } else if (sensorNombre == "Sensor_0x41") {
+      responseJson = generarRespuestaJson(sensor_0x41);
+    } else if (sensorNombre == "Sensor_0x44") {
+      responseJson = generarRespuestaJson(sensor_0x44);
+    } else if (sensorNombre == "Sensor_0x45") {
+      responseJson = generarRespuestaJson(sensor_0x45);
+    }
+
+    else {
+      Serial.println("Error: Sensor no encontrado");
+      AsyncWebServerResponse* response = request->beginResponse(404, "text/plain", "Sensor no encontrado.");
+      addCORSHeaders(response);
+      request->send(response);
+      return;
+    }
+
+    AsyncWebServerResponse* response = request->beginResponse(200, "application/json", responseJson);
+    addCORSHeaders(response);
+    request->send(response);
+  });
+  server.begin();
+}
 
 void setup() {
   Serial.begin(115200);
-  delay(10);
 
-  // Conexión a la red WiFi
-  Serial.println();
-  Serial.println("Conectando a ");
-  Serial.println(ssid);
-  
+  Serial.println("\nConectando a ");
+  Serial.print("Setting AP (Access Point)…");
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-  
-  Serial.println("");
   Serial.println("WiFi conectado");
   Serial.println("Dirección IP: ");
   Serial.println(WiFi.localIP());
 
-  // Iniciar el servidor
-  server.begin();
-  Serial.println("Servidor iniciado");
+  Serial.println("\nServidor iniciado");
+  setup_servidor();
 }
 
-
 void loop() {
-  // Comprobar si hay datos disponibles desde el RP2040 por UART
   if (Serial.available()) {
-    json = Serial.readStringUntil('\n');  // Leer el JSON completo desde el puerto uart
+    String json = Serial.readStringUntil('\n');
     Serial.println("Datos recibidos por UART:");
     Serial.println(json);
+    procesarJson(json);
   }
+  else if (!pruebaEnviada) {
+    String json = "{\"nombre\":\"Sensor_0x40\",\"carga\":15.5,\"corriente\":2.3,\"voltage\":5.0,\"potencia\":11.5}";
 
-  // Gestionar los clientes que se conectan al servidor web
-  WiFiClient client = server.available();
-  if (client) {
-    Serial.println("Cliente conectado");
-    client.print("Servidor activo\r\n");
+    Serial.println("Prueba de JSON:");
+    Serial.println(json);
 
-    // Esperar a que llegue una petición HTTP completa
-    while (client.connected()) {
-      if (client.available()) {
-        String request = client.readStringUntil('\r');
-        Serial.println("Petición HTTP recibida:");
-        Serial.println(request);
+    // Procesa el JSON de prueba
+    procesarJson(json);
 
-        client.flush();
-
-        // Si es una petición GET al recurso raíz
-        if (request.startsWith("GET / ")) {
-          // Enviar la respuesta HTTP con los datos JSON
-          client.print("HTTP/1.1 200 OK\r\n");
-          client.print("Content-Type: application/json\r\n\r\n");
-          client.print("Acces-Control-Allow-Origin: *\r\n"); //Permito CORS
-          client.print(json);  // Enviar el JSON recibido desde UART
-          Serial.println("JSON enviado al cliente: " + json);
-
-        } else {
-          // Responder con 404 si se solicita un recurso no válido
-          client.print("HTTP/1.1 404 Not Found\r\n");
-          client.print("Content-Type: text/plain\r\n\r\n");
-          client.print("Acces-Control-Allow-Origin: *\r\n"); //Permito CORS
-          client.print("Recurso no encontrado");
-          Serial.println("Recurso no encontrado\n\n\n");
-        }
-        //break;  // Salir tras procesar la petición
-      }
-    }
-    client.flush();
-    delay(1);  // Breve pausa antes de cerrar la conexión
-    client.stop();  // Cerrar la conexión con el cliente
-    Serial.println("Cliente desconectado\n\n");
+    // Cambia la bandera a true para evitar que se vuelva a enviar
+    pruebaEnviada = true;
   }
 }
