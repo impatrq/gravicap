@@ -1,0 +1,8282 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "826a9095-2799-4188-ad7d-fdf0715a7719")
+	(paper "A4")
+	(title_block
+		(title "MPPT")
+		(date "05-10-2024")
+		(company "IMPA - GraviCap")
+	)
+	(lib_symbols
+		(symbol "Connector:Screw_Terminal_01x02"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector:Screw_Terminal_01x06"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x06"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x06_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 0 -7.62)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -5.08)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -7.2898) (xy 0.3302 -8.128)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -4.7498) (xy 0.3302 -5.588)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 5.4102) (xy 0.3302 4.572)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -7.112) (xy 0.508 -7.9502)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -4.572) (xy 0.508 -5.4102)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 5.588) (xy 0.508 4.7498)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 5.08)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:D"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:L_Ferrite"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L_Ferrite"
+				(at 2.794 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Inductor with ferrite core"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "L_Ferrite_0_1"
+				(arc
+					(start 0 -2.54)
+					(mid 0.6323 -1.905)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -2.794) (xy 1.016 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.778) (xy 1.016 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -0.762) (xy 1.016 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0.254) (xy 1.016 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.27) (xy 1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 2.286) (xy 1.016 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -2.286) (xy 1.524 -2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.27) (xy 1.524 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.778) (xy 1.524 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.794) (xy 1.524 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 0.635)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 1.905)
+					(end 0 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_Ferrite_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Modulos Varios:module_ina219"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U3"
+				(at -7.62 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "module_ina219"
+				(at -12.7 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Modulos Varios:module_ina219"
+				(at 12.7 -17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "module_ina219_0_1"
+				(rectangle
+					(start 2.54 11.43)
+					(end 20.32 -13.97)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 20.32 2.54)
+					(end 16.51 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "module_ina219_1_1"
+				(pin input line
+					(at 0 5.08 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 0 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -2.54 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -5.08 0)
+					(length 2.54)
+					(name "VIN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -7.62 0)
+					(length 2.54)
+					(name "VIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 1.27 180)
+					(length 2.54)
+					(name "VIN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 22.86 -2.54 180)
+					(length 2.54)
+					(name "VIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Raspberry Pico RP2040-Zero:MP1584"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U1"
+				(at 0 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Raspberry Pico RP2040-Zero:MP1584"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MP1584_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MP1584_1_1"
+				(text "MP1584\n"
+					(at 0 2.54 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Raspberry Pico RP2040-Zero:RP2040-Zero"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RPZ1"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(face "Carlito")
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "~"
+				(at 27.94 -12.7 0)
+				(effects
+					(font
+						(face "Carlito")
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "GraviCap:RP2040 Zero"
+				(at 27.94 -10.16 0)
+				(effects
+					(font
+						(face "Carlito")
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(face "Carlito")
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RP2040-Zero_0_1"
+				(rectangle
+					(start -12.7 15.24)
+					(end 12.7 -13.97)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "RP2040-Zero_1_1"
+				(pin bidirectional line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "GP29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "GP0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(name "GP7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -7.62 180)
+					(length 2.54)
+					(name "GP8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 -16.51 90)
+					(length 2.54)
+					(name "GP9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.54 -16.51 90)
+					(length 2.54)
+					(name "GP10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -16.51 90)
+					(length 2.54)
+					(name "GP11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -2.54 -16.51 90)
+					(length 2.54)
+					(name "GP12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -16.51 90)
+					(length 2.54)
+					(name "GP13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -7.62 0)
+					(length 2.54)
+					(name "GP14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 10.16 180)
+					(length 2.54)
+					(name "GP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -5.08 0)
+					(length 2.54)
+					(name "GP15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -2.54 0)
+					(length 2.54)
+					(name "GP26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 0 0)
+					(length 2.54)
+					(name "GP27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "GP28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 7.62 0)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 10.16 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 12.7 0)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "GP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "GP3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "GP4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "GP5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "GP6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:BC548"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BC548"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.1A Ic, 30V Vce, Small Signal NPN Transistor, TO-92"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BC548_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BC548_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:BC558"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BC558"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, TO-92"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "PNP Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BC558_0_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778) (xy 2.286 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BC558_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.715)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_FET:IRF4905"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IRF4905"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.infineon.com/dgdl/irf4905.pdf?fileId=5546d462533600a4015355e32165197c"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "-74A Id, -55V Vds, Single P-Channel HEXFET Power MOSFET, 20mOhm Ron, TO-220AB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Single P-Channel HEXFET Power MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?220*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "IRF4905_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "IRF4905_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GNDREF"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GNDREF"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GNDREF_0_1"
+				(polyline
+					(pts
+						(xy -0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -2.54) (xy 0.127 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDREF_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GNDREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 95.25 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "175c814c-f41a-485d-adfb-b36dffb082aa")
+	)
+	(junction
+		(at 224.79 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28cb21e9-5d53-400a-9797-58ad913b425f")
+	)
+	(junction
+		(at 182.88 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f4a568c-38f2-4224-82f4-7d18c0c02134")
+	)
+	(junction
+		(at 195.58 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5db993e8-5392-4182-9a65-680d2d6dd228")
+	)
+	(junction
+		(at 69.85 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76cb5e39-d99e-4355-a9d7-b1599bc59979")
+	)
+	(junction
+		(at 62.23 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9e89728-5195-4d98-b421-1ff15f9fe10c")
+	)
+	(junction
+		(at 240.03 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "acbc7fc3-c057-4e92-977d-e0f3ca8f955d")
+	)
+	(junction
+		(at 110.49 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdb2fffb-b177-4310-af1f-5bb23e6e26e1")
+	)
+	(junction
+		(at 154.94 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eae05480-73cc-44ec-8243-e79c59bc9da1")
+	)
+	(junction
+		(at 54.61 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "efbfd311-d047-4b5f-a215-bdcac22e18b1")
+	)
+	(junction
+		(at 54.61 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4c0c025-c828-4e42-9b57-8ea6b9dadc2c")
+	)
+	(no_connect
+		(at 254 72.39)
+		(uuid "0df34990-196c-4364-8a87-571424966805")
+	)
+	(no_connect
+		(at 254 82.55)
+		(uuid "0f4104e9-35bc-4c88-b225-fc50653cc1c8")
+	)
+	(no_connect
+		(at 223.52 80.01)
+		(uuid "14d1555a-c59d-4d9d-9553-f4de14f1665b")
+	)
+	(no_connect
+		(at 241.3 101.6)
+		(uuid "349baa69-1231-4dbd-9c06-c4b49ab25aca")
+	)
+	(no_connect
+		(at 254 74.93)
+		(uuid "5498decd-f3a1-49ab-82a3-142d7c51aa94")
+	)
+	(no_connect
+		(at 223.52 90.17)
+		(uuid "58bcab48-14a5-4f25-8d32-05816fd2859e")
+	)
+	(no_connect
+		(at 254 92.71)
+		(uuid "5904416e-dc82-4dfb-a5c0-fcd087550434")
+	)
+	(no_connect
+		(at 223.52 92.71)
+		(uuid "626497af-6a4f-42c7-8e79-c9c20d8a232f")
+	)
+	(no_connect
+		(at 43.18 128.27)
+		(uuid "6e5560a8-49ef-4db9-87ca-4520fc675d0d")
+	)
+	(no_connect
+		(at 243.84 101.6)
+		(uuid "6f94d0b6-36db-4d2c-aa30-b0a4e0300f80")
+	)
+	(no_connect
+		(at 254 85.09)
+		(uuid "724bdb6d-20fc-4537-905a-c876b832ef4a")
+	)
+	(no_connect
+		(at 254 77.47)
+		(uuid "74ad2236-3fe1-4613-bb13-a159004d06a9")
+	)
+	(no_connect
+		(at 43.18 125.73)
+		(uuid "9274e956-b20b-4da2-ada2-e4cc9a516b42")
+	)
+	(no_connect
+		(at 236.22 101.6)
+		(uuid "97ab8ae4-f6ab-45d5-b9ed-6e827a23a364")
+	)
+	(no_connect
+		(at 238.76 101.6)
+		(uuid "b4f29103-41ba-448f-9bde-2295484510f0")
+	)
+	(no_connect
+		(at 254 80.01)
+		(uuid "d09139a8-4301-4472-8b45-ed45737dca96")
+	)
+	(no_connect
+		(at 233.68 101.6)
+		(uuid "d2c06224-9752-4ae2-b648-8eaa2bc81ec9")
+	)
+	(no_connect
+		(at 223.52 77.47)
+		(uuid "f2788f15-2686-4b45-b5ca-40be8b421449")
+	)
+	(wire
+		(pts
+			(xy 166.37 113.03) (xy 166.37 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "006b6b00-fd32-4b8c-a198-1a22679702df")
+	)
+	(wire
+		(pts
+			(xy 189.23 110.49) (xy 201.93 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00cf1398-a753-45ae-9fad-f35bb03c383d")
+	)
+	(wire
+		(pts
+			(xy 54.61 85.09) (xy 54.61 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06868a41-0666-46f9-8f38-152d7ff0d172")
+	)
+	(wire
+		(pts
+			(xy 195.58 82.55) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "127b3ba3-fbca-4b95-8866-283646517a9a")
+	)
+	(wire
+		(pts
+			(xy 168.91 110.49) (xy 168.91 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13dbadf7-f2fc-4f98-b148-5eb346fa6dc5")
+	)
+	(wire
+		(pts
+			(xy 62.23 85.09) (xy 62.23 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "150d4a0f-e8b5-47e2-a738-e2f0b262eb83")
+	)
+	(wire
+		(pts
+			(xy 154.94 82.55) (xy 160.02 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18b9e116-8869-423f-98ef-147d5ffa9237")
+	)
+	(wire
+		(pts
+			(xy 240.03 118.11) (xy 240.03 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d46acd5-7a10-4a66-8719-df1785283dad")
+	)
+	(wire
+		(pts
+			(xy 189.23 120.65) (xy 191.77 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24508e78-aae4-4649-a988-4643a124ae49")
+	)
+	(wire
+		(pts
+			(xy 194.31 118.11) (xy 194.31 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "246b6b69-4fce-46a2-a908-4f8f842c4704")
+	)
+	(wire
+		(pts
+			(xy 36.83 95.25) (xy 39.37 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25c0becc-8b3e-491d-aef9-e8c84294b577")
+	)
+	(wire
+		(pts
+			(xy 240.03 120.65) (xy 242.57 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "273aa9d9-8390-4877-8c9f-df4ac8e950da")
+	)
+	(wire
+		(pts
+			(xy 176.53 123.19) (xy 176.53 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2857942a-e4da-4534-95e4-f425452cccc9")
+	)
+	(wire
+		(pts
+			(xy 110.49 120.65) (xy 110.49 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aa5b53a-6cf6-43ec-a00b-34fd2b7e42bc")
+	)
+	(wire
+		(pts
+			(xy 156.21 110.49) (xy 168.91 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dff8db5-52f7-45f7-b07f-ffea5b3351e0")
+	)
+	(wire
+		(pts
+			(xy 224.79 120.65) (xy 224.79 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31e7397e-3bf4-4de5-af11-e2145b968e49")
+	)
+	(wire
+		(pts
+			(xy 224.79 120.65) (xy 227.33 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ab7f511-04d1-434d-9d46-8a3c9997517b")
+	)
+	(wire
+		(pts
+			(xy 148.59 123.19) (xy 143.51 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fd232d4-4228-4629-8de4-9a5681b5ee1c")
+	)
+	(wire
+		(pts
+			(xy 100.33 125.73) (xy 100.33 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46b309b9-b795-4d60-835e-63b6ba607b56")
+	)
+	(wire
+		(pts
+			(xy 92.71 120.65) (xy 92.71 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b01fbf-6344-4ffc-82d4-760e588edb22")
+	)
+	(wire
+		(pts
+			(xy 224.79 118.11) (xy 224.79 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49f95b8b-5693-412f-908c-81ca777fd524")
+	)
+	(wire
+		(pts
+			(xy 87.63 76.2) (xy 87.63 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ddc684a-a38d-47e7-8cbe-ba774a85e5b7")
+	)
+	(wire
+		(pts
+			(xy 156.21 113.03) (xy 166.37 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5868b6f5-fdca-42f9-9002-35d37ffbd688")
+	)
+	(wire
+		(pts
+			(xy 69.85 85.09) (xy 71.12 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5eedd6d4-5ce2-47e7-ad62-974cf01869d7")
+	)
+	(wire
+		(pts
+			(xy 87.63 90.17) (xy 95.25 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6832c528-b247-4a1e-8945-e239b9e40737")
+	)
+	(wire
+		(pts
+			(xy 95.25 123.19) (xy 100.33 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "688edf49-fcad-4d8a-ae5b-dcb1f645caae")
+	)
+	(wire
+		(pts
+			(xy 209.55 123.19) (xy 209.55 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d6f865e-5b40-41a9-823b-ba6e9fe0c6ee")
+	)
+	(wire
+		(pts
+			(xy 180.34 82.55) (xy 182.88 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f6e06c2-c204-465d-8300-7a74ed7af412")
+	)
+	(wire
+		(pts
+			(xy 196.85 115.57) (xy 196.85 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fa2994e-6e27-4154-8eeb-f29b298bda86")
+	)
+	(wire
+		(pts
+			(xy 148.59 125.73) (xy 148.59 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7086dc18-af58-43ee-b31b-80eda0ec74c7")
+	)
+	(wire
+		(pts
+			(xy 69.85 85.09) (xy 69.85 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71a2be59-2d31-4ab5-a647-c6d2c468db77")
+	)
+	(wire
+		(pts
+			(xy 161.29 118.11) (xy 161.29 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7343650b-11fc-4171-b6ea-9131ade360b5")
+	)
+	(wire
+		(pts
+			(xy 125.73 120.65) (xy 125.73 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "751bce0e-541e-48a0-bda9-cad13ec9b31e")
+	)
+	(wire
+		(pts
+			(xy 110.49 90.17) (xy 115.57 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7584dc8c-09f5-44b8-b3da-07ad435700b5")
+	)
+	(wire
+		(pts
+			(xy 118.11 123.19) (xy 113.03 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7650e8a6-c71f-4234-81e4-42d9a5717151")
+	)
+	(wire
+		(pts
+			(xy 191.77 120.65) (xy 191.77 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7966ef36-b491-4eff-b490-d9a0b9b445f4")
+	)
+	(wire
+		(pts
+			(xy 52.07 69.85) (xy 54.61 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a4e2f23-befc-4616-9d6c-28e9c6a95376")
+	)
+	(wire
+		(pts
+			(xy 189.23 118.11) (xy 194.31 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "807600cb-fd18-4582-9d4d-9471ab631304")
+	)
+	(wire
+		(pts
+			(xy 156.21 118.11) (xy 161.29 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86a62a94-b109-44dc-ad19-ff15414b07a3")
+	)
+	(wire
+		(pts
+			(xy 110.49 92.71) (xy 110.49 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b637b5f-e495-4f75-9b5d-238df0600e8d")
+	)
+	(wire
+		(pts
+			(xy 80.01 85.09) (xy 78.74 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "997c6fd4-0e85-41d4-8123-47c11f8deedb")
+	)
+	(wire
+		(pts
+			(xy 201.93 110.49) (xy 201.93 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a3b8db7-2ec2-4137-9c23-5bf1a581e4a1")
+	)
+	(wire
+		(pts
+			(xy 189.23 115.57) (xy 196.85 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b3e5671-a9b6-4f08-90b7-f87273e5950e")
+	)
+	(wire
+		(pts
+			(xy 163.83 115.57) (xy 163.83 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2952c0b-26b9-4c90-85a0-aa667bf126a0")
+	)
+	(wire
+		(pts
+			(xy 189.23 113.03) (xy 199.39 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a483949b-d9bb-48e6-9c9c-3285d1b90fed")
+	)
+	(wire
+		(pts
+			(xy 69.85 80.01) (xy 69.85 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a76d1ba5-095e-4d22-9f9a-c6377b9a08bf")
+	)
+	(wire
+		(pts
+			(xy 62.23 74.93) (xy 62.23 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8344e3d-314d-4f88-83df-ad94a75792d0")
+	)
+	(wire
+		(pts
+			(xy 54.61 69.85) (xy 54.61 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8804547-725d-4701-99ff-588885edc9b7")
+	)
+	(wire
+		(pts
+			(xy 171.45 123.19) (xy 176.53 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa27eff8-693b-4914-83d0-c8a3c8cc2273")
+	)
+	(wire
+		(pts
+			(xy 156.21 120.65) (xy 158.75 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab5f3577-9752-4bbf-8d8d-a7a0e9eb970d")
+	)
+	(wire
+		(pts
+			(xy 156.21 115.57) (xy 163.83 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae3e6a12-890b-4ee1-acfb-8087afaee523")
+	)
+	(wire
+		(pts
+			(xy 128.27 123.19) (xy 133.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9f47676-40b3-491f-a3b4-9f09678cd7b9")
+	)
+	(wire
+		(pts
+			(xy 54.61 69.85) (xy 69.85 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba957a0c-840e-4d97-b556-bee69bb20c94")
+	)
+	(wire
+		(pts
+			(xy 140.97 120.65) (xy 140.97 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcf11bc8-5e1d-4113-a0d9-8e7414935334")
+	)
+	(wire
+		(pts
+			(xy 240.03 120.65) (xy 240.03 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfd0bee8-e0db-4b8d-a8ea-4fbc8e6312c6")
+	)
+	(wire
+		(pts
+			(xy 95.25 90.17) (xy 95.25 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c079a120-f4dc-4596-b8b6-c568cd8231a8")
+	)
+	(wire
+		(pts
+			(xy 133.35 125.73) (xy 133.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbeb0060-3cf5-43e1-ab41-664e2cb07099")
+	)
+	(wire
+		(pts
+			(xy 152.4 82.55) (xy 154.94 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd1ef2d9-60d4-4489-97d7-0566cdd16627")
+	)
+	(wire
+		(pts
+			(xy 54.61 80.01) (xy 54.61 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3a7e055-9269-4d67-972d-f3656cbfaf45")
+	)
+	(wire
+		(pts
+			(xy 62.23 85.09) (xy 54.61 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e42098f0-0788-4be3-bc7c-40a9677a2e55")
+	)
+	(wire
+		(pts
+			(xy 95.25 90.17) (xy 100.33 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e968b119-1daf-4c8a-b180-e7647701bb7d")
+	)
+	(wire
+		(pts
+			(xy 182.88 82.55) (xy 195.58 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9813762-66a1-4f9b-a4a0-d9d3d9e419b5")
+	)
+	(wire
+		(pts
+			(xy 199.39 113.03) (xy 199.39 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebb18182-6bd0-4b0d-b8d5-9434aab26de1")
+	)
+	(wire
+		(pts
+			(xy 107.95 90.17) (xy 110.49 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed116370-e41f-469d-81c4-a2c5069f982c")
+	)
+	(wire
+		(pts
+			(xy 118.11 125.73) (xy 118.11 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f39f6799-09a5-46b5-a047-3e4693cf496d")
+	)
+	(wire
+		(pts
+			(xy 204.47 123.19) (xy 209.55 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd701ce0-4628-4c36-9833-07fe68b7eaf7")
+	)
+	(wire
+		(pts
+			(xy 158.75 120.65) (xy 158.75 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdbb17ba-1a90-4972-84d3-7a5b2b79fdb6")
+	)
+	(rectangle
+		(start 212.62 66.04)
+		(end 265.43 106.68)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 580f0151-2a79-4b78-9bf8-aa26d3920a06)
+	)
+	(rectangle
+		(start 29.21 66.04)
+		(end 138.43 106.68)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 8283de75-bb7f-411d-b52b-5b091b90a279)
+	)
+	(rectangle
+		(start 81.28 107.95)
+		(end 213.36 138.43)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b8c7f651-fb71-451a-bf03-1874b2890006)
+	)
+	(rectangle
+		(start 29.21 107.95)
+		(end 78.74 138.43)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid c33b2910-0c3c-49f3-86ac-5dab0dbc48ef)
+	)
+	(rectangle
+		(start 215.9 107.95)
+		(end 250.19 139.7)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid e226ab5b-4d13-4576-a3ab-1e3d24cfc8e5)
+	)
+	(rectangle
+		(start 139.7 65.97)
+		(end 210.82 106.67)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ebbeb9e0-d9ec-4c90-8c3c-72970caafe13)
+	)
+	(text "Conversor Buck DC-DC"
+		(exclude_from_sim no)
+		(at 115.316 106.68 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "05ced618-2f01-4fc1-aa02-99f08fc233a7")
+	)
+	(text "Regulador de Voltaje 5V"
+		(exclude_from_sim no)
+		(at 140.208 106.934 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e202b7b-a5b6-4de7-a6db-3a310649bbbc")
+	)
+	(text "Raspberry Pi 2040 Zero\n"
+		(exclude_from_sim no)
+		(at 212.852 106.68 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "12ab1c89-ee23-44b5-9c2f-907f0dedfdfd")
+	)
+	(text "Intercom 1"
+		(exclude_from_sim no)
+		(at 165.608 132.334 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "17949c98-ed21-41ef-b942-4b77f5f18ba4")
+	)
+	(text "Salida"
+		(exclude_from_sim no)
+		(at 142.494 132.588 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "39ea8dd4-4891-4b6e-b0b1-66d8bba177c9")
+	)
+	(text "Fuente 5V\n"
+		(exclude_from_sim no)
+		(at 94.234 132.588 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3e371798-b892-475a-b1fe-5eab45ffbf48")
+	)
+	(text "Conexiones"
+		(exclude_from_sim no)
+		(at 81.788 138.43 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b032981-75b4-467c-afbe-74e35bcf4cbd")
+	)
+	(text "Divisor de Voltaje\n"
+		(exclude_from_sim no)
+		(at 215.9 139.7 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "7af4e8ca-beb6-4ee2-a67d-3b1182c8c871")
+	)
+	(text "Intercom 2"
+		(exclude_from_sim no)
+		(at 198.882 132.334 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "bda847b6-c1d2-4841-9243-8937ff0abc6d")
+	)
+	(text "Fuente 5V\n"
+		(exclude_from_sim no)
+		(at 127.254 132.588 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c86e50c6-fcf4-4655-8fa6-994171a2e205")
+	)
+	(text "Panel Solar\n"
+		(exclude_from_sim no)
+		(at 112.268 132.588 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e59ddca4-6a5a-4031-95d1-6dfe296910b3")
+	)
+	(text "Sensor de Corriente\n"
+		(exclude_from_sim no)
+		(at 33.528 138.176 0)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "efcd51d0-0046-4a69-afb1-d82e150c7b36")
+	)
+	(global_label "C. Buck Out"
+		(shape input)
+		(at 123.19 90.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1136cfe5-cae4-4397-9ae5-3655d580b105")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 134.3192 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 3"
+		(shape input)
+		(at 223.52 82.55 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "11c19b60-2d07-427e-a5e9-82b710aae24b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.6082 82.55 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "C. Buck Out"
+		(shape input)
+		(at 66.04 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39a5fd50-c5ea-42e3-a0d2-519e1adc0c67")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 78.5079 119.38 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 2"
+		(shape input)
+		(at 189.23 113.03 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41ba8a93-7fec-4ccf-aef8-28101f442f74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.4733 113.03 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fuente 5V"
+		(shape input)
+		(at 198.12 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4c1b9570-b6b0-4218-ad9d-cb50dbac7089")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 208.2069 82.55 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+Panel"
+		(shape input)
+		(at 87.63 76.2 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "56e647f2-1a92-4af3-b203-1a1cd9d25b1f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80.0258 76.2 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SDA S"
+		(shape input)
+		(at 43.18 123.19 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "582e29fb-cbb7-43b1-b04e-1a03b4f1886e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.1936 123.19 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SDA"
+		(shape input)
+		(at 189.23 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5df6f8c3-16fd-4a52-9b3e-bd61ca6b1e9a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.9596 118.11 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Out"
+		(shape input)
+		(at 240.03 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6a74f02c-12f7-494f-8c17-877a13e02f0a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 233.8396 110.49 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SCL S"
+		(shape input)
+		(at 43.18 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6b5dbd4a-0468-46b3-9914-0e99da648d9c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.5943 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SDA"
+		(shape input)
+		(at 156.21 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7e2e1385-742e-4f7d-873c-41f25755b957")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.9396 118.11 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SDA"
+		(shape input)
+		(at 254 87.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "80197410-418e-4c80-b202-3315564ae14f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 265.2704 87.63 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SCL"
+		(shape input)
+		(at 156.21 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84eaa01d-92a0-4d4d-ba52-9b17d5bf6257")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145.0001 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fuente 5V"
+		(shape input)
+		(at 125.73 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8e0ec6e1-b0fd-4312-b8d0-0635560728a1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 115.6431 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SCL"
+		(shape input)
+		(at 189.23 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9179a1da-f3b5-4d2f-ad6f-72cc45dbddd0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 178.0201 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fuente 5V"
+		(shape input)
+		(at 92.71 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "921b1fb6-121a-47ae-83d6-d494f154c516")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 82.6231 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 2"
+		(shape input)
+		(at 242.57 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "94083090-c88b-49cf-a974-5ac3531b688f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 249.3267 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+Panel"
+		(shape input)
+		(at 224.79 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9506893d-9a84-4790-90f9-cb9f9ccd5c67")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 217.1858 110.49 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 2"
+		(shape input)
+		(at 223.52 85.09 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "974c0479-9879-4132-9b96-ce14e70f0149")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.6082 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+Panel"
+		(shape input)
+		(at 52.07 69.85 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "999564dd-215d-41c5-9db3-0d449d412ae3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 44.4658 69.85 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fuente 5V"
+		(shape input)
+		(at 43.18 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2ee259c-f930-4a5f-b907-8e2199f2e484")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.0931 115.57 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 1"
+		(shape input)
+		(at 189.23 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7866b9c-b2a9-4440-9ff4-14a62191c390")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.4733 110.49 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Out"
+		(shape input)
+		(at 140.97 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8b57e35-40c1-4213-b6e9-bd852c9151bb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 134.7796 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fuente 5V"
+		(shape input)
+		(at 223.52 72.39 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b2085789-a2d9-4592-a37e-ad8d8cebab56")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.4492 72.39 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 3"
+		(shape input)
+		(at 36.83 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b3fb4a74-ff17-4481-a880-7650e5e434f1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.0733 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 1"
+		(shape input)
+		(at 227.33 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c4abe705-7c97-4e5c-b210-e0519dbfe4f8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.0867 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+Panel"
+		(shape input)
+		(at 110.49 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c6cca081-62dd-4a9f-aefb-44f14a5d9bf7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 102.8858 120.65 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ SCL"
+		(shape input)
+		(at 254 90.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c85ca086-d3a0-49a7-a169-a5de1671169f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 265.2099 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 2"
+		(shape input)
+		(at 156.21 113.03 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d64932c9-5da7-4e83-99bd-58679cf2b5d6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.4533 113.03 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Out"
+		(shape input)
+		(at 66.04 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d77544da-9eb8-403d-87d9-1592ecedfcb0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 72.2304 123.19 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 3"
+		(shape input)
+		(at 189.23 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d97fe835-2424-4026-a9a3-1ba654f5dc14")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.4733 115.57 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 1"
+		(shape input)
+		(at 223.52 87.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de934613-7867-4f99-9f96-a525474eacfc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.6082 87.63 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 3"
+		(shape input)
+		(at 156.21 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e9324992-b29e-4f37-ac5c-2dc26988c660")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.4533 115.57 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RPZ 1"
+		(shape input)
+		(at 156.21 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ef032887-5ff7-46e2-9a63-6aea2ad615bc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.4533 110.49 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+Panel"
+		(shape input)
+		(at 152.4 82.55 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Carlito")
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f000ad96-d013-411b-afde-2477c2f13b35")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.7958 82.55 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 240.03 114.3 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0058ad45-6180-46b2-88a9-08e3f2c01389")
+		(property "Reference" "R6"
+			(at 242.81 112.54 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150kΩ"
+			(at 244.01 114.54 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 241.808 114.3 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 240.03 114.3 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed215c2b-713d-4b3b-83ce-32d464a1899f")
+		)
+		(pin "2"
+			(uuid "afe3d65e-704d-4a5c-a558-da3cd5c1d78f")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 195.58 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12f0a178-b168-438c-8ad5-fb3b757d6549")
+		(property "Reference" "#PWR015"
+			(at 195.58 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 195.58 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ccdad81-00a0-4f4b-840e-23b50a81703f")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14c09ec5-e52f-4e39-9ba3-cc3b7a6a450e")
+		(property "Reference" "C2"
+			(at 147.32 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10µF"
+			(at 147.32 87.63 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+			(at 155.9052 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 86.36 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5daa82d8-96be-421c-a35f-181c30ec89b6")
+		)
+		(pin "2"
+			(uuid "11c2be0b-ffa4-4ba4-9424-666bd9ea1a03")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 180.34 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "160942b8-6d9c-4e1c-a503-0ab174e04726")
+		(property "Reference" "#PWR013"
+			(at 180.34 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 180.34 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 180.34 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5765bfab-1fba-437f-a746-4c3c26b1353b")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 176.53 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a950d60-ccc7-408a-925e-9a96982421bf")
+		(property "Reference" "#PWR012"
+			(at 176.53 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 176.53 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5ce0d58-c845-4c5b-a347-6c46a6e73ff2")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 95.25 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2230a89c-e005-4a0c-b1f6-87df80b23bbe")
+		(property "Reference" "J1"
+			(at 94.488 130.556 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 97.79 129.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba4b902f-77f7-47fb-b2ff-f933fefb2617")
+		)
+		(pin "2"
+			(uuid "52007769-81b5-456c-ae21-93910027e6aa")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 54.61 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2250c14e-182b-491c-b8e9-629b0cbb3449")
+		(property "Reference" "#PWR02"
+			(at 54.61 106.68 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 54.61 104.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "983aaa1f-cb62-4f1a-b60b-cfeb87e08543")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x06")
+		(at 166.37 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26acd9bc-18b9-471c-9ebc-cdd84f97a1a3")
+		(property "Reference" "J5"
+			(at 166.37 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x06"
+			(at 165.1 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-6_P5.08mm"
+			(at 166.37 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3009034-1d09-4c48-a48a-d3d1bb6658fc")
+		)
+		(pin "2"
+			(uuid "c1fe63a2-d7d7-456b-816c-a516d605ba61")
+		)
+		(pin "3"
+			(uuid "63495806-468b-46a2-a566-f5b91af19be6")
+		)
+		(pin "4"
+			(uuid "51644467-a0fa-4b6d-8b8a-5ab33a19d536")
+		)
+		(pin "5"
+			(uuid "cf877576-ce2d-4869-9282-34e923a52ee0")
+		)
+		(pin "6"
+			(uuid "2c5bdcec-3e73-4a5d-9cc2-3ce9eed23a48")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 223.52 74.93 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d31f1fb-2a9b-4e1a-a001-dcff1ccbe734")
+		(property "Reference" "#PWR017"
+			(at 217.17 74.93 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 219.71 74.93 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 74.93 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 74.93 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 223.52 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "991b189b-aadb-4cad-8235-b7cec3f481c1")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 240.03 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3340cef0-00aa-476b-b096-d39f9dff999b")
+		(property "Reference" "#PWR019"
+			(at 240.03 137.16 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 240.01 135.03 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 130.81 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 130.81 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "39ce0253-9c6e-4b60-a50f-43b6d65e949f")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC548")
+		(at 52.07 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3aa97567-04e2-4e81-8be9-97bf16c19a98")
+		(property "Reference" "Q1"
+			(at 57.15 93.98 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC548"
+			(at 57.15 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 57.15 97.155 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(at 52.07 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "769df446-d2f4-4dfb-b300-3fd59781ff7e")
+		)
+		(pin "2"
+			(uuid "5fc52b41-3849-4fa8-a2fb-bd42cd0c42ad")
+		)
+		(pin "3"
+			(uuid "d1faccb7-e635-4654-a634-729203f0f1e3")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 182.88 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5248298e-f32a-41b2-b257-2dd273aa5889")
+		(property "Reference" "#PWR014"
+			(at 189.23 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 186.69 90.17 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8f9a461-394c-497d-ae3f-5e211568b4ee")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Modulos Varios:module_ina219")
+		(at 43.18 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53896270-6741-4596-8da0-4f1353b5b762")
+		(property "Reference" "U1"
+			(at 35.56 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "module_ina219"
+			(at 30.48 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "GraviCap:INA_219"
+			(at 55.88 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "888a1cbf-cb63-4e9c-9ae0-10bad8aae169")
+		)
+		(pin "2"
+			(uuid "2f6e0c11-f0e1-40ca-80b7-27a0cb0a5435")
+		)
+		(pin "3"
+			(uuid "8c7cfaa6-8d35-4de6-ac7b-85260871a727")
+		)
+		(pin "4"
+			(uuid "9fc3237f-84f4-4300-a613-be1a0d50e8c1")
+		)
+		(pin "5"
+			(uuid "df444070-ee44-4716-91a6-67fa17c5deb8")
+		)
+		(pin "6"
+			(uuid "00549116-5c79-4112-a58f-e9655a731834")
+		)
+		(pin "7"
+			(uuid "d5ddfff1-ff62-4960-9d10-1dc1e85893c8")
+		)
+		(pin "8"
+			(uuid "df8ea8f2-9a9d-4c46-94b9-a74e0aa44cab")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Raspberry Pico RP2040-Zero:MP1584")
+		(at 170.18 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54d3cc43-bad9-4b10-8a91-bd8acad22fcc")
+		(property "Reference" "U2"
+			(at 170.18 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 170.18 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "GraviCap:MP1584"
+			(at 170.18 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c4c425a-db5b-4cb7-b3fe-7d4f8107b673")
+		)
+		(pin "2"
+			(uuid "0a93a8a2-5201-46a5-87f9-b1602bf75157")
+		)
+		(pin "3"
+			(uuid "a1cf598b-8383-48fc-8bdb-3a648240b890")
+		)
+		(pin "4"
+			(uuid "61472cfe-62e0-45aa-9f07-234a8f79f159")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 143.51 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5511f00b-5005-4cd2-a749-c7ded962b942")
+		(property "Reference" "J4"
+			(at 142.748 130.556 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 146.05 129.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+			(at 143.51 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d7bc204-fb21-4547-8376-9520f1f250e6")
+		)
+		(pin "2"
+			(uuid "7e3ac322-5efa-47b3-b54f-7a4da2f9ff26")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 133.35 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "59e84000-6ceb-458d-8bf4-2b5dad96cded")
+		(property "Reference" "#PWR08"
+			(at 133.35 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 133.35 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9c8a1e1-7862-4809-af78-ee74dc5f0a2b")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 85.09 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64b3e69c-f841-4b71-8c29-0512c7d502ae")
+		(property "Reference" "R3"
+			(at 73.58 82.64 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150Ω"
+			(at 74.28 87.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 74.93 86.868 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 74.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "230e6425-2c81-4479-a680-7dd2c5f2bba6")
+		)
+		(pin "2"
+			(uuid "6980acbe-828c-43ea-b45a-c7df5006cfc7")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 160.02 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a2ea294-a063-4a68-a427-679edeef7128")
+		(property "Reference" "#PWR011"
+			(at 160.02 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 160.02 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "758dcb29-082e-4ecf-a7b7-55b223fa28a6")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L_Ferrite")
+		(at 104.14 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "79c8595e-f5ae-4cd0-9e24-6dea4844bb2d")
+		(property "Reference" "L1"
+			(at 104.14 86.36 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "117,5µH"
+			(at 104.14 91.44 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_THT:L_Toroid_Horizontal_D41.9mm_P37.60mm_Vishay_TJ7"
+			(at 104.14 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b06db1cd-8796-4fe1-8ffe-2bd7fc974f9d")
+		)
+		(pin "2"
+			(uuid "d88275ed-2dbf-45c9-9950-11ebf8078975")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 240.03 127 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d13cfc1-8550-4615-ad10-a5497bc71319")
+		(property "Reference" "R7"
+			(at 242.91 125.44 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 243.61 127.68 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 241.808 127 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 240.03 127 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0227db9-e319-447e-9926-6479f63fb22e")
+		)
+		(pin "2"
+			(uuid "2f675187-4334-4e74-9874-daec39cb928d")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 95.25 96.52 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7fb6fc15-fe0a-463e-9f25-b12057eec641")
+		(property "Reference" "D1"
+			(at 97.87 95.25 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 97.87 97.79 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9efbf36-6b2c-45e5-bb4c-4a7e8cb475f0")
+		)
+		(pin "2"
+			(uuid "b521a7ff-e52d-4fbb-a151-f236460dd1a7")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 224.79 114.3 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81129b20-2cdc-439d-b7b5-550b0e6bb95d")
+		(property "Reference" "R4"
+			(at 227.48 112.94 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150kΩ"
+			(at 228.68 114.84 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 226.568 114.3 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 114.3 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0aa4dccd-1d60-4428-b14f-297083efdf98")
+		)
+		(pin "2"
+			(uuid "06b16bb8-0c45-4a27-ba8c-3431774834ec")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 43.18 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87c7b1e2-ba99-485c-b1c9-5e1f7910d604")
+		(property "Reference" "#PWR01"
+			(at 36.83 118.11 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 36.576 118.11 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 118.11 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 118.11 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8862163-c493-4a41-ad23-be06b76f844e")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 113.03 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94e21174-227b-4748-9791-5317670ccbf5")
+		(property "Reference" "J2"
+			(at 112.268 130.556 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 115.57 129.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+			(at 113.03 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0056fec0-a072-42cc-a368-4d7299caafd7")
+		)
+		(pin "2"
+			(uuid "62a8f64b-a924-49ae-ada7-09f442a4d14c")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 69.85 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1325e9b-4478-4055-8a96-b5d9a6049f73")
+		(property "Reference" "#PWR03"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "baec74b3-80fa-4393-b2d7-ced487312fda")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 100.33 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a20580f4-d207-4f6f-b922-2b9c882fe489")
+		(property "Reference" "#PWR05"
+			(at 100.33 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 100.33 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f58b6a4a-52dd-41ef-8d4e-30c83902cc8b")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 43.18 95.25 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2c65045-0e20-46da-8e5c-a0dab2dbc6ea")
+		(property "Reference" "R1"
+			(at 40.84 92.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4,7kΩ"
+			(at 40.94 97.74 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 43.18 93.472 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 43.18 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff313461-6ddb-4165-aa6d-6651c0038cbc")
+		)
+		(pin "2"
+			(uuid "5647f369-99c7-472b-b233-ad8dbfdc7754")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 128.27 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab211a27-9f2d-42fb-b7e5-6a4744e4cbad")
+		(property "Reference" "J3"
+			(at 127.508 130.556 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 130.81 129.54 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+			(at 128.27 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 128.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c796ce1d-87c6-400d-82ae-2c75f69aad30")
+		)
+		(pin "2"
+			(uuid "de9e0362-7624-4267-8008-7c9e84a2472d")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 95.25 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2bcf489-d96d-4d5e-994d-1e32b98589cc")
+		(property "Reference" "#PWR04"
+			(at 95.25 106.68 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 95.25 104.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a2e2ae1e-8d16-4a02-872c-a1c2866b7225")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 182.88 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3876d92-3f51-4953-b56d-8f383f9566ab")
+		(property "Reference" "C3"
+			(at 186.69 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100µF"
+			(at 186.69 87.63 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+			(at 183.8452 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 182.88 86.36 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4956f035-6919-4e41-8baf-ba6cad58acc6")
+		)
+		(pin "2"
+			(uuid "32e656cf-151f-4b4d-8003-08473eff23d5")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 154.94 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6635edf-a4b8-46b5-bb3d-7d39afb07bbf")
+		(property "Reference" "#PWR010"
+			(at 148.59 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 151.13 90.17 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5a1b1ba-0123-469f-a33a-6b0de2d93d77")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 209.55 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bed4e6b4-0d98-4693-8e9e-da0bdafb0029")
+		(property "Reference" "#PWR016"
+			(at 209.55 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 209.55 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 209.55 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4945365d-7ccd-4cb0-8f3f-cba465b819e5")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 148.59 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1d692a1-beea-4df8-8573-45c1a58f3d08")
+		(property "Reference" "#PWR09"
+			(at 148.59 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 148.59 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e764a07-ef4b-43d9-a9c7-9cfae12657e2")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC558")
+		(at 67.31 95.25 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c81c98f1-c51b-40a9-bfc4-265ca1a13fe2")
+		(property "Reference" "Q3"
+			(at 72.39 93.98 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC558"
+			(at 72.39 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 72.39 93.345 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf"
+			(at 67.31 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 67.31 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "456535fe-1f93-48e2-a469-0ed24c9c4702")
+		)
+		(pin "2"
+			(uuid "d2af8252-6632-45df-9a18-e2355bd06052")
+		)
+		(pin "3"
+			(uuid "e352f722-698f-415a-80b8-5be9ca9b9198")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 119.38 90.17 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ce6af76c-b57b-42e0-b888-4f1197fb0845")
+		(property "Reference" "D2"
+			(at 119.27 87.07 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D"
+			(at 118.97 92.97 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1df521dd-a907-40d2-bed0-5653cb03f7a9")
+		)
+		(pin "2"
+			(uuid "5fb068ad-6da3-4575-8c38-d79bc7434039")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Raspberry Pico RP2040-Zero:RP2040-Zero")
+		(at 238.76 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d87f10f4-82bb-44e7-8b17-b41503a958b3")
+		(property "Reference" "RPZ1"
+			(at 238.76 82.55 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 266.7 97.79 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "GraviCap:RP2040 Zero"
+			(at 266.7 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 238.76 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75e9bf77-7b31-4d05-a3c0-a3781875058a")
+		)
+		(pin "10"
+			(uuid "bf436b64-c0d0-4ae5-b572-442c9a8530ea")
+		)
+		(pin "11"
+			(uuid "f6fc7528-5168-499c-bdab-3abadfb0ac70")
+		)
+		(pin "12"
+			(uuid "f8d7bdbc-9e09-4b76-8eaa-7e2704ec04cb")
+		)
+		(pin "-"
+			(uuid "a16e4247-4542-4f96-8e83-a1bcd18818e1")
+		)
+		(pin "14"
+			(uuid "0fa3a694-fbc6-4223-9390-488207374665")
+		)
+		(pin "15"
+			(uuid "564fffa1-f59e-423e-b2e0-43540df681e9")
+		)
+		(pin "16"
+			(uuid "4331f417-b6ae-450e-86f7-22f5810290dd")
+		)
+		(pin "17"
+			(uuid "2744a527-0358-40f4-9176-a97676828ada")
+		)
+		(pin "37"
+			(uuid "eeb8992e-c192-4a55-ab3b-20baa183e532")
+		)
+		(pin "19"
+			(uuid "83df667d-7aaa-41e7-8cb2-f1f707c63a28")
+		)
+		(pin "2"
+			(uuid "4722d94d-7aa2-4d0e-b07b-393763a9f383")
+		)
+		(pin "20"
+			(uuid "c111399d-ef26-4c61-a092-5b68f3d40ceb")
+		)
+		(pin "34"
+			(uuid "eafea338-694a-43b0-8b70-39b29c92c047")
+		)
+		(pin "39"
+			(uuid "379baf03-9c7d-491e-b3ae-62c52ca556ab")
+		)
+		(pin "31"
+			(uuid "17d18038-e3da-411c-bcc0-2b90e976e336")
+		)
+		(pin "32"
+			(uuid "c087b296-01a3-473a-9638-c5497947e85a")
+		)
+		(pin "4"
+			(uuid "7aebfe7b-be59-4ad9-8893-f5d47fd527ac")
+		)
+		(pin "5"
+			(uuid "da082dfb-95cc-4bc7-9f8b-cfe7f560b6d0")
+		)
+		(pin "6"
+			(uuid "e1bb0901-27c4-4f34-984c-8ef6661bf4fa")
+		)
+		(pin "7"
+			(uuid "35bff0bc-0a92-47a1-865e-a71a9d45c7ee")
+		)
+		(pin "38"
+			(uuid "3581ecb6-5db7-4b0f-b7e4-e8eaa17d77ec")
+		)
+		(pin "9"
+			(uuid "3040d30b-c20c-42f4-8034-1568e276ef10")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "RPZ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 110.49 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d90d8f28-2dd1-46c6-9cac-fd50cfabc5c9")
+		(property "Reference" "C1"
+			(at 114.3 95.25 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2314,57µF"
+			(at 114.3 97.7899 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm"
+			(at 111.4552 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 96.52 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98627def-706b-4433-b1ee-3be040a97bad")
+		)
+		(pin "2"
+			(uuid "afd689bf-d38d-452b-88b4-65868b12c208")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 224.79 127 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "daa3281e-6d34-4227-9759-96794a8ea32d")
+		(property "Reference" "R5"
+			(at 227.58 125.54 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 228.48 128.04 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 226.568 127 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 127 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12a47bda-cc32-47e7-a001-528da1683177")
+		)
+		(pin "2"
+			(uuid "c8777a72-5304-479e-98c4-73a6d85e8d7e")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 110.49 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dcfa28a0-9c60-4134-8384-9c528db2b225")
+		(property "Reference" "#PWR06"
+			(at 110.49 106.68 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 110.49 104.27 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 100.33 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "632bb66b-3f78-4931-8e21-cfece21a3e12")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 195.58 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e05f3906-d531-4335-b3b2-993fed6e2d29")
+		(property "Reference" "C4"
+			(at 199.39 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100pF"
+			(at 199.39 87.63 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+			(at 196.5452 90.17 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 195.58 86.36 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5c6652a-346f-4411-8e29-076677e2d3f4")
+		)
+		(pin "2"
+			(uuid "8fd7e5aa-d9f9-4654-9cac-6c0bd9446012")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 54.61 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "edd376f2-3bde-4850-9687-d7738b2ef946")
+		(property "Reference" "R2"
+			(at 50.97 74.74 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4,7kΩ"
+			(at 56.47 74.74 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+			(at 52.832 76.2 90)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c94f431d-c372-4f12-a128-f5bd4e4d57c3")
+		)
+		(pin "2"
+			(uuid "90f73f2e-85d2-40ca-96ea-ee26ae699c48")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC548")
+		(at 67.31 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "edf335a2-92e0-4492-96a1-7ac62a1b7329")
+		(property "Reference" "Q2"
+			(at 72.39 73.66 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC548"
+			(at 72.39 76.2 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 72.39 76.835 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(at 67.31 74.93 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 67.31 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef68502a-f791-4ee9-a870-1b24f111a6c5")
+		)
+		(pin "2"
+			(uuid "1d61a744-3dfa-462c-80b6-69e9350779d9")
+		)
+		(pin "3"
+			(uuid "5ed2477e-432a-4fc8-9080-9068e6598085")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 224.79 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3b1e6e9-0522-40e4-92c7-9bcdfbb2d85d")
+		(property "Reference" "#PWR018"
+			(at 224.79 137.16 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 224.81 134.93 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 130.81 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 130.81 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48a980ae-decd-4fc4-ade0-3ce3d517e20c")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x06")
+		(at 199.39 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd6c0847-20fc-467b-a3e3-6502d2db62b0")
+		(property "Reference" "J6"
+			(at 199.39 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x06"
+			(at 198.12 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-6_P5.08mm"
+			(at 199.39 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 199.39 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2f5aba63-edf7-4ff7-903e-647dce5f268e")
+		)
+		(pin "2"
+			(uuid "d14a9836-124a-4438-b270-db6a7a1a388b")
+		)
+		(pin "3"
+			(uuid "b080eb60-955e-453f-ade0-b53032a89e70")
+		)
+		(pin "4"
+			(uuid "9207f960-0f38-44f6-a99e-96b70f2e5953")
+		)
+		(pin "5"
+			(uuid "1bf3d50f-877c-429f-93a3-51fc6acaa695")
+		)
+		(pin "6"
+			(uuid "77ef8eaa-3080-4c58-85f4-6f8629dfd7a5")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 118.11 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe9f400a-56fc-4467-8872-5ad4106008fc")
+		(property "Reference" "#PWR07"
+			(at 118.11 132.08 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 118.11 129.67 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6f5cb77-1109-4092-affc-a9204b7f7c7b")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRF4905")
+		(at 85.09 85.09 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ffc937e0-5ab2-4eb0-864b-f4acd9c9cb46")
+		(property "Reference" "Q4"
+			(at 91.32 86.36 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRF4905"
+			(at 91.32 83.82 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 90.17 83.185 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/irf4905.pdf?fileId=5546d462533600a4015355e32165197c"
+			(at 85.09 85.09 0)
+			(effects
+				(font
+					(face "Carlito")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0624a374-ec2c-439e-a8ee-c5d70389e797")
+		)
+		(pin "2"
+			(uuid "52ead379-f9b8-4ab8-8dc2-1535daddc593")
+		)
+		(pin "3"
+			(uuid "d75ee74a-ef06-4482-ab25-093964d8db6e")
+		)
+		(instances
+			(project "GraviCap"
+				(path "/826a9095-2799-4188-ad7d-fdf0715a7719"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
