@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include <string.h>
+
+#include "gravi.h"
 
 void carga_motor();
 int descarga_motor();
