@@ -1,6 +1,6 @@
 #include "gravi.h"
-#include "cap_motor.h"
-#include "cap_sensors.h"
+//#include "cap_motor.h"
+//#include "cap_sensors.h"
 
 // Variables para las mediciones particulares de cada sensor
 mediciones_ina219 m_ina0x40;
@@ -20,9 +20,6 @@ char uart_mppt[CHAR_UART];
 char uart_consumo_bat[CHAR_UART];
 char uart_panel[CHAR_UART];
 
-// Variables para almacenar lecturas que serán enviadas
-float corriente_consumo, entrega_panel, consumo_bat, carga;
-
 QueueHandle_t queue_ina219_consulta_all;
 QueueHandle_t queue_ina219_send_uart;
 
@@ -35,7 +32,6 @@ int p_r = 600;
 float carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter;
 bool test_up, test_down;
 
-// variable de prueba, futuro reemplazo de un sensor
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
 
 int leds_encendidos_previos = -1;  // Inicialmente -1 para asegurar la primera actualización
@@ -156,6 +152,7 @@ void task_init(void *params) {
 void task_consulta_all(void *params) {
   while(1){
     mediciones_ina219 medicion = *((mediciones_ina219*)params);
+    printf("INSIDE CONSULTA\r");
 
     if (xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))) {
       // Considero el los valores de consumo de corriente obtenidos de la cola
@@ -169,12 +166,12 @@ void task_consulta_all(void *params) {
             int result = descarga_motor();
             // Si es posible descargar la batería, descargamos
             if (result == 1) {
-              vTaskDelay(1000);
+              vTaskDelay(1500);
             }
             else if (result == 0) {
               // Ya dio su valor de last_carga_motor, down = 1;
               printf("seguimos descargando sin problemas\n");
-              vTaskDelay(1000);
+              vTaskDelay(1500);
             }
           }
 
@@ -210,16 +207,16 @@ void task_consulta_all(void *params) {
         }
       }
       else if (status() == 1) {
-        vTaskDelay(1000);
+        vTaskDelay(1500);
       }
     }
     else {
-      vTaskDelay(1000);
+      vTaskDelay(1500);
     }
   }
 }
 
-void core_1_task(void) {
+void core_1_task() {
   last_carga_core_1 == 0;
 
   while (1) {
@@ -276,7 +273,7 @@ void actualizar_leds(float porcentaje_carga) {
 // Función que le da valores a los test, habilitando o no los motores
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
-bool status(void){
+bool status(){
   if (queue_try_peek(&queue_core_1, &carga)) {
     queue_remove_blocking (&queue_core_1, &carga);
     queue_add_blocking (&queue_core_1_motor, &carga);
@@ -334,6 +331,7 @@ void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubic
 void task_send_uart(void *params) {
   mediciones_ina219 medicion = *((mediciones_ina219*)params);
   while(true) {
+    printf("Send task\n");
     if (xQueueReceive(queue_ina219_send_uart, &medicion, pdMS_TO_TICKS(1000))) {
 
       prepare_char_uart(uart_consumo, &m_ina0x40, CHAR_UART, carga);
@@ -347,7 +345,7 @@ void task_send_uart(void *params) {
       uart_puts(uart1, uart_panel);
     }
     else {
-      vTaskDelay(1000);
+      vTaskDelay(3000);
     }
   }
 }

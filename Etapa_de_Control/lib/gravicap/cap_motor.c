@@ -1,4 +1,3 @@
-#include "gravi.h"
 #include "cap_motor.h"
 
 // Variables para las mediciones particulares de cada sensor
@@ -22,7 +21,7 @@ void carga_motor(int rele_carga) {
   gpio_put(LED_STOP, 1);
   gpio_put(LED_DESCARGA, 0);
   gpio_put(LED_CARGA, 0);
-
+  return;
 }
 
 int descarga_motor() {
@@ -95,4 +94,5 @@ void motor_stop() {
   gpio_put(LED_CARGA, 0);
 
   printf("MOTOR EN PAUSA\n");
+  return;
 }

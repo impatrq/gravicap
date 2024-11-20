@@ -1,6 +1,9 @@
 #ifndef _gravi_h
 #define _gravi_h
 
+#include "cap_sensors.h"
+#include "cap_motor.h"
+
 #include "hardware/irq.h"
 #include "hardware/i2c.h"
 #include "hardware/uart.h"
@@ -65,10 +68,10 @@ void task_consulta_all(void *params);
 void actualizar_leds(float porcentaje_carga);
 
 // Usando el número de vueltas, le da valores a los test
-bool status(void);
+bool status();
 
 // Función del core1
-void core_1_task(void);
+void core_1_task();
 
 // Convierte los leídos en char para mandarlos por uart
 void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubicacion_size, float porcentaje_carga);
