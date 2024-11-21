@@ -1,0 +1,30 @@
+ion-content {
+  --background: #c18de1;
+}
+
+ion-button {
+  --background: #e2e415;
+  margin-top: 90px;
+  color: #000000;
+}
+
+#bienvenida {
+  text-align: center;
+}
+
+#bienvenida img {
+  height: auto;
+  width: 270px;
+}
+
+#textocentro {
+  margin-top: 45px;
+}
+
+#letrasbienvenida {
+  margin-top: 20px;
+}
+
+#bienvenida strong {
+  font-size: 21px;
+}

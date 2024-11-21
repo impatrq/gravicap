@@ -1,0 +1,31 @@
+#paginaenergiagenerada {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#paginaenergiagenerada ion-card {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#paginaenergiagenerada strong {
+  font-size: 20px;
+}
+
+#contenedorenergia {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#valorpotenciaeg {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 55px;
+}

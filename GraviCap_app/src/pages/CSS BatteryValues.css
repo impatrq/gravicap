@@ -1,0 +1,81 @@
+#paginavaloresbateria {
+  text-align: center;
+  margin-top: 160px;
+}
+
+#carta {
+  margin-top: 80px;
+}
+
+#contenedor3valores {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#voltajecolumna {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#voltajecolumna ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#voltajecolumna strong {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#corrientecoluma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#corrientecolumna ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#corrientecolumna strong {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#potenciacolumna {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#potenciacolumna strong {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#potenciacolumna ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}

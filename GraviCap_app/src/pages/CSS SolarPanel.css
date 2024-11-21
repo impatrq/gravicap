@@ -1,0 +1,105 @@
+#paginapanel {
+  margin-top: 60px;
+}
+
+#circulopanel {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#circulopanel ion-card {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+#circulopanel img {
+  width: 220px;
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.cartablanca {
+  text-align: center;
+}
+
+.cartablanca p {
+  font-size: 25px;
+}
+
+#valoresconsumo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.voltaje {
+  background-color: #810ec8; 
+  justify-content: flex-start; 
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  border-radius: 3%;
+  margin-right: 35px;
+}
+
+.potencia {
+  background-color: #810ec8; 
+  justify-content: flex-end; 
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  border-radius: 3%;
+}
+
+#contenedorcirculos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#circulovoltaje {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 35px;
+}
+
+#circulovoltaje ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+  margin-left: 6px;
+}
+
+#circulopotencia {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#circulopotencia ion-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #810ec8; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+}
+
+
