@@ -1,0 +1,293 @@
+\chapter{Aplicación}
+
+    \section{Función de la aplicación}
+        La aplicación móvil tiene como objetivo mostrarle al usuario los distintos tipos de valores de la batería en tiempo real. Esto lo hará por medio de pantallas destinadas a los valores e interacciones que necesite el usuario, contando con gráficos interactivos. Los datos mostrados en la aplicación son subidos desde una base de datos. Contando también con una sección para contactarnos, por medio de nuestras redes sociales y página web.\par
+        Con esta aplicación, el usuario podrá saber, en todo momento, los valores que necesite de la batería, como por ejemplo, la entrega que tiene la batería hacia el dispositivo que esté alimentando o, para un perfil más técnico, valores del panel solar y gráficos para más detalles sobre la misma.\par
+
+    \section{Desarrollo del mockup de la aplicación}
+    
+        \subsection{Mockup}
+            	Para poder desarrollar la aplicación, se necesita tener un Mockup. Su función es proveer al desarrollador el prototipo de funcionamiento, planteado de forma ilustrativa, el cual, da un primer vistazo estético, funcional e informativo de cómo será la misma. \par
+                Esto conlleva plantear el diseño, e información que contendrá la aplicación , para que, posteriormente, el desarrollo final de la aplicación, se base en el Mockup, siendo de esta forma, más cómodo y práctico poder desarrollarla.\par
+                La página que se designó para realizar el Mockup, fue “\href{https://marvelapp.com}{Marvel}”.\par
+                Dentro de este, pueden haber varios cambios según vaya avanzando y se necesite, ya que, al fin y al cabo, es a modo ilustrativo para después poder desarrollar la aplicación final.\par
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.8\linewidth]{Imagenes/Aplicación/Mockup.jpg}
+                    \caption{Mockup de la aplicación.}
+                    \label{fig:a14}
+                \end{figure}
+                
+            \subsection{UI/UX}
+                La \textbf{UX} (Experiencia de Usuario) es la experiencia integral y el conjunto de interacciones que tienen los usuarios con la misma.\par
+                En cuanto a la \textbf{UI} (Interfaz de Usuario) consiste en toda la arquitectura de información, patrones y diferentes elementos visuales que nos permitan explorar la funcionalidad de la aplicación de forma eficaz y gratificante.\par
+                Con esto, el usuario podrá tener una interacción “amigable” con la aplicación, siendo más cómodo y práctico moverse dentro de la misma para ver lo que necesite.\par
+                La diferencia entre estos, es que la UX se centra en la manera en que el usuario interactúa con el producto de manera eficaz y, por otro lado, la UI busca ofrecer una experiencia estética satisfactoria.\par
+
+            \subsection{User Journey}
+                Para el desarrollo de la aplicación se planteó utilizar como metodología, una “jornada de usuario”. Esta metodología, plantea un mapa de recorrido del usuario en nuestra aplicación, representando así, su experiencia visual e interactiva con la misma. Pudiendo así, plantear el desarrollo del Mockup enfocándonos en el proceso que realizaría nuestro usuario dentro de la aplicación y su perspectiva.\par
+                El proceso para esta metodología es buscar la empatía con el usuario, comprendiendo la relación y puntos de contacto que este tiene. Analizar sus acciones y procesos, para así, determinar lo que necesita. Con esto, se puede generar una mejor experiencia para el usuario y un proceso más eficiente.\par
+                Facilita tanto el desarrollo de la aplicación como el proyecto en sí, generando una experiencia del usuario y requerimientos para el mismo. También se relaciona directamente con la UI/UX y facilita un mejor y cómodo planteamiento para las mismas.\par
+                Esta herramienta o metodología, nos permite generar un usuario para así comprender y mejorar su experiencia dentro de la aplicación, así también, dándonos un mejor desarrollo dentro de nuestro proyecto.\par
+
+                
+        \section{Estructura de la Aplicación}
+        
+            \subsection{Editor de Código y Framework}
+                Para el desarrollo de la aplicación, se utilizó el editor de código “Visual Studio Code”, en conjunto con “\href{https://ionicframework.com}{Ionic}" un framework de código abierto, proporcionandonos comodidad y amplias opciones de herramientas para el desarrollo, conteniendo varias opciones para la implementación en varios lenguajes.
+                
+            \subsection{Lenguajes Utilizados}
+                Los lenguajes utilizados fueron HTML, CSS, JS y, como principal, React. Siendo este último, el lenguaje principal para el uso de las herramientas que nos provee Ionic.\par
+                
+            \subsection{Componentes}
+        
+                \subsubsection{WelcomePage.tsx}
+                
+                    Este componente es el primero que se ve al iniciar la aplicación, su función consta de darle una pequeña bienvenida al usuario, con nuestro logo y \textit{slogan}, explicando un poco sobre la batería, el proyecto, la funcionalidad de la aplicación y un botón que lo envía a la pantalla de inicio una vez que el usuario quiera.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Welcome.jpg}
+                        \caption{Página de Bienvenida}
+                        \label{fig:a1}
+                    \end{figure}
+                
+                \subsubsection{StartPage.tsx}
+                    Una vez vista la pantalla de bienvenida, el usuario es reenviado hacia la pantalla de inicio, la cual, es la pantalla principal de la aplicación, esta contiene los botones con links hacia las distintas pantallas de valores.En la parte inferiror izquierda de la página encontramos un botón amarillo de tamaño pequelo el cual le permite al usuario redirigirse hacia la pantalla de gráficos de potencia de la batería.\par
+                    En el apartado de arriba a la derecha encontramos un botón de información, el cual contiene los links hacia nuestro contacto y diversas redes sociales.\par
+                    
+                    \begin{figure} [H]
+                        \centering
+                        \begin{subfigure}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=0.7\textwidth]{Imagenes/Aplicación/Start.jpg}
+                            \caption{Página de Inicio}
+                            \label{fig:a2.1}
+                        \end{subfigure}
+                        \begin{subfigure}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=0.7\textwidth]{Imagenes/Aplicación/Start_Menu.jpg}
+                            \caption{Menú de Inicio}
+                            \label{fig:a2.2}
+                        \end{subfigure}
+                        \hfill
+                                
+                        \caption{Ambas partes de la Página de Inicio}
+                        \label{fig:a2}
+                        \end{figure}
+                
+                \subsubsection{GeneratedEnergy.tsx}
+                    Este componente contiene un valor importante y recurrente para el usuario, el cual es la energía generada por la batería. Este valor le provee al usuario el valor de cuánta potencia está entregando hacia su dispositivo.\par
+                    En esta pantalla disponemos de un gráfico circular referenciando el valor de potencia de energía generada de la batería.\par
+                    En la parte inferior encontramos el color referenciando el valor del gráfico con un texto plasmando el valor numérico textualmente con su unidad (Watt).\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Generated.jpg}
+                        \caption{La cantidad de energía generada (Los valores son de referencia)}
+                        \label{fig:a3}
+                    \end{figure}
+                
+                \subsubsection{BatteryCharge.tsx}
+                    Para el usuario, también es importante saber cuál es la carga de la batería, es decir, en este caso, si está en su punto más alto o más bajo. Este valor se basa en un porcentaje, el cual nos indica la posición del peso de la batería, que se traduce en un valor porcentual para el usuario. Por ejemplo, el 100\% de la batería, se da cuando el peso está en su punto más alto, ya habiendo almacenado la energía potencial gravitatoria. Por lo tanto, el 0\% referencia cuando el peso está en su punto más bajo, ya habiendo descargado toda la batería.\par
+                    Este apartado también cuenta con el tiempo que falta para que la batería llegue a completar su carga.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Charge.jpg}
+                        \caption{Carga de la batería (Los valores son de referencia)}
+                        \label{fig:a4}
+                    \end{figure}
+                
+                \subsubsection{MyConsumption.tsx}
+                    El usuario también necesita saber el consumo de su dispositivo. Ese es el funcionamiento de este componente. Dándole el valor en unidad de potencia.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Consumption.jpg}
+                        \caption{El consumo del usuario (Los valores son de referencia)}
+                        \label{fig:a5}
+                    \end{figure}
+                
+                \subsubsection{SolarPanel.tsx}
+                    Para saber los valores de entrega del panel solar, el usuario puede verlos dentro de la pantalla del panel solar.\par
+                    Los valores que podemos ver son el voltaje que entrega y su potencia. Todo esto en tiempo real.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Value_Energy.jpg}
+                        \caption{Valor del panel solar utilizado (Los valores son de referencia)}
+                        \label{fig:a6}
+                    \end{figure}
+                
+                \subsubsection{BatteryValues.tsx}
+                    Para registrar la batería y sus valores varios, en la pantalla de valores de batería el usuario podrá ver valores como Voltaje, Corriente y Potencia de la batería.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Value_Battery.jpg}
+                        \caption{Valor de la batería (Los valores son de referencia)}
+                        \label{fig:a7}
+                    \end{figure}
+
+                \subsubsection{GraphicsPage.tsx}
+                    En este apartado, el cual el usuario puede acceder desde el botón amarillo de la página de inicio, encontraremos dos botones los cuales contienen los gráficos de carga y descarga de la batería.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Graphics_Page.jpg}
+                        \caption{Página de Gráficos}
+                        \label{fig:a8}
+                    \end{figure}
+
+                \subsubsection{ChargingPowerGraphics.tsx}
+                    En esta pantalla encontramos un gráfico ascendente, el cual se basa en la potencia que entrega la batería en función del tiempo cuando el peso está en su momento de ascenso.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Graphics_Charge.jpg}
+                        \caption{Gráfico de Carga (Los valores son de referencia)}
+                        \label{fig:a9}
+                    \end{figure}
+
+                \subsubsection{DischargePowerGraphics.tsx}
+                    Esta pantalla actúa de igual forma que la anterior, encontraremos un gráfico descendente el cual se basa en la potencia que entrega la batería en función del tiempo.\par
+                    Este funciona cuando la batería se encuentra en estado de descarga, es decir, cuando está descendiendo.\par
+    
+                    \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.25\linewidth]{Imagenes/Aplicación/Graphics_Discharge.jpg}
+                        \caption{Gráfico de Descarga (Los valores son de referencia)}
+                        \label{fig:a10}
+                    \end{figure}
+
+                \subsubsection{Buttons.tsx}
+                    Este componente es un botón de tamaño pequeño amarillo ubicado en la parte inferior de la página de inicio, el cual está declarado con una ruta de navegación que permite conectar la página principal de inicio con la página de gráficos de potencia de la batería.\par 
+                    También hay un botón del mismo estilo en la página de gráficos para poder volver hacia la pantalla principal de inicio si se necesita.\par 
+                    Con esto, damos una forma eficiente de visualización de valores entre páginas por medio de estos botones.\par
+
+                    \begin{figure}[H]
+                        \centering
+                        \begin{subfigure}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=0.7\textwidth]{Imagenes/Aplicación/Start_Button.jpg}
+                            \caption{Botón para volver a la Página de Inicio}
+                            \label{fig:a15.1}
+                        \end{subfigure}
+                        \begin{subfigure}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=0.7\textwidth]{Imagenes/Aplicación/Graphics_Button.jpg}
+                            \caption{Botón para volver la página de Gráficos}
+                            \label{fig:a15.2}
+                        \end{subfigure}
+                        \hfill
+                                
+                        \caption{Ambas partes de la Página de Inicio}
+                        \label{fig:a20}
+                        \end{figure}
+                    
+                \subsubsection{Tabs.tsx}
+                    Este componente es la barra de botones que se encuentra en la parte de abajo, este contiene un botón que te redirecciona hacia la pantalla de inicio y otra que te redirecciona hacia la parte los gráficos de potencia. Dándole una mayor accesibilidad al usuario hacia las pantallas del Tab.\par
+
+                \subsubsection{main.tsx}
+                    El main es un componente el cual no es visible, dentro de la aplicación. Este se encarga de poder ejecutar las rutas declaradas dentro del archivo App.tsx.\par
+
+                \subsubsection{App.tsx}
+                    Este componente tampoco es visible, ya que se encarga de declarar las rutas dentro de la aplicación. Por ejemplo, puede realizar que al abrir la aplicación, redireccione al usuario hacia la pantalla de bienvenida.\par
+                
+        \section{Desarrollo}
+            Para el desarrollo de la aplicación, se descargó \textbf{Ionic}, configurando su descarga para la utilización de herramientas y templates con el lenguaje de programación de \textbf{React}. Para poder programar y utilizar las herramientas descargadas se utilizó el editor de código de \textbf{Visual Studio Code}.\par 
+            \subsection{Base de Datos}
+                Teniendo como base de desarrollo el Mockup, facilita la programación de la misma. También cabe resaltar que mediante se desarrolla la aplicación en sí, el Mockup puede ir variando o la aplicación puede no ser completamente fiel estética y visualmente al mismo, quedando la aplicación final, diferente al Mockup, esto ya que se utiliza como una primera base.\par 
+                Mediante el proceso se encuentran nuevas herramientas que se adapten mejor a las necesidades del momento, reescribiendo o modificando el Mockup según se requiera para una mejor versión de la aplicación.\par
+                
+            \subsection{Creación de Archivos}
+                Se crearon los distintos archivos que funcionarán como componentes para la creación de las pantallas de la aplicación, desarrollando y programando así la estructura de cada uno, importando las carpetas y herramientas para cada archivo.\par
+
+            \subsection{Herramientas de Ionic}
+                Para el desarrollo de programación de los archivos se necesitó tener conocimientos dentro del lenguaje de HTML para poder programar su estructura y combinarse con el lenguaje principal React y las herramientas que provee, creando así, componentes .tsx como archivos principales para el desarrollo. En cuanto a las herramientas que nos provee Ionic, se investigó en el Framework sobre sus templates e información del uso de las herramientas más convenientes para el desarrollo de los archivos. Para poder estilizarlos según queramos, se necesitó también tener conocimientos en CSS. Para los gráficos, importados de carpetas, se necesitó tener conocimientos básicos en JavaScript.\par
+                
+                \subsubsection{IonApp}
+                    Para la creación de los archivos, se necesita empezar con una constante o función, en la cual iremos desarrollando el código para la creación de las pantallas, así como declarar primeramente una herramienta IonApp la cual contendrá el código y los elementos de la aplicación de Ionic, solamente se declara uno en el archivo que queramos considerar como principal.\par
+                
+                \subsubsection{IonContent}
+                    Otro componente importante para el desarrollo es declarar un IonContent el cual actúa de contenedor principal de los componentes de la aplicación, dando así, un área única para el contenido por fuera del Header.\par
+                
+                \subsubsection{IonHeader y IonMenu}
+                    IonHeader componente que actúa de barra superior central, conteniendo componentes tales como iconos, botones y texto (vistos en el Header de la pantalla de Inicio). En este mismo también se declara el componente IonMenu, un botón de información lateral ubicado en la parte superior derecha de la pantalla de inicio, proporcionando los links hacia nuestras redes sociales, contacto y página web.\par
+                
+                \subsubsection{IonCard}
+                    Un componente muy utilizado es el de IonCard visto en gran parte en la pantalla de inicio y utilizado en otros archivos. Actuando de contenedor de otros componentes y, a su vez, dándole una mejor estética, actuando, como dice su nombre, como una carta. Modificándose en cuanto a estilos y formas con CSS, pueden actuar de contenedores circulares, también vistos en los contenedores de "Mi Consumo", "Panel Solar" y "Valores de Batería" en la pantalla de inicio. También dándole un recuadro en las páginas de gráficos, y actuando como "botones" (declarados con el componente de NavLink los cuales, al clickearlos, nos redireccionan hacia otra pantalla.\par
+                    
+                \subsubsection{IonNavLink y IonBackButton}
+                    Con los archivos desarrollados con sus componentes y estructuras, para el movimiento del usuario por las diferentes pantallas de estas, estos necesitan un enrutamiento para la conexión entre sí. Para esto, los componentes que provee Ionic como botones (ion-button) o cartas (ion-card) se los programó con la función de IonNavLink, funciona como un enrutamiento, el cual realiza que al clickear un botón o carta nos redireccione hacia otro componente/archivo que le designemos. Con esto, el Usuario se puede movilizar dentro de la aplicación hacia donde necesite. Así también como se redirecciona hacia un componente, puede volver hacia atrás a la pantalla anterior, esto con la herramienta IonBackButton.\par
+                    
+                \subsubsection{IonButton}
+                    Para una mejor interacción y movimiento del usuario dentro de la aplicación, se implementaron botones (ion-button). Por ejemplo, en la pantalla de Bienvenida. Otros ubicados en la parte inferior de la página de Inicio y de Gráficos la cual le permite al usuario moverse de una forma más eficiente entre las mismas. Estos cumplen la función de redireccionar al usuario hacia su determinada pantalla, dándole posibilidad de visualizar otras pantallas y obtener otro tipo de información.\par
+                    
+                \subsubsection{Formato SmartPhone}
+                    Ionic también nos provee una herramienta para poder ver el desarrollo del archivo que estemos programando dentro de Visual Studio Code en forma de un SmartPhone. Con esta función se facilita poder programar cada componente estructural para el desarrollo final.\par
+                    
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=\linewidth]{Imagenes/Aplicación/Code.jpg}
+                        \caption{Imagen de Referencia de la función de Smartphone}
+                        \label{fig:a15}
+                    \end{figure}
+        
+                    Con los archivos desarrollados con sus componentes y estructuras, para el movimiento del usuario por las diferentes pantallas de estas, los componentes necesitan un enrutamiento para la conexión entre sí. Para esto, los componentes que provee Ionic como botones (\textit{ion-button}) o cartas (\textit{ion-card}) se los programó con la función de \textit{IonNavLink}, funciona como un enrutamiento, el cual realiza que al clickear un botón o carta nos redireccione hacia otro componente/archivo que le designemos. Con esto, el Usuario se puede movilizar dentro de la aplicación hacia donde necesite. Así también como se redirecciona hacia un componente, puede volver hacia atrás a la pantalla anterior, esto con la herramienta \textit{IonBackButton}.\par
+                        
+                    El usuario, en la pantalla de inicio, en la parte superior derecha de la misma, dispone de un botón de información, el cual, le proveerá información de nuestras redes sociales y contacto.\par
+                    Para un mejor movimiento del usuario dentro de la aplicación, se implementó la herramienta \textit{Tabs} (\textit{ion-tabs}). Esta es una barra ubicada en la parte inferior la cual le permite al usuario moverse de una forma más eficiente, conteniendo iconos, los cuales actúan de botones para redireccionar al usuario hacia su determinada pantalla, dándole posibilidad de visualizar otras pantallas y obtener otro tipo de información.\par
+                    Una vez teniendo todos los archivos programados con sus respectivas estructuras y componentes, se debe añadir estilos, darle forma a los componentes que queramos, colores y tamaños, dándoles así el vistazo estético requerido planteado en el Mockup. Para esto, cada componente necesita sus estilos, creándose así un archivo \textit{CSS} individual para cada uno. Estos se programan y se importan al archivo que se requiera, modificando su estructura y tamaños dándole un mejor acabado estético para el usuario.\par
+                
+            \subsection{Estilos y CSS}
+                Una vez teniendo todos los archivos programados con sus respectivas estructuras y componentes, se debe añadir estilos, darle forma a los componentes que queramos, colores y tamaños, dándoles así el vistazo estético requerido planteado en el Mockup. Para esto, cada componente necesita sus estilos, creándose así un archivo CSS individual para cada uno. Estos se programan y se importan al archivo que se requiera, modificando su estructura y tamaños dándole un mejor acabado estético para el usuario.\par
+                
+            \subsection{Gráficos}
+                Para el desarrollo de los gráficos dentro de la aplicación, se utilizaron las carpetas de \textbf{charts.js} y \textbf{react-chartjs-2}. De estas carpetas, importamos los tipos de gráficos que necesitemos para, posteriormente, programarlos y darles forma con los valores que registre la base de datos. Los tipos de gráficos que se utilizaron fueron: “\textit{Doughnut}” (circular); “\textit{Bar}” (columna) y “\textit{Line}” (línea).\par
+                Para esto, se creó un archivo diferente para el desarrollo de cada gráfico para, posteriormente, importarlo hacia los archivos de los gráficos. Estos archivos, al ser JavaScript, los desarrollamos en formato .jsx.\par
+
+                \subsubsection{Tipos de Gráficos Utilizados}
+                \begin{itemize} [label=•]
+                \setlength{\itemindent}{1.5em}
+                
+                    \item Doughnut\par
+                        Este gráfico fue utilizado en el apartado de la Pantalla de Energía generada, dándonos un gráfico circular el cual se adapta al valor de energía que genere la batería.\par
+                        
+                    \item Bar\par
+                        Para que el usuario pueda ver los valores cómodamente, además de tener una referencia de su magnitud, se usó este tipo de gráfico, el cual nos da los valores referenciados en columnas.\par
+                        Estos valores son el Voltaje, Amperaje y Wataje (potencia) de la batería.\par
+                        Este gráfico se utilizó en la Pantalla de Valores de la Batería.\par
+                        
+                    \item Line\par
+                        Dentro de los gráficos de potencia podemos observar 2 gráficos del mismo tipo, siendo estos de línea. Para referencia el valor de potencia de la batería en función del tiempo se utilizó este tipo de gráfico.\par
+                        Para la potencia de carga siendo un gráfico de línea ascendente y para la Potencia de descarga siendo un gráfico del mismo tipo pero descendente.\par
+                \end{itemize}
+                
+            \subsection{Servidor}
+                El microcontrolador utilizado para la creación del servidor, fue una ESP8266, comunicándose con la aplicación por medio de WiFi.\par
+                Para el desarrollo de código se utilizó C++ con un sistema de detección del usuario al servidor conectado dentro de la misma red WiFi.\par
+                Dentro del servidor se obtienen los valores y datos de los sensores de la etapa de control, dándonos así, valores de corriente; tensión; voltaje y carga de los 4 sensores utilizados.\par
+                Cada sensor contiene información de datos diferentes, destinados a sensar específicamente una sección de la batería, como el panel solar, el consumo de la batería, el consumo de usuario y la potencia de la placa MPPT.\par
+                Al ser 4 sensores con información de datos diferentes, para una petición más cómoda de datos, realizamos solicitudes individuales a cada uno de los sensores por separado.
+                Cuando se realice una solicitud dentro del servidor y sea correcta y aceptada, este está configurado para contestar mandando los valores en formato de archivo json mandando un \textit{string} con los valores.\par
+                Dentro del desarrollo de la aplicación, para pedir los datos de los sensores dentro de los archivos de las pantalla, realizamos un fetch el cual solicitará los datos en forma de GET a la IP del servidor al sensor específico que le indiquemos.\par
+                Una vez realizado el fetch, obtendremos todos los valores del sensor al cual le indicamos la solicitud. Posteriormente, para mostrar los datos que necesitemos dentro de la pantalla de la aplicación, declaramos una variable la cual contendrá el dato específico que necesitemos del sensor recibido y la utilizamos dentro de la aplicación, mostrando el valor dentro del dispositivo móvil.\par
+
+            \newpage
+            
+            \subsection{Android Studio}
+                Una vez teniendo todo el desarrollo de código dentro de Visual Studio Code, realizamos el vistazo de la aplicación dentro de un dispositivo móvil android. Para lograr esto, utilizamos Android Studio el cual nos permitió realizar la conversión de nuestro proyecto de desarrollo en una aplicación móvil ejecutable dentro de nuestro dispositivo móvil android. Con esto, ya tenemos el vistazo final de la aplicación dentro de un dispositivo móvil, solamente pudiendo variar los tamaños de la aplicación debido a la resolución que tenga cada dispositivo donde se descargue.\par
+                Con esto, se pudo modificar los tamaños para adaptarlo lo mejor posible teniendo de referencia un celular con la aplicación.\par
+                Para una mejor estética, Android Studio nos permite modificar el nombre a la aplicación vista en el dispositivo móvil y también el logo que tendrá, dándonos así la posibilidad de modificarlo a nuestro gusto. Dando como resultado, el siguiente logotipo de aplicación para móviles.\par
+
+                \begin{figure} [H]
+                    \centering
+                    \includegraphics[width=0.5\linewidth]{Imagenes/Aplicación/Icon.jpg}
+                    \caption{Icono de la aplicación que se ve al descargarla}
+                    \label{fig:a21}
+                \end{figure}
+                
+                Para que cualquier persona pueda descargar la aplicación en su dispositivo móvil, Android Studio también nos permite generar un archivo \textbf{\textit{.apk}}, el cual, es un archivo ejecutable que contiene la aplicación. Al abrir el archivo \textit{\textbf{apk}}, podrá instalar la aplicación en su dispositivo móvil.\par
