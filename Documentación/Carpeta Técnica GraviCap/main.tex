@@ -1,6 +1,8 @@
 % Establece la clase del documento y las especificaciones de la misma.
 \documentclass[28pt, a4paper]{report}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece el tamaño de los bordes de la página.
 \usepackage[top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry}
 % Permite el uso de hipervínculos en el documento.
@@ -27,7 +29,9 @@
 \usepackage{xcolor}
 % Permite el uso de Apéndices.
 \usepackage{appendix}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Permite la inserción de imágenes al archivo.
 \usepackage{graphicx}
 % Permite el uso de imágenes y figuras rotadas
@@ -47,6 +51,7 @@
 % Expande las capacidades de las tablas.
 \usepackage{tabularray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Permite el uso de ecuaciones y distintos formatos de las mismas.
 \usepackage{amsmath}
 % Permite el uso de fracciones de una forma que ocupe menos espacio y sea más legible.
@@ -55,10 +60,14 @@
 \usepackage{cancel}
 % Permite poner código como si fuera una términal de código.
 \usepackage{listings}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece que la carpeta a usar para almacenar las imágenes es "Imagenes".
 \graphicspath{Imagenes/}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece la separación entre líneas.
 \setlength{\lineskip}{3.5pt}
 % Establece la mínima separación entre líneas.
@@ -67,12 +76,14 @@
 \setlength{\parindent}{20pt}
 % Establece la separación entre parráfos.
 \setlength{\baselineskip}{12pt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
 \newcounter{subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
-\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}}
 
 \titleformat{\subsubsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
@@ -98,10 +109,14 @@
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece las condiciones para los hipervínculos.
 \hypersetup{colorlinks=true,linkcolor=medium_violet,filecolor=dark_violet,urlcolor=light_violet,pdftitle={Carpeta Técnica GraviCap},pdfpagemode=FullScreen,}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece el estilo de la página para permitir el uso de encabezados y pies de página.
 \pagestyle{fancy}
 % Establece el uso de encabezados y pies de página.
@@ -109,12 +124,14 @@
 % Establece el contenido de la parte izquierda del encabezado.
 \lhead{\footnotesize \textcolor{dark_violet}{\textbf{GraviCap}} - \the\year{}}
 % Establece el contenido de la parte central del encabezado.
-\chead{\includegraphics[width=1cm]{Imagenes/IMPA.png}}
+\chead{\includegraphics[width=1cm]{Imagenes/Preface/IMPA.png}}
 % Establece el contenido de la parte de derecha del encabezado.
 \rhead{\footnotesize E.E.S.T N°7 IMPA "T.R.Q."}
 % Establece el contenido de la parte central del pie de página.
 \cfoot{\large \thepage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Establece que dentro de la tipografía "Carlito" se use la variante "OsF".
 \renewcommand*\oldstylenums[1]{\carlitoOsF #1}
 % Establece el tamaño del pie de página.
@@ -132,7 +149,9 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -153,63 +172,69 @@
 }
 
 \lstset{style=mystyle}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 \begin{titlepage}
 
         \begin{center}      
             \begin{figure} [!ht]
                 \centering
-                \includegraphics [width=9cm]{Imagenes/Logo-Nombre.png}
+                \includegraphics [width=9cm]{Imagenes/Preface/Logo-Nombre.png}
                 \label{Logo-Nombre}
             \end{figure}
+            
+                \vspace{0.5cm}
+                {\LARGE\textbf{{\textcolor{dark_violet}{\textbf{\textit{Una forma de elevar tu energía}}}}}}\par
+                \vspace{0.5cm}
+                
             {\Huge\textbf{Carpeta Técnica}}\par
-                \vspace{0.2cm}
-            {\LARGE\textbf{{\textcolor{dark_violet}{\textbf{GraviCap}}}}}\par
-                \vspace{1.5cm}
+                \vspace{1cm}
+                
             {\LARGE\textbf{7mo 1ra Comisión A}}\par
                 \vspace{0.2cm}
+                
             {\LARGE\textbf{Año \the\year}}\par
                 \vspace{1cm}
+                
             {\Large\textbf{{Alvarez Mollo, Fausto}}}\par
+            
             {\Large\textbf{{Bianqui Kronemberger, Mariano Joaquín}}}\par
+            
             {\Large\textbf{{Calleja, Tomás Joaquín}}}\par
+            
             {\Large\textbf{{Donatti, Augusto}}}\par
+            
             {\Large\textbf{{Felizia, Tatiana Milena}}}\par
+            
             {\Large\textbf{{Sofía, Gabriel Jerónimo Takashi}}}\par
-                \vspace{2cm}
+                \vspace{1.5cm}
+                
             \begin{figure} [!ht]
                 \centering
-                \includegraphics [width=7cm]{Imagenes/IMPA.png}
+                \includegraphics [width=7cm]{Imagenes/Preface/IMPA.png}
                 \label{IMPA}
             \end{figure}
+            
         \end{center}
         
     \end{titlepage}
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \tableofcontents
     \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{Preambulo}
-\include{Introduccion}
-\include{Estructura}
-\include{MPPT}
-\include{Software}
-\include{Hardware}
-\include{Aplicacion}
-\include{Pagina}
-\include{Futuro}
-\include{Bibliografia}
-
-\begin{appendix}
-
-\include{Anexo_A}
-
-\include{Anexo_B}
-
-\include{Anexo_c}
-
-\end{appendix}
+\include{Archivos/Preambulo}
+\include{Archivos/Introduccion}
+\include{Archivos/Estructura}
+\include{Archivos/MPPT}
+\include{Archivos/Software}
+\include{Archivos/Hardware}
+\include{Archivos/Aplicacion}
+\include{Archivos/Pagina}
+\include{Archivos/Futuro}
+\include{Archivos/Bibliografia}
 
 \end{document}
