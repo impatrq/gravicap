@@ -54,7 +54,7 @@ Desarollo de Aplicación.
 
 - 📧 tomascalleja918@gmail.com
 
-- LinkedIn: [Tomás Joaquín Calleja](ttps://www.linkedin.com/in/tomás-calleja-5a9894302/)
+- LinkedIn: [Tomás Joaquín Calleja](https://www.linkedin.com/in/tomás-calleja-5a9894302/)
 
 ### Augusto Donatti
 Desarrollo Estructural.
