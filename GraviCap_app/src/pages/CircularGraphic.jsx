@@ -38,10 +38,6 @@ const CircularChart = ({ value }) => {
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Gráfico Circular con Valores',
-      },
     },
   };
 

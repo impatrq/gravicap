@@ -24,8 +24,8 @@ function Start () {
             {/*links hacia nuestras redes*/}
             <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gravi.cap/">Instagram</a></p>
             <p><a target="_blank" rel="noopener noreferrer" href="https://gravicap.vercel.app/home">Página Web</a></p>
-            <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gravi.cap/">Gmail</a></p>
             <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/impatrq/gravicap">Github</a></p>
+            <p>Mail de Contacto: gravicap.arg@gmail.com</p>
           </div>
         </IonContent>
       </IonMenu>

@@ -36,10 +36,6 @@ const BarChart = () => {
             legend: {
                 position: 'top',
             },
-            title: {
-                display: true,
-                text: 'Valores de Batería',
-            },
         },
     };
 

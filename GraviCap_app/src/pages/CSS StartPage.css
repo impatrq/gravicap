@@ -10,6 +10,7 @@ ion-content {
 
 #inicio {
   text-align: center;
+  margin-top: 60px;
 }
 
 #textoredes p {
@@ -17,8 +18,20 @@ ion-content {
   color: #FFFFFF;
 }
 
+#textoredes a {
+  color: #FFFFFF;
+}
+
+#contenedoreb ion-card {
+  display: flex;
+}
+
 #contenedoreb {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #circuloporcentaje {
@@ -37,7 +50,6 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 #circuloadelante ion-card {
@@ -48,11 +60,10 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 #circuloadelante p {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 #imagenbateria {
@@ -160,6 +171,6 @@ ion-content {
 
 #inicio ion-button {
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 110px;
   margin-right: 172px;
 }
