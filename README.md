@@ -6,9 +6,9 @@
 
 &nbsp;
 
-| Página web | Email | Instagram |
-|------------|-------|-----------|
-|[Página Web](https://gravicap.vercel.app/home)|gravicap.arg@gmail.com|[@gravi.cap](https://www.instagram.com/gravi.cap/)|
+| Página web | Email | Instagram | Linktree |
+|------------|-------|-----------|----------|
+|[https://gravicap.vercel.app/home](https://gravicap.vercel.app/home)|gravicap.arg@gmail.com|[@gravi.cap](https://www.instagram.com/gravi.cap/)|[https://linktr.ee/gravicap](https://linktr.ee/gravicap)|
 
 &nbsp;
 
