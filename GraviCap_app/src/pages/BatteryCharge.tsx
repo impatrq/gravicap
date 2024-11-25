@@ -11,13 +11,16 @@ function BatteryCharge () {
     voltage: null,
     potencia: null,
   });
-  
+  const [tiempoRestante, setTiempoRestante] = useState(0); // Estado para el tiempo restante
+  const tiempoTotalCarga = 60; // Tiempo total de carga en minutos (puedes ajustarlo)
+
   useEffect(() => {
-    // Función para obtener datos
+    // Función para obtener y procesar los datos
     const fetchData = () => {
-      fetch('http://192.168.124.161/sensor?nombre=Sensor_0x40') // Cambia la URL a la IP del ESP8266
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // Cambia la URL a la IP del ESP8266
         .then((response) => response.json())
         .then((data) => {
+          // Actualizamos el estado con los valores recibidos
           setData({
             carga: data.carga,
             nombre: data.nombre,
@@ -25,19 +28,24 @@ function BatteryCharge () {
             voltage: data.voltage,
             potencia: data.potencia,
           });
-          console.log('Datos actualizados:', data); // Log para verificar los valores
+
+          // Calculamos el tiempo restante con base en la carga recibida
+          const porcentajeCarga = parseFloat(data.carga); // Parsear el porcentaje de carga
+          const tiempoTranscurrido = (porcentajeCarga / 100) * tiempoTotalCarga;
+          const tiempoFaltante = tiempoTotalCarga - tiempoTranscurrido;
+          setTiempoRestante(tiempoFaltante);
         })
         .catch((error) => {
           console.error('Error al obtener los datos:', error);
         });
     };
-  
+
     // Llamamos a fetchData al montar el componente
     fetchData();
-  
+
     // Configuramos el intervalo para actualizar los datos cada 2 segundos
     const interval = setInterval(fetchData, 2000);
-  
+
     // Limpiamos el intervalo al desmontar el componente
     return () => clearInterval(interval);
   }, []); // El array vacío asegura que solo se configure el intervalo una vez
@@ -66,7 +74,7 @@ function BatteryCharge () {
                   {/*carta circular delantera contendora del valor porcentaul de la carga de batería*/}
                   <IonCard>
                     {/*valor porcentual de la carga de la batería*/}
-                    <strong><p>{data.carga} % </p></strong>
+                    <strong><p> {data.carga} % </p></strong>
                   </IonCard>
                 </div>
               </IonCard>
@@ -75,7 +83,7 @@ function BatteryCharge () {
           <div id= "textocarga">
             <div id= "valorcarga">
               {/*valor del tiempo de carga total de la batería*/}
-              <p>10 minutos</p>
+              <p> {tiempoRestante.toFixed(2)} minutos </p>
             </div>
             <div id= "textoabajo">
               {/*texto del tiempo de carga*/}

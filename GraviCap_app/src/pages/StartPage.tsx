@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IonApp, IonAvatar, IonButton, IonButtons, IonCard, IonContent, IonHeader, IonItem, IonMenu, IonMenuButton, IonNavLink, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import "./CSS StartPage.css"
 import GeneratedEnergy from './GeneratedEnergy';
@@ -9,6 +9,45 @@ import SolarPanel from './SolarPanel';
 import Graphics from './GraphicsPage';
 
 function Start () {
+
+  const [data, setData] = useState({
+    carga: null,
+    nombre: '',
+    corriente: null,
+    voltage: null,
+    potencia: null,
+  });
+  
+  useEffect(() => {
+    // Función para obtener datos
+    const fetchData = () => {
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // Cambia la URL a la IP del ESP8266
+        .then((response) => response.json())
+        .then((data) => {
+          setData({
+            carga: data.carga,
+            nombre: data.nombre,
+            corriente: data.corriente,
+            voltage: data.voltage,
+            potencia: data.potencia,
+          });
+          console.log('Datos actualizados:', data); // Log para verificar los valores
+        })
+        .catch((error) => {
+          console.error('Error al obtener los datos:', error);
+        });
+    };
+  
+    // Llamamos a fetchData al montar el componente
+    fetchData();
+  
+    // Configuramos el intervalo para actualizar los datos cada 2 segundos
+    const interval = setInterval(fetchData, 2000);
+  
+    // Limpiamos el intervalo al desmontar el componente
+    return () => clearInterval(interval);
+  }, []); // El array vacío asegura que solo se configure el intervalo una vez
+
 	return (
 		<IonApp>
       {/*menú en la parte superior derecha*/}
@@ -69,7 +108,7 @@ function Start () {
                       <IonCard>
                         <div id= "circuloadelante">
                           <IonCard>
-                            <strong><p>73%</p></strong>
+                            <strong><p> {data.carga} %</p></strong>
                           </IonCard>
                         </div>
                       </IonCard>

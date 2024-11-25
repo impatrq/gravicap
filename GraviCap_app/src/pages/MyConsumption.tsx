@@ -9,27 +9,39 @@ function MyConsumption () {
     nombre: '',
     corriente: null,
     voltage: null,
-    potencia: null
+    potencia: null,
   });
-
+  
   useEffect(() => {
-    // Realizamos el fetch para obtener los datos
-    fetch('http://192.168.124.79/sensor?nombre=Sensor_0x40') // Cambia la URL a la IP del ESP8266
-      .then((response) => response.json())
-      .then((data) => {
-        // Actualizamos el estado con los valores recibidos
-        setData({
-          carga: data.carga,
-          nombre: data.nombre,
-          corriente: data.corriente,
-          voltage: data.voltage,
-          potencia: data.potencia
+    // Función para obtener datos
+    const fetchData = () => {
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x40') // Cambia la URL a la IP del ESP8266
+        .then((response) => response.json())
+        .then((data) => {
+          setData({
+            carga: data.carga,
+            nombre: data.nombre,
+            corriente: data.corriente,
+            voltage: data.voltage,
+            potencia: data.potencia,
+          });
+          console.log('Datos actualizados:', data); // Log para verificar los valores
+        })
+        .catch((error) => {
+          console.error('Error al obtener los datos:', error);
         });
-      })
-      .catch((error) => {
-        console.error('Error al obtener los datos:', error);
-      });
-  }, []); // El array vacío asegura que solo se ejecute una vez al montar el componente
+    };
+  
+    // Llamamos a fetchData al montar el componente
+    fetchData();
+  
+    // Configuramos el intervalo para actualizar los datos cada 2 segundos
+    const interval = setInterval(fetchData, 2000);
+  
+    // Limpiamos el intervalo al desmontar el componente
+    return () => clearInterval(interval);
+  }, []); // El array vacío asegura que solo se configure el intervalo una vez
+
 
   return (
 		<>
@@ -53,7 +65,7 @@ function MyConsumption () {
               <strong><p>Su Consumo es</p></strong>
               <div id= "valorconsumo">
                 <IonCard>
-                  <strong><p>{data.potencia} W </p></strong>
+                  <strong><p> {data.potencia} W</p></strong>
                 </IonCard>
               </div>
             </IonCard> 
