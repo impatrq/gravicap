@@ -23,5 +23,5 @@ Habla sobre nosotros como un grupo e indica el rol que cumplimos cada uno en est
 - [Galería](https://gravicap.vercel.app/galeria)<br>
 Tiene imágenes del proceso de nuestro proyecto, las visitas a medios que tuvimos y nuestra participación en las ONIET.
 
-- [Contáctnos](https://gravicap.vercel.app/contactanos)<br>
+- [Contáctanos](https://gravicap.vercel.app/contactanos)<br>
 Por medio de w3schools generamos una llave para que cuando se rellene la forma que se encuentra en este componente, el mensaje con el mail y nombre de la persona, llegue a nuestro mail del proyecto así establecemos una línea de contacto más directa con quien lo desee. 
