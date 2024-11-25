@@ -24,7 +24,7 @@ const BarChart = () => {
     useEffect(() => {
         // Función para obtener datos del servidor
         const fetchData = () => {
-            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // Cambia la URL a la IP del ESP8266
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (server)
                 .then((response) => response.json())
                 .then((data) => {
                     setSensorData({
@@ -38,17 +38,13 @@ const BarChart = () => {
                     console.error('Error al obtener los datos:', error);
                 });
         };
-
         // Llamamos a fetchData al montar el componente
         fetchData();
-
         // Configuramos el intervalo para actualizar los datos cada 2 segundos
         const interval = setInterval(fetchData, 2000);
-
         // Limpiamos el intervalo al desmontar el componente
         return () => clearInterval(interval);
     }, []);
-
     // Datos dinámicos del gráfico
     const data = {
         labels: ['Voltaje', 'Amperaje', 'Wataje'],

@@ -16,7 +16,7 @@ function GeneratedEnergy () {
   useEffect(() => {
     // Función para obtener datos
     const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x41') // Cambia la URL a la IP del ESP8266
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x41') // IP de la ESP8266 (servidor)
         .then((response) => response.json())
         .then((data) => {
           setData({
@@ -32,13 +32,10 @@ function GeneratedEnergy () {
           console.error('Error al obtener los datos:', error);
         });
     };
-  
     // Llamamos a fetchData al montar el componente
     fetchData();
-  
     // Configuramos el intervalo para actualizar los datos cada 2 segundos
     const interval = setInterval(fetchData, 2000);
-  
     // Limpiamos el intervalo al desmontar el componente
     return () => clearInterval(interval);
   }, []); // El array vacío asegura que solo se configure el intervalo una vez
@@ -59,7 +56,7 @@ function GeneratedEnergy () {
       {/*contenido central de la pantalla*/}
       <IonContent className="ion-padding">
         <div id= "paginaenergiagenerada">
-          {/*decalro el componente de carta circular con el valor de variación de la energía*/}
+          {/*declaro el gráffico circular con el valor de variación de la energía*/}
           <CircularChart value={data.potencia}></CircularChart>
           <br></br>
           <div id= "contenedorenergia">
@@ -68,7 +65,7 @@ function GeneratedEnergy () {
             {/*texto de energía generada*/}
             <strong>Energía Generada</strong>
             <div id= "valorpotenciaeg">
-              {/*valor de potencia de energía generada en referencai con el valor del grafico*/}
+              {/*valor de potencia de energía generada en referencia con el valor del gráfico*/}
               <strong> {data.potencia} W </strong>
             </div> 
           </div>

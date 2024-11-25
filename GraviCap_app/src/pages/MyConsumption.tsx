@@ -15,7 +15,7 @@ function MyConsumption () {
   useEffect(() => {
     // Función para obtener datos
     const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x40') // Cambia la URL a la IP del ESP8266
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x40') // IP de la ESP8266 (server)
         .then((response) => response.json())
         .then((data) => {
           setData({
@@ -31,20 +31,17 @@ function MyConsumption () {
           console.error('Error al obtener los datos:', error);
         });
     };
-  
     // Llamamos a fetchData al montar el componente
     fetchData();
-  
     // Configuramos el intervalo para actualizar los datos cada 2 segundos
     const interval = setInterval(fetchData, 2000);
-  
     // Limpiamos el intervalo al desmontar el componente
     return () => clearInterval(interval);
   }, []); // El array vacío asegura que solo se configure el intervalo una vez
 
-
   return (
 		<>
+      {/*header principal con botón para ir hacia atrás*/}
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -52,19 +49,24 @@ function MyConsumption () {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-
+      {/*contendio de la pantalla*/}
       <IonContent className="ion-padding">
         <div id= "paginaconsumo">
           <div id= "circuloconsumo">
+            {/*carta circular con la imagen central de "mi consumo"*/}
             <IonCard> 
               <img src= "/Icono Consumo.png" alt= "Consumo" />
             </IonCard> 
           </div>
           <div id= "valorredondeado">
+            {/*carta circular con el valor de mi consumo*/}
             <IonCard> 
+              {/*texto de la carta circular*/}
               <strong><p>Su Consumo es</p></strong>
               <div id= "valorconsumo">
+                {/*carta contenedora del valor*/}
                 <IonCard>
+                  {/*valor de mi consumo en watts*/}
                   <strong><p> {data.potencia} W</p></strong>
                 </IonCard>
               </div>

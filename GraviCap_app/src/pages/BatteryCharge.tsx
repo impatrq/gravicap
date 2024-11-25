@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import "./CSS BatteryCharge.css"
 
 function BatteryCharge () {
-
   const [data, setData] = useState({
     carga: null,
     nombre: '',
@@ -12,12 +11,12 @@ function BatteryCharge () {
     potencia: null,
   });
   const [tiempoRestante, setTiempoRestante] = useState(0); // Estado para el tiempo restante
-  const tiempoTotalCarga = 60; // Tiempo total de carga en minutos (puedes ajustarlo)
+  const tiempoTotalCarga = 60; // Tiempo total de carga en minutos 
 
   useEffect(() => {
     // Función para obtener y procesar los datos
     const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // Cambia la URL a la IP del ESP8266
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (servidor)
         .then((response) => response.json())
         .then((data) => {
           // Actualizamos el estado con los valores recibidos
@@ -28,7 +27,6 @@ function BatteryCharge () {
             voltage: data.voltage,
             potencia: data.potencia,
           });
-
           // Calculamos el tiempo restante con base en la carga recibida
           const porcentajeCarga = parseFloat(data.carga); // Parsear el porcentaje de carga
           const tiempoTranscurrido = (porcentajeCarga / 100) * tiempoTotalCarga;
@@ -39,17 +37,13 @@ function BatteryCharge () {
           console.error('Error al obtener los datos:', error);
         });
     };
-
     // Llamamos a fetchData al montar el componente
     fetchData();
-
     // Configuramos el intervalo para actualizar los datos cada 2 segundos
     const interval = setInterval(fetchData, 2000);
-
     // Limpiamos el intervalo al desmontar el componente
     return () => clearInterval(interval);
   }, []); // El array vacío asegura que solo se configure el intervalo una vez
-
   return (
     <>
       {/*header principal de la pantalla*/}

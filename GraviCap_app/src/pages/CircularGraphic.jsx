@@ -1,4 +1,3 @@
-// CircularChart.jsx
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import {
@@ -40,7 +39,6 @@ const CircularChart = ({ value }) => {
       },
     },
   };
-
   return <Doughnut data={data} options={options} />;
 };
 

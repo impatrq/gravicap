@@ -21,7 +21,7 @@ function Start () {
   useEffect(() => {
     // Función para obtener datos
     const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // Cambia la URL a la IP del ESP8266
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (server)
         .then((response) => response.json())
         .then((data) => {
           setData({
@@ -108,6 +108,7 @@ function Start () {
                       <IonCard>
                         <div id= "circuloadelante">
                           <IonCard>
+                            {/*valor de la carga de la batería*/}
                             <strong><p> {data.carga} %</p></strong>
                           </IonCard>
                         </div>

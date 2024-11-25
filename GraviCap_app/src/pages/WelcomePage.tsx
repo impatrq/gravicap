@@ -19,7 +19,7 @@ function Welcome () {
               <p><strong>Bienvenido a GraviCap</strong></p>
               <p><strong>Una forma de elevar tu energía</strong></p>
               <div id= "textocentro">
-                <p> {/*texto informativo de bienvenida*/}
+                <p> {/*texto informativo sobre gravicap y breve explicaión de la aplicación y lo que verá*/}
                   Nuestro producto "GraviCap" es una batería de almacenamiento gravitatorio, la cual podrá darle energía por medio de la fuerza de la gravedad.
                   <br></br>
                   En nuestra aplicación podrá monitorear sus distnitos valores, como la energía que genera o porcentaje de carga. Así también, dispondrá de graficos y una interfaz amigable con la que podrá ver estos valores.
@@ -30,7 +30,7 @@ function Welcome () {
             </div>
             {/*ruta de navegación hacia la pagina de inicio*/}
             <IonNavLink routerDirection="forward" component={() => <Start />}> 
-            {/*botón amarillo en la parte inferiror*/}
+            {/*botón de tamaño pequeño amarillo en la parte inferiror*/}
               <IonButton size="small" shape="round">  
                 Pulse Aquí para ir a Inicio
               </IonButton>
