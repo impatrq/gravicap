@@ -10,43 +10,45 @@ import Graphics from './GraphicsPage';
 
 function Start () {
 
-  const [data, setData] = useState({
-    carga: null,
-    nombre: '',
-    corriente: null,
-    voltage: null,
-    potencia: null,
-  });
-  
-  useEffect(() => {
-    // Función para obtener datos
-    const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (server)
-        .then((response) => response.json())
-        .then((data) => {
-          setData({
-            carga: data.carga,
-            nombre: data.nombre,
-            corriente: data.corriente,
-            voltage: data.voltage,
-            potencia: data.potencia,
-          });
-          console.log('Datos actualizados:', data); // Log para verificar los valores
-        })
-        .catch((error) => {
-          console.error('Error al obtener los datos:', error);
-        });
-    };
-  
-    // Llamamos a fetchData al montar el componente
-    fetchData();
-  
-    // Configuramos el intervalo para actualizar los datos cada 2 segundos
-    const interval = setInterval(fetchData, 2000);
-  
-    // Limpiamos el intervalo al desmontar el componente
-    return () => clearInterval(interval);
-  }, []); // El array vacío asegura que solo se configure el intervalo una vez
+  const [carga, setCarga] = useState(null); // Estado para la carga del sensor 44
+    const [potencia, setPotencia] = useState(null); // Estado para la potencia del sensor 41
+    useEffect(() => {
+        // Función para obtener los datos del sensor 44
+        const fetchSensor44 = () => {
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // URL del sensor 44
+                .then((response) => response.json())
+                .then((data) => {
+                    setCarga(data.carga); // Actualiza la carga del sensor 44
+                    console.log('Carga del Sensor 0x44:', data.carga);
+                })
+                .catch((error) => {
+                    console.error('Error al obtener la carga del sensor 44:', error);
+                });
+        };
+        // Función para obtener los datos del sensor 41
+        const fetchSensor41 = () => {
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x41') // URL del sensor 41
+                .then((response) => response.json())
+                .then((data) => {
+                    setPotencia(data.potencia); // Actualiza la potencia del sensor 41
+                    console.log('Potencia del Sensor 0x41:', data.potencia);
+                })
+                .catch((error) => {
+                    console.error('Error al obtener la potencia del sensor 41:', error);
+                });
+        };
+        // Llamamos a ambas funciones al montar el componente
+        fetchSensor44();
+        fetchSensor41();
+        // Configuramos el intervalo para actualizar los datos de ambos sensores cada 2 segundos
+        const interval = setInterval(() => {
+            fetchSensor44();
+            fetchSensor41();
+        }, 2000);
+
+        // Limpiamos el intervalo al desmontar el componente
+        return () => clearInterval(interval);
+    }, []); // Ejecuta solo una vez al montar el componente
 
 	return (
 		<IonApp>
@@ -94,6 +96,7 @@ function Start () {
               <IonCard>
                 {/*imagen y texto de energia generada*/}
                 <img src= "Aroicono.png" alt= "Arco Energia Generada"></img>
+                <strong><p>{potencia} W </p></strong>
                 <p>Energía Generada</p>
               </IonCard>
             </IonNavLink>
@@ -109,7 +112,7 @@ function Start () {
                         <div id= "circuloadelante">
                           <IonCard>
                             {/*valor de la carga de la batería*/}
-                            <strong><p> {data.carga} %</p></strong>
+                            <strong><p> {carga} % </p></strong>
                           </IonCard>
                         </div>
                       </IonCard>
@@ -167,7 +170,7 @@ function Start () {
             </IonCard>
             {/*ruta de navegación hacia la pantalla de graficos de potencia*/}
             <IonNavLink routerDirection="forward" component={() => <Graphics />}>
-              {/*boton para ir hacia la pantalla de graficos*/}
+              {/*boton para ir hacia la página de graficos*/}
               <IonButton size="small">
                 Página de Gráficos
               </IonButton>

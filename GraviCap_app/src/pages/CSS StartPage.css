@@ -22,6 +22,10 @@ ion-content {
   color: #FFFFFF;
 }
 
+#inicio strong {
+  font-size: 15px;
+}
+
 #contenedoreb ion-card {
   display: flex;
 }
