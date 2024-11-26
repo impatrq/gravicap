@@ -1,6 +1,4 @@
 #include "gravi.h"
-//#include "cap_motor.h"
-//#include "cap_sensors.h"
 
 // Variables para las mediciones particulares de cada sensor
 mediciones_ina219 m_ina0x40;
@@ -34,7 +32,7 @@ float carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter
 bool test_up, test_down;
 float carga_1;
 
-int p = 5;
+int p = 3;
 
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
 
@@ -156,11 +154,9 @@ void task_init(void *params) {
 void task_consulta_all(void *params) {
   vTaskDelay(50);
   while(true){
-    printf("\nINSIDE CONSULTAaaa\r");
-    //medicion = *((mediciones_ina219*)params);
 
-    //mediciones_ina219 medicion = *((mediciones_ina219*)params);
-    printf("INSIDE CONSULTA\r");
+    printf("CONSULTA\n");
+    gpio_put(LED_STOP, 0);
 
     if (xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))) {
       // Considero el los valores de consumo de corriente obtenidos de la cola
@@ -214,15 +210,16 @@ void task_consulta_all(void *params) {
           }
         }
       }
-      else if (status() == 1) {
-        vTaskDelay(1500);
-        printf("SALIMOS DE LA CONSULTA STATUS =1\n");
-      }
+      //else if (status() == 1) {
+        //printf("out CONSULT\n");
+        //vTaskDelay(1500);
+      //}
     }
     else {
-      printf("salimosss\n\n");
+      printf("salimosss consulta\n\n");
       vTaskDelay(1500);
     }
+    gpio_put(LED_STOP, 1);
   }
 }
 
@@ -253,7 +250,7 @@ void core_1_task() {
     if (i % p >= 0) {
       if (!queue_try_peek(&queue_core_1, &carga_1)) {
         queue_add_blocking(&queue_core_1, &carga_1);
-        printf("enviamos core1, %f\n", carga_1);
+        //printf("enviamos core1, %f\n", carga_1);
 
         last_carga_core_1 = carga_1;
         i = 1;
@@ -263,20 +260,13 @@ void core_1_task() {
       }
       i++;
     }
-
-    //if (fabs(carga - last_carga_core_1) >= 2.5) {
-      // Si la diferencia entre la carga actual y la anterior es por lo menos de 2,5%
-      // Agrego el dato a una cola (no de freertos)
-      //queue_add_blocking(&queue_core_1, &carga);
-
-      //last_carga_core_1 = carga;
-   // }
   }
 }
 
 
 // Función para encender los LEDs según el porcentaje de carga
 void actualizar_leds(float porcentaje_carga) {
+  printf("leds actualizados\n");
   int leds_encendidos = (int)(porcentaje_carga / 100.0 * 6);
 
   // Solo actualizar si el número de LEDs encendidos cambia
@@ -300,16 +290,23 @@ void actualizar_leds(float porcentaje_carga) {
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(){
-  printf("inside status\n");
+  printf("statuss\n\n");
   if (queue_try_peek(&queue_core_1, &carga)) {
 
-    printf("dentro del if\n");
-    
-    queue_remove_blocking (&queue_core_1, &carga);
+    //Levanto el dato de la cola que proviene del core1
+    queue_remove_blocking(&queue_core_1, &carga);
 
-    printf("cargaa %f\n", carga);
+    printf("inside stat cargaa %f\n", carga);
 
-    queue_add_blocking (&queue_core_1_motor, &carga);
+    // Chequeo si la cola del core0 para el motor esta llena
+    if (!queue_try_add(&queue_core_1_motor, &carga)) {
+
+      // Si la cola está llena, la vacío
+      queue_remove_blocking(&queue_core_1_motor, &carga);
+    }
+
+      // Si la cola estaba vacía, solo agrego el dato
+      queue_add_blocking (&queue_core_1_motor, &carga);
 
     if (carga < 100 && carga > 0) {
       actualizar_leds(carga);
@@ -342,7 +339,7 @@ bool status(){
     return 1;
   }
   else {
-    printf("no hubo carga \n");
+    printf("en stat sin carga \n");
     return 1;
   }
   return 1;
@@ -379,8 +376,10 @@ void task_send_uart(void *params) {
       uart_puts(uart1, uart_mppt);
       uart_puts(uart1, uart_consumo_bat);
       uart_puts(uart1, uart_panel);
+      vTaskDelay(30000);
     }
     else {
+      printf("out send\n");
       vTaskDelay(30000);
     }
   }

@@ -19,7 +19,7 @@ void task_lectura_sensor_ina219_0x40(void *params) {
   vTaskDelay(20);
   bool sent_40_all = false, sent_40_uart = false;
   while(1){
-    printf("Lectura sensor INA219_0X40\n");
+    printf("read 0X40\n");
     sent_40_all = false;
     sent_40_uart = false;
     m_ina0x40.ina = &ina219_0x40;
@@ -35,10 +35,15 @@ void task_lectura_sensor_ina219_0x40(void *params) {
             sent_40_all = true;
           }
           if (sent_40_uart == false) { 
-            xQueueSend(queue_ina219_send_uart, &m_ina0x40, pdMS_TO_TICKS(1000));
-            sent_40_uart = true;
+            if (xQueueSend(queue_ina219_consulta_all, &m_ina0x40, pdMS_TO_TICKS(1000)) == pdPASS) {
+              // Si la cola está vacía
+              xQueueSend(queue_ina219_send_uart, &m_ina0x40, pdMS_TO_TICKS(1000));
+              sent_40_uart = true;
+              printf("+datos40\n\n");
+            }
           }
         }
+        printf("nada 40\n\n");
       }
     }
     vTaskDelay(1000);
@@ -51,7 +56,7 @@ void task_lectura_sensor_ina219_0x41(void *params) {
   while(1) {
     sent_41_all = false;
     sent_41_uart = false;
-    printf("Lectura sensor INA219_0X41\n");
+    printf("read 0X41\n");
     m_ina0x41.ina = &ina219_0x41;
 
     if(ina219_read_current(ina219_0x41, &m_ina0x41.corriente) == INA219_OK) {
@@ -65,10 +70,15 @@ void task_lectura_sensor_ina219_0x41(void *params) {
             sent_41_all = true;
           }
           if (sent_41_uart == false) { 
-            xQueueSend(queue_ina219_send_uart, &m_ina0x41, pdMS_TO_TICKS(1000));
-            sent_41_uart = true;
+            if (xQueueSend(queue_ina219_consulta_all, &m_ina0x41, pdMS_TO_TICKS(1000)) == pdPASS) {
+              // Si la cola está vacía
+              xQueueSend(queue_ina219_send_uart, &m_ina0x41, pdMS_TO_TICKS(1000));
+              sent_41_uart = true;
+              printf("+datos41\n\n");
+            }
           }
         }
+        printf("nada41\n\n");
       }
     }
     vTaskDelay(1000);
@@ -80,7 +90,7 @@ void task_lectura_sensor_ina219_0x44(void *params) {
   bool sent_44 = false;
   while(1) {
     sent_44 = false;
-    printf("Lectura sensor INA219_0X44\n");
+    printf("read 0X44\n");
     m_ina0x44.ina = &ina219_0x44;
 
     if(ina219_read_current(ina219_0x44, &m_ina0x44.corriente) == INA219_OK) {
@@ -90,8 +100,11 @@ void task_lectura_sensor_ina219_0x44(void *params) {
         if(ina219_read_power(ina219_0x44, &m_ina0x44.power) == INA219_OK) {
 
           if (sent_44 == false) {
-            xQueueSend(queue_ina219_send_uart, &m_ina0x44, pdMS_TO_TICKS(1000));
-            sent_44 = true;
+            if (xQueueSend(queue_ina219_consulta_all, &m_ina0x44, pdMS_TO_TICKS(1000)) == pdPASS) {
+              // Si la cola está vacía
+              xQueueSend(queue_ina219_send_uart, &m_ina0x44, pdMS_TO_TICKS(1000));
+              sent_44 = true;
+            }
           }
         }
       }
@@ -105,7 +118,7 @@ void task_lectura_sensor_ina219_0x45(void *params) {
   bool sent_45 = false;
   while(1) {
     sent_45 = false;
-    printf("Lectura sensor INA219_0X45\n");
+    printf("read 0X45\n");
     m_ina0x45.ina = &ina219_0x45;
 
     if(ina219_read_current(ina219_0x45, &m_ina0x45.corriente) == INA219_OK) {
@@ -115,8 +128,11 @@ void task_lectura_sensor_ina219_0x45(void *params) {
         if(ina219_read_power(ina219_0x45, &m_ina0x45.power) == INA219_OK) {
 
           if (sent_45 == false) {
-            xQueueSend(queue_ina219_send_uart, &m_ina0x45, pdMS_TO_TICKS(1000));
-            sent_45 = true;
+            if (xQueueSend(queue_ina219_consulta_all, &m_ina0x45, pdMS_TO_TICKS(1000)) == pdPASS) {
+              // Si la cola está vacía
+              xQueueSend(queue_ina219_send_uart, &m_ina0x45, pdMS_TO_TICKS(1000));
+              sent_45 = true;
+            }
           }
         }
       }

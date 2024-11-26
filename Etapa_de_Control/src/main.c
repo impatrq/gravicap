@@ -12,7 +12,6 @@ int main(void) {
   stdio_init_all();
   sleep_ms(1000);
   multicore_launch_core1(core_1_task);
-  printf("hello");
 
   xTaskCreate(
     task_init, "Task Init",
