@@ -32,14 +32,14 @@ const LineChart = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://<192.168.124.160>/sensor?nombre=Sensor_0x44');
+            const response = await fetch('http://<192.168.124.160>/sensor?nombre=Sensor_0x44'); //IP de la ESP8266 (servidor) referenciado al sensor que le pedimos datos
             if (!response.ok) {
-                throw new Error('Error en la solicitud');
+                throw new Error('Error en la solicitud'); // Da error si la respuesta no es válida
             }
 
-            const data = await response.json();
-            const { potencia } = data;
-            const timestamp = new Date().toLocaleTimeString();
+            const data = await response.json(); // Obtiene los datos JSON de la respuesta
+            const { potencia } = data; // Extrae la potencia del JSON
+            const timestamp = new Date().toLocaleTimeString(); // Obtiene el tiempo actual como etiqueta
 
             if (!recording && potencia === 0) {
                 // Inicia la grabación si la potencia es 0
@@ -69,7 +69,7 @@ const LineChart = () => {
         }
     };
 
-    useEffect(() => {
+    useEffect(() => { // useEffect ejecuta la función "fetchData" periódicamente
         const interval = setInterval(() => {
             fetchData();
         }, 2000);
@@ -77,7 +77,7 @@ const LineChart = () => {
         return () => clearInterval(interval); // Limpia el intervalo al desmontar
     }, [recording]); // Solo reinicia el efecto si cambia `recording`
 
-    const options = {
+    const options = { // Configuración del gráfico
         responsive: true,
         plugins: {
             legend: {

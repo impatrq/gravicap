@@ -15,7 +15,7 @@ function Start () {
     useEffect(() => {
         // Función para obtener los datos del sensor 44
         const fetchSensor44 = () => {
-            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // URL del sensor 44
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP referenciado al sensor 44
                 .then((response) => response.json())
                 .then((data) => {
                     setCarga(data.carga); // Actualiza la carga del sensor 44
@@ -27,7 +27,7 @@ function Start () {
         };
         // Función para obtener los datos del sensor 41
         const fetchSensor41 = () => {
-            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x41') // URL del sensor 41
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x41') // IP referenciado al sensor 41
                 .then((response) => response.json())
                 .then((data) => {
                     setPotencia(data.potencia); // Actualiza la potencia del sensor 41

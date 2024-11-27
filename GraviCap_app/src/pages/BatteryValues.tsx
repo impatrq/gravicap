@@ -16,7 +16,7 @@ function BatteryValues () {
   useEffect(() => {
     // Función para obtener datos
     const fetchData = () => {
-      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (servidor)
+      fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (servidor) referenciado al sensor que le pedimos datos
         .then((response) => response.json())
         .then((data) => {
           setData({

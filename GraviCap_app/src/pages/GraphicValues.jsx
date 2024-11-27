@@ -24,7 +24,7 @@ const BarChart = () => {
     useEffect(() => {
         // Función para obtener datos del servidor
         const fetchData = () => {
-            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (server)
+            fetch('http://192.168.124.160/sensor?nombre=Sensor_0x44') // IP de la ESP8266 (servidor) referenciado al sensor que le pedimos datos
                 .then((response) => response.json())
                 .then((data) => {
                     setSensorData({

@@ -20,7 +20,7 @@ function Discharge () {
         <div id= "contenidodescarga">
           {/*carta contenderora del gráfcio de línea*/}
           <IonCard>
-            {/*declaro el gráfcio de línea que está desarrollado en otro archivo*/}
+            {/*declaro el gráfico de línea que está desarrollado en otro archivo*/}
             <LineChart1></LineChart1>
           </IonCard>
         </div>
