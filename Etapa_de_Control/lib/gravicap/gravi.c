@@ -1,12 +1,11 @@
 #include "gravi.h"
-//#include "cap_motor.h"
-//#include "cap_sensors.h"
 
 // Variables para las mediciones particulares de cada sensor
 mediciones_ina219 m_ina0x40;
 mediciones_ina219 m_ina0x41;
 mediciones_ina219 m_ina0x44;
 mediciones_ina219 m_ina0x45;
+static mediciones_ina219 medicion;
 
 // Registro de cada sensor
 ina219_t ina219_0x40; // Consumo
@@ -31,6 +30,9 @@ volatile bool last_A = 0;
 int p_r = 600;
 float carga, last_carga_core_1, last_carga_core_0, last_carga_motor, lap_counter;
 bool test_up, test_down;
+float carga_1;
+
+int p = 3;
 
 float needed; // Consumo mínimo de los motores, necesario para que empiece a cargar
 
@@ -150,9 +152,11 @@ void task_init(void *params) {
 }
 
 void task_consulta_all(void *params) {
-  while(1){
-    mediciones_ina219 medicion = *((mediciones_ina219*)params);
-    printf("INSIDE CONSULTA\r");
+  vTaskDelay(50);
+  while(true){
+
+    printf("CONSULTA\n");
+    gpio_put(LED_STOP, 0);
 
     if (xQueueReceive(queue_ina219_consulta_all, &medicion, pdMS_TO_TICKS(1000))) {
       // Considero el los valores de consumo de corriente obtenidos de la cola
@@ -206,18 +210,22 @@ void task_consulta_all(void *params) {
           }
         }
       }
-      else if (status() == 1) {
-        vTaskDelay(1500);
-      }
+      //else if (status() == 1) {
+        //printf("out CONSULT\n");
+        //vTaskDelay(1500);
+      //}
     }
     else {
+      printf("salimosss consulta\n\n");
       vTaskDelay(1500);
     }
+    gpio_put(LED_STOP, 1);
   }
 }
 
 void core_1_task() {
   last_carga_core_1 == 0;
+  int i = 0;
 
   while (1) {
     // Leer el estado de las señales A y B
@@ -236,14 +244,21 @@ void core_1_task() {
 
     // Cálculo de parámetros
     lap_counter = (counter / p_r);
-    carga = (lap_counter * 100) / COMPLETE_LAPS;
+    carga_1 = (lap_counter * 100) / COMPLETE_LAPS;
+    //printf("carga = %f, lap = %f, counter %i\n", carga_1, lap_counter, counter);
 
-    if (fabs(carga - last_carga_core_1) >= 2.5) {
-      // Si la diferencia entre la carga actual y la anterior es por lo menos de 2,5%
-      // Agrego el dato a una cola (no de freertos)
-      queue_add_blocking(&queue_core_1, &carga);
+    if (i % p >= 0) {
+      if (!queue_try_peek(&queue_core_1, &carga_1)) {
+        queue_add_blocking(&queue_core_1, &carga_1);
+        //printf("enviamos core1, %f\n", carga_1);
 
-      last_carga_core_1 = carga;
+        last_carga_core_1 = carga_1;
+        i = 1;
+      }
+      else {
+        queue_remove_blocking (&queue_core_1, &carga);
+      }
+      i++;
     }
   }
 }
@@ -251,6 +266,7 @@ void core_1_task() {
 
 // Función para encender los LEDs según el porcentaje de carga
 void actualizar_leds(float porcentaje_carga) {
+  printf("leds actualizados\n");
   int leds_encendidos = (int)(porcentaje_carga / 100.0 * 6);
 
   // Solo actualizar si el número de LEDs encendidos cambia
@@ -274,9 +290,24 @@ void actualizar_leds(float porcentaje_carga) {
 // en función de los datos obtenidos del encoder, enviados desde el core_1
 // La función se bloquea hasta que el porcentaje_carga esté en la cola
 bool status(){
+  printf("statuss\n\n");
   if (queue_try_peek(&queue_core_1, &carga)) {
-    queue_remove_blocking (&queue_core_1, &carga);
-    queue_add_blocking (&queue_core_1_motor, &carga);
+
+    //Levanto el dato de la cola que proviene del core1
+    queue_remove_blocking(&queue_core_1, &carga);
+
+    printf("inside stat cargaa %f\n", carga);
+
+    // Chequeo si la cola del core0 para el motor esta llena
+    if (!queue_try_add(&queue_core_1_motor, &carga)) {
+
+      // Si la cola está llena, la vacío
+      queue_remove_blocking(&queue_core_1_motor, &carga);
+    }
+
+      // Si la cola estaba vacía, solo agrego el dato
+      queue_add_blocking (&queue_core_1_motor, &carga);
+
     if (carga < 100 && carga > 0) {
       actualizar_leds(carga);
 
@@ -308,6 +339,7 @@ bool status(){
     return 1;
   }
   else {
+    printf("en stat sin carga \n");
     return 1;
   }
   return 1;
@@ -329,6 +361,7 @@ void prepare_char_uart(char *ubicacion, mediciones_ina219 *medicion, size_t ubic
 
 // Envía el char que digas por uart a la esp
 void task_send_uart(void *params) {
+  vTaskDelay(20);
   mediciones_ina219 medicion = *((mediciones_ina219*)params);
   while(true) {
     printf("Send task\n");
@@ -343,9 +376,11 @@ void task_send_uart(void *params) {
       uart_puts(uart1, uart_mppt);
       uart_puts(uart1, uart_consumo_bat);
       uart_puts(uart1, uart_panel);
+      vTaskDelay(30000);
     }
     else {
-      vTaskDelay(3000);
+      printf("out send\n");
+      vTaskDelay(30000);
     }
   }
 }

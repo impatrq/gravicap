@@ -4,6 +4,9 @@
 Una vez recolectados, los procesa para controlar el dispositivo y enviarlos a un [servidor web](https://github.com/impatrq/gravicap/tree/main/Servidor_Web).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El sistema es ejecutado por un microcontrolador [RP2040-Zero](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf).<br>
 
+![Diagrama de Tareas de FreeRTOS](https://github.com/impatrq/gravicap/blob/feat/etapa_de_control/Etapa_de_Control/resources/Diagrama_de_Tareas_Etapa_de_Control.png)
+<div align="center">Diagrama de Tareas de FreeRTOS</div>
+
 ## Recursos utilizados
 - [FreeRTOS](https://www.freertos.org/)
 - [Pico-SDK](https://github.com/raspberrypi/pico-sdk/tree/master)

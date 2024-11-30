@@ -7,15 +7,15 @@
 
 
 int main(void) {
+  sleep_ms(1000);
   
   stdio_init_all();
   sleep_ms(1000);
   multicore_launch_core1(core_1_task);
-  printf("hello");
 
   xTaskCreate(
     task_init, "Task Init",
-    512,
+    2048,
     NULL, 
     6,
     NULL
@@ -37,13 +37,17 @@ int main(void) {
     NULL
   );
 
-  xTaskCreate(
+  BaseType_t result = xTaskCreate(
     task_consulta_all, "Consulta",
-    2048,
+    16384,
     NULL,
     3,
     NULL 
   );
+
+  if (result != pdPASS) {
+    printf("Error: No se pudo crear la tarea Consulta (Error %ld)\n", result);
+  }
 
   xTaskCreate(
     task_lectura_sensor_ina219_0x44, "Lectura INA219 0x44 CONSUMO DE LA BATERÍA",
@@ -72,4 +76,4 @@ int main(void) {
   // Arranco el scheduler
   vTaskStartScheduler();
 
-}
+} 
