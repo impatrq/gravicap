@@ -25,7 +25,7 @@
 ## Integrantes:
 <div align="center">
 
-<img src="/Documentación/Carpeta Técnica GraviCap/Preámbulo/Grupal.png" height="300"/>
+<img src="Documentación/Carpeta Técnica GraviCap/Imagenes/Preámbulo/Grupal.jpg" height="300"/>
 
 </div>
 
